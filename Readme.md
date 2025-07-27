@@ -1,8 +1,6 @@
 # Devops - Capstone Project
--------------------------
 
 ## Problem Statement
----------------------------
 Modern DevOps teams need a robust, automated CI/CD pipeline that not only builds and deploys
 applications consistently but also ensures container security and Kubernetes cluster reliability. This
 project sets up an end-to-end pipeline that covers infrastructure provisioning (Terraform),
@@ -12,7 +10,6 @@ monitoring & self-healing using Prometheus and custom scripts.
 ---------------------------
 
 ## Project Goals
----------------------------
 1. Design and implement an automated CI/CD pipeline on AWS.
 2. Provision infrastructure using Terraform (VPC, subnets, EKS, EC2).
 3. Automate configuration using Ansible.
@@ -23,7 +20,6 @@ monitoring & self-healing using Prometheus and custom scripts.
 ---------------------------
 
 ## Key Tools & Technologies
----------------------------
 - CI/CD: Jenkins, GitHub
 - Containerization: Docker, AWS ECR
 - Infrastructure as Code: Terraform
