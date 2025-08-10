@@ -7,6 +7,7 @@ project sets up an end-to-end pipeline that covers infrastructure provisioning (
 configuration management (Ansible), containerization (Docker), CI/CD orchestration (Jenkins),
 secure image scanning (Trivy), application deployment on AWS EKS, and automated cluster health
 monitoring & self-healing using Prometheus and custom scripts.
+
 ---------------------------
 
 ## Project Goals
@@ -28,4 +29,6 @@ monitoring & self-healing using Prometheus and custom scripts.
 - Image Security: Trivy (Container Vulnerability Scanner)
 - Monitoring & Alerts: Prometheus, Grafana, Alertmanager, Slack API
 - Programming/Scripting: Bash, Python (for health checker)
+- Other AWS Services: CDN, EC2, ECS + Fargate
+- Database: MONGO DB (Atlas Cloud)
 ---------------------------
