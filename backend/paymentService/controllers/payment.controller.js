@@ -102,6 +102,8 @@ exports.createOrder = async (req, res) => {
       payment_capture,
     };
 
+    console.log("Creating Razorpay Order with options: ", JSON.stringify(options));
+
     const response = await razorpay.orders.create(options);
     console.log(response);
     res.json({
