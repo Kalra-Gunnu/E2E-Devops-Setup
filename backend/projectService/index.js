@@ -11,9 +11,12 @@ app.use(express.json());
 
 app.use(cors());
 
+const healthRoutes = require('./routes/health.route')
+
 app.use('/api/projectdomain', projectDomainRoutes);
 app.use('/api/projects', projectRoutes)
 app.use('/api/projectcontent', projectContentRoutes)
+app.use('/', healthRoutes)
 
 const PORT = process.env.PORT;
 

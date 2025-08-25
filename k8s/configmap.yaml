@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: e2e-devops
+data:
+  NODE_ENV: "production"
+  MONGODB_URI: "mongodb://mongodb-service:27017/e2e-devops"
+  REDIS_URL: "redis://redis-service:6379"
+  AWS_REGION: "us-east-1"
+  AWS_S3_BUCKET: "e2e-devops-bucket"
+  RAZORPAY_KEY_ID: "your-razorpay-key-id"
+  RAZORPAY_KEY_SECRET: "your-razorpay-key-secret"

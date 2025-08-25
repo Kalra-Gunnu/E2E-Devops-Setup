@@ -9,7 +9,10 @@ app.use(express.json());
 
 app.use(cors());
 
+const healthRoutes = require('./routes/health.route')
+
 app.use('/api/userleads', userLeadRoutes);
+app.use('/', healthRoutes)
 
 const PORT = process.env.PORT;
 

@@ -8,8 +8,10 @@ app.use(express.json());
 
 app.use(cors());
 const paymentRoutes = require('./routes/payment.route')
+const healthRoutes = require('./routes/health.route')
 
 app.use('/api/payment', paymentRoutes);
+app.use('/', healthRoutes);
 
 
 const PORT = process.env.PORT;

@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: e2e-devops
+  labels:
+    name: e2e-devops
+    app: fullstack-app
