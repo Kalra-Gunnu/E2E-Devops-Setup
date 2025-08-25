@@ -15,7 +15,7 @@ nano config.env
 
 ```bash
 # Change this line:
-DOCKER_USERNAME=prag1402
+DOCKER_USERNAME=<your docker hub user>
 
 # To your username:
 DOCKER_USERNAME=your-username
@@ -41,9 +41,9 @@ ${DOCKER_USERNAME}/${DOCKER_REPO_NAME}-${SERVICE_NAME}:latest
 ### Examples:
 
 #### With Default Values:
-- `prag1402/e2e-devops-payment-service:latest`
-- `prag1402/e2e-devops-project-service:latest`
-- `prag1402/e2e-devops-user-service:latest`
+- `<your docker hub user>/e2e-devops-payment-service:latest`
+- `<your docker hub user>/e2e-devops-project-service:latest`
+- `<your docker hub user>/e2e-devops-user-service:latest`
 
 #### With Custom Username (e.g., `john_doe`):
 - `john_doe/e2e-devops-payment-service:latest`
@@ -51,9 +51,9 @@ ${DOCKER_USERNAME}/${DOCKER_REPO_NAME}-${SERVICE_NAME}:latest
 - `john_doe/e2e-devops-user-service:latest`
 
 #### With Custom Repo Name (e.g., `my-app`):
-- `prag1402/my-app-payment-service:latest`
-- `prag1402/my-app-project-service:latest`
-- `prag1402/my-app-user-service:latest`
+- `<your docker hub user>/my-app-payment-service:latest`
+- `<your docker hub user>/my-app-project-service:latest`
+- `<your docker hub user>/my-app-user-service:latest`
 
 ## 🔄 How It Works
 
@@ -67,7 +67,7 @@ if [ -f "config.env" ]; then
     echo "✅ Configuration loaded from config.env"
 else
     echo "⚠️  config.env not found, using default values"
-    DOCKER_USERNAME="prag1402"
+    DOCKER_USERNAME="<your docker hub user>"
     DOCKER_REPO_NAME="e2e-devops"
 fi
 ```

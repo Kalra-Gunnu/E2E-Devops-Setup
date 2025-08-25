@@ -19,7 +19,7 @@ cd /Users/pragoy/projects/vlearn/E2E-Devops-Setup
 ### 2. Login to DockerHub
 ```bash
 docker login
-# Enter your DockerHub credentials (prag1402)
+# Enter your DockerHub credentials (<your docker hub user>)
 ```
 
 ### 3. Build and Push Docker Images
@@ -33,7 +33,7 @@ chmod +x docker-build-push.sh
 
 This will:
 - Build all backend services
-- Push them to DockerHub under `prag1402/e2e-devops/`
+- Push them to DockerHub under `<your docker hub user>/e2e-devops/`
 - Create images: `payment-service`, `project-service`, `user-service`
 
 ### 4. Start Minikube
@@ -76,9 +76,9 @@ chmod +x deploy.sh
 | Service | Port | Image | Replicas |
 |---------|------|-------|----------|
 | Frontend | 80 | nginx:alpine | 1 |
-| Payment Service | 3000 | prag1402/e2e-devops/payment-service:latest | 2 |
-| Project Service | 3001 | prag1402/e2e-devops/project-service:latest | 2 |
-| User Service | 3002 | prag1402/e2e-devops/user-service:latest | 2 |
+| Payment Service | 3000 | <your docker hub user>/e2e-devops/payment-service:latest | 2 |
+| Project Service | 3001 | <your docker hub user>/e2e-devops/project-service:latest | 2 |
+| User Service | 3002 | <your docker hub user>/e2e-devops/user-service:latest | 2 |
 | MongoDB | 27017 | mongo:6.0 | 1 |
 | Redis | 6379 | redis:7-alpine | 1 |
 

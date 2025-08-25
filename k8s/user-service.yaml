@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: user-service
-        image: prag1402/e2e-devops-user-service:latest
+        image: <your docker hub user>/e2e-devops-user-service:latest
         ports:
         - containerPort: 3002
         env:
