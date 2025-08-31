@@ -17,7 +17,11 @@ fi
 echo -e "${GREEN}✅ Kind cluster is running${NC}"
 
 # Check if ingress controller is available
-echo -e "${YELLOW}🔧 Checking ingress controller...${NC}"
+echo -e "${YELLOW}🔧 Installing ingress controller...${NC}"
+
+# Install NGINX Ingress Controller for Docker Desktop Kubernetes
+echo -e "${YELLOW} Installing NGINX Ingress Controller...${NC}"
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.10.1/deploy/static/provider/cloud/deploy.yaml
 
 # Wait for ingress controller to be ready
 echo -e "${YELLOW}⏳ Waiting for ingress controller to be ready...${NC}"
