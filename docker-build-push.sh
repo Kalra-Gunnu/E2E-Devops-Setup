@@ -7,7 +7,7 @@ if [ -f "config.env" ]; then
 else
     echo -e "${YELLOW}⚠️  config.env not found, using default values${NC}"
     # Default values
-    DOCKER_USERNAME="<your docker hub user>"
+    DOCKER_USERNAME="prag1402"
     DOCKER_REPO_NAME="e2e-devops"
 fi
 

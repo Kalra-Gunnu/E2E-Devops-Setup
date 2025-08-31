@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: user-service
-        image: <your docker hub user>/e2e-devops-user-service:latest
+        image: prag1402/e2e-devops-user-service:latest
         ports:
         - containerPort: 3002
         env:
@@ -28,11 +28,11 @@ spec:
               key: NODE_ENV
         - name: PORT
           value: "3002"
-        - name: MONGODB_URI
+        - name: MONGO_URI
           valueFrom:
             secretKeyRef:
               name: app-secrets
-              key: MONGODB_URI
+              key: MONGO_URI
         resources:
           requests:
             memory: "256Mi"

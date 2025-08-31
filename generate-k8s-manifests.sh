@@ -13,7 +13,7 @@ if [ -f "config.env" ]; then
     echo -e "${GREEN}✅ Configuration loaded from config.env${NC}"
 else
     echo -e "${YELLOW}⚠️  config.env not found, using default values${NC}"
-    DOCKER_USERNAME="<your docker hub user>"
+    DOCKER_USERNAME="prag1402"
     DOCKER_REPO_NAME="e2e-devops"
 fi
 
@@ -52,11 +52,11 @@ spec:
               key: NODE_ENV
         - name: PORT
           value: "3000"
-        - name: MONGODB_URI
+        - name: MONGO_URI
           valueFrom:
             secretKeyRef:
               name: app-secrets
-              key: MONGODB_URI
+              key: MONGO_URI
         - name: RAZORPAY_KEY_ID
           valueFrom:
             secretKeyRef:
@@ -136,11 +136,11 @@ spec:
               key: NODE_ENV
         - name: PORT
           value: "3001"
-        - name: MONGODB_URI
+        - name: MONGO_URI
           valueFrom:
             secretKeyRef:
               name: app-secrets
-              key: MONGODB_URI
+              key: MONGO_URI
         - name: REDIS_URL
           valueFrom:
             secretKeyRef:
@@ -151,11 +151,11 @@ spec:
             configMapKeyRef:
               name: app-config
               key: AWS_REGION
-        - name: AWS_S3_BUCKET
+        - name: S3_BUCKET_NAME
           valueFrom:
             configMapKeyRef:
               name: app-config
-              key: AWS_S3_BUCKET
+              key: S3_BUCKET_NAME
         - name: AWS_ACCESS_KEY_ID
           valueFrom:
             secretKeyRef:
@@ -235,11 +235,11 @@ spec:
               key: NODE_ENV
         - name: PORT
           value: "3002"
-        - name: MONGODB_URI
+        - name: MONGO_URI
           valueFrom:
             secretKeyRef:
               name: app-secrets
-              key: MONGODB_URI
+              key: MONGO_URI
         resources:
           requests:
             memory: "256Mi"

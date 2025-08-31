@@ -1,0 +1,1806 @@
+apiVersion: v1
+data:
+  Refund_Policy.html: "<!doctype html>\r\n<html lang=\"en\">\r\n\r\n<head>\r\n\r\n
+    \ <meta charset=\"utf-8\">\r\n  <meta name=\"viewport\" content=\"width=device-width,
+    initial-scale=1, shrink-to-fit=no\">\r\n  <meta http-equiv=\"x-ua-compatible\"
+    content=\"ie=edge\">\r\n\r\n  <title>Refund Policy – betterproject</title>\r\n
+    \ <link rel=\"shortcut icon\" href=\"assets/images/logo/favourite_icon_1.svg\">\r\n\r\n
+    \ <!-- Framework - CSS Include -->\r\n  <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/bootstrap.min.css\">\r\n\r\n  <!-- Icon Font - CSS Include -->\r\n
+    \ <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/fontawesome.css\">\r\n\r\n
+    \ <!-- Animation - CSS Include -->\r\n  <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/animate.css\">\r\n\r\n  <!-- Cursor - CSS Include -->\r\n  <link
+    rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/cursor.css\">\r\n\r\n  <!--
+    Carousel - CSS Include -->\r\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/slick.css\">\r\n
+    \ <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/slick-theme.css\">\r\n\r\n
+    \ <!-- Video & Image Popup - CSS Include -->\r\n  <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/magnific-popup.css\">\r\n\r\n  <!-- Vanilla Calendar - CSS Include
+    -->\r\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/vanilla-calendar.min.css\">\r\n\r\n
+    \ <!-- Custom - CSS Include -->\r\n  <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/style.css\">\r\n\r\n</head>\r\n\r\n\r\n<body>\r\n\r\n  <!--
+    Body Wrap - Start -->\r\n  <div class=\"page_wrapper\">\r\n\r\n    <!-- Back To
+    Top - Start -->\r\n    <div class=\"backtotop\">\r\n      <a href=\"#\" class=\"scroll\">\r\n
+    \       <i class=\"far fa-arrow-up\"></i>\r\n      </a>\r\n    </div>\r\n    <!--
+    Back To Top - End -->\r\n\r\n    <!-- Site Header - Start\r\n      ==================================================
+    -->\r\n    <header class=\"site_header site_header_1\">\r\n      <div class=\"container\">\r\n
+    \       <div class=\"row align-items-center\">\r\n          <div class=\"col col-lg-3
+    col-5\">\r\n            <div class=\"site_logo\">\r\n              <a class=\"site_link\"
+    href=\"index.html\">\r\n                <img src=\"assets/images/logo/site_logo.svg\">\r\n
+    \             </a>\r\n            </div>\r\n          </div>\r\n\r\n        </div>\r\n
+    \     </div>\r\n    </header>\r\n    <!-- Site Header - End\r\n      ==================================================
+    -->\r\n\r\n    <!-- Main Body - Start\r\n      ==================================================
+    -->\r\n    <main class=\"page_content\">\r\n\r\n      <!-- Page Section - Start\r\n
+    \       ================================================== -->\r\n      <section
+    class=\"page_banner\">\r\n        <div class=\"container\">\r\n          <div
+    class=\"content_wrapper\">\r\n            <div class=\"row align-items-center\">\r\n
+    \             <div class=\"col col-lg-6\">\r\n                <ul class=\"breadcrumb_nav
+    unordered_list\">\r\n                  <li><a href=\"index.html\">Home</a></li>\r\n\r\n
+    \                 <li>Refund Policy</li>\r\n                </ul>\r\n                <h1
+    class=\"page_title\">Refund Policy</h1>\r\n\r\n\r\n              </div>\r\n            </div>\r\n
+    \         </div>\r\n        </div>\r\n      </section>\r\n      <!-- Page Section
+    - End\r\n        ================================================== -->\r\n\r\n
+    \     <!-- FAQ Section - Start\r\n        ==================================================
+    -->\r\n      <section class=\"faq_section section_space_lg\">\r\n        <div
+    class=\"container\">\r\n          <div class=\"section_heading text-center mb-3\">\r\n
+    \           <div class=\"row justify-content-center\">\r\n              <div class=\"col
+    col-lg-8\" style=\"text-align:left\">\r\n                <h1>No Returns Policy
+    for Digital Products</h1>\r\n    \r\n                <h2>Overview</h2>\r\n                <p>\r\n
+    \                   At Better Projects, we strive to provide high-quality digital
+    products that meet your needs and exceed your expectations.\r\n                    Due
+    to the nature of digital products, all sales are final. We do not accept returns
+    or offer refunds for any digital\r\n                    products purchased through
+    our platform.\r\n                </p>\r\n                \r\n                <h2>No
+    Returns or Refunds</h2>\r\n                <p>\r\n                    All sales
+    of digital products are final. Once a purchase is made and the digital product
+    has been delivered, we cannot\r\n                    accept any returns, exchanges,
+    or provide refunds.\r\n                </p>\r\n                \r\n                <h2>Damages
+    and Issues</h2>\r\n                <p>\r\n                    Please inspect your
+    digital product immediately upon receipt and contact us at <a href=\"mailto:support@betterprojects.in\">support@betterprojects.in</a>
+    if you encounter any issues with the download or access.\r\n                    If
+    the digital product is defective, corrupted, or if you received the wrong item,
+    we will evaluate the issue and make it right.\r\n                </p>\r\n                \r\n
+    \               <h2>Contact Information</h2>\r\n                <p>\r\n                    If
+    you have any questions or concerns regarding your digital product purchase, please
+    contact us at <a href=\"mailto:support@betterprojects.in\">support@betterprojects.in</a>.\r\n
+    \                   We are here to help and ensure your satisfaction with our
+    products.\r\n                </p>\r\n              </div>\r\n            </div>\r\n
+    \         </div>\r\n\r\n        </div>\r\n      </section>\r\n      <!-- FAQ Section
+    - End\r\n        ================================================== -->\r\n\r\n
+    \     <!-- Newslatter Section - Start\r\n        ==================================================
+    -->\r\n      <section class=\"newslatter_section\">\r\n        <div class=\"container\">\r\n
+    \         <div class=\"newslatter_box\" style=\"background-image: url('assets/images/shape/shape_img_6.svg');\">\r\n
+    \           <div class=\"row justify-content-center\">\r\n              <div class=\"col
+    col-lg-6\">\r\n                <div class=\"section_heading text-center\">\r\n
+    \                 <h2 class=\"heading_text\">\r\n                    Join our
+    Newsletter to stay updated on Next Courses\r\n                  </h2>\r\n                  <p
+    class=\"heading_description mb-0\">\r\n                    Subscribe to our newsletter
+    and stay informed about upcoming courses and updates. Don’t miss\r\n                    out—join
+    today!\r\n                  </p>\r\n                </div>\r\n                <form
+    action=\"#\">\r\n                  <div class=\"form_item m-0\">\r\n                    <input
+    type=\"email\" name=\"email\" placeholder=\"Your Email\">\r\n                    <button
+    type=\"submit\" class=\"btn btn_dark\">\r\n                      <span>\r\n                        <small>Subsctibe</small>\r\n
+    \                       <small>Subsctibe</small>\r\n                      </span>\r\n
+    \                   </button>\r\n                  </div>\r\n                </form>\r\n
+    \             </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n
+    \     </section>\r\n      <!-- Newslatter Section - End -->\r\n\r\n    </main>\r\n
+    \   <!-- Main Body - End\r\n      ==================================================
+    -->\r\n\r\n    <!-- Site Footer - Start\r\n      ==================================================
+    -->\r\n    <footer class=\"site_footer\">\r\n      <div class=\"footer_widget_area\">\r\n
+    \       <div class=\"container\">\r\n          <div class=\"row\">\r\n            <div
+    class=\"col col-lg-3 col-md-6 col-sm-6\">\r\n              <div class=\"footer_widget\">\r\n
+    \               <div class=\"site_logo\">\r\n                  <a class=\"site_link\"
+    href=\"index.html\">\r\n                    <img src=\"assets/images/logo/site_logo_2.svg\">\r\n
+    \                 </a>\r\n                </div>\r\n\r\n              </div>\r\n
+    \           </div>\r\n            <div class=\"col col-lg-6\">\r\n              <div
+    class=\"row\">\r\n                <div class=\"col col-md-4 col-sm-4\">\r\n                  <div
+    class=\"footer_widget\">\r\n                    <ul class=\"page_list unordered_list_block\">\r\n
+    \                     <li>\r\n                        <a href=\"about.html\">\r\n
+    \                         <span class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n
+    \                         <span class=\"item_text\">About</span>\r\n                        </a>\r\n
+    \                     </li>\r\n\r\n                    </ul>\r\n                  </div>\r\n
+    \               </div>\r\n                <div class=\"col col-md-4 col-sm-4\">\r\n
+    \                 <div class=\"footer_widget\">\r\n\r\n                    <ul
+    class=\"page_list unordered_list_block\">\r\n                      <li>\r\n                        <a
+    href=\"course_details.html\">\r\n                          <span class=\"item_icon\"><i
+    class=\"fas fa-caret-right\"></i></span>\r\n                          <span class=\"item_text\">Contact</span>\r\n
+    \                       </a>\r\n                      </li>\r\n\r\n                    </ul>\r\n
+    \                 </div>\r\n                </div>\r\n                <div class=\"col
+    col-md-4 col-sm-4\">\r\n                  <div class=\"footer_widget\">\r\n\r\n
+    \                   <ul class=\"page_list unordered_list_block\">\r\n                      <li>\r\n
+    \                       <a href=\"privacy_policy.html\">\r\n                          <span
+    class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n                          <span
+    class=\"item_text\">Privacy Policy</span>\r\n                        </a>\r\n
+    \                     </li>\r\n\r\n                    </ul>\r\n                  </div>\r\n
+    \               </div>\r\n                \r\n              </div>\r\n            </div>\r\n
+    \           <div class=\"col col-md-4 col-sm-4\">\r\n              <div class=\"footer_widget\">\r\n
+    \           \r\n                <ul class=\"page_list unordered_list_block\">\r\n
+    \                 <li>\r\n                    <a href=\"service_terms.html\">\r\n
+    \                     <span class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n
+    \                     <span class=\"item_text\">Terms and Conditions</span>\r\n
+    \                   </a>\r\n                  </li>\r\n                 \r\n                </ul>\r\n
+    \             </div>\r\n            </div>\r\n\r\n            <div class=\"col
+    col-md-4 col-sm-4\">\r\n              <div class=\"footer_widget\">\r\n            \r\n
+    \               <ul class=\"page_list unordered_list_block\">\r\n                  <li>\r\n
+    \                   <a href=\"Refund_Policy.html\">\r\n                      <span
+    class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n                      <span
+    class=\"item_text\">Refund Policy</span>\r\n                    </a>\r\n                  </li>\r\n
+    \                \r\n                </ul>\r\n              </div>\r\n            </div>\r\n
+    \         </div>\r\n        </div>\r\n      </div>\r\n\r\n    </footer>\r\n    <!--
+    Site Footer - End\r\n      ==================================================
+    -->\r\n\r\n  </div>\r\n  <!-- Body Wrap - End -->\r\n\r\n  <!-- Framework - Jquery
+    Include -->\r\n  <script src=\"assets/js/jquery.min.js\"></script>\r\n  <script
+    src=\"assets/js/popper.min.js\"></script>\r\n  <script src=\"assets/js/bootstrap.min.js\"></script>\r\n
+    \ <script src=\"assets/js/bootstrap-dropdown-ml-hack.js\"></script>\r\n\r\n  <!--
+    animation - jquery include -->\r\n  <script src=\"assets/js/cursor.js\"></script>\r\n
+    \ <script src=\"assets/js/wow.min.js\"></script>\r\n  <script src=\"assets/js/tilt.min.js\"></script>\r\n
+    \ <script src=\"assets/js/parallax.min.js\"></script>\r\n  <script src=\"assets/js/parallax-scroll.js\"></script>\r\n\r\n
+    \ <!-- Carousel - Jquery Include -->\r\n  <script src=\"assets/js/slick.min.js\"></script>\r\n\r\n
+    \ <!-- Video & Image Popup - Jquery Include -->\r\n  <script src=\"assets/js/magnific-popup.min.js\"></script>\r\n\r\n
+    \ <!-- Counter Up - Jquery Include -->\r\n  <script src=\"assets/js/waypoint.js\"></script>\r\n
+    \ <script src=\"assets/js/counterup.min.js\"></script>\r\n\r\n  <!-- Countdown
+    Timer - jquery include -->\r\n  <script src=\"assets/js/countdown.js\"></script>\r\n\r\n
+    \ <!-- Vanilla Calendar - Jquery Include -->\r\n  <script src=\"assets/js/vanilla-calendar.min.js\"></script>\r\n\r\n
+    \ <!-- Custom - Jquery Include -->\r\n  <script src=\"assets/js/main.js\"></script>\r\n\r\n</body>\r\n\r\n</html>"
+  about.html: "<!doctype html>\r\n<html lang=\"en\">\r\n\r\n  <head>\r\n\r\n    <meta
+    charset=\"utf-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width,
+    initial-scale=1, shrink-to-fit=no\">\r\n    <meta http-equiv=\"x-ua-compatible\"
+    content=\"ie=edge\">\r\n\r\n    <title>About – betterproject</title>\r\n    <link
+    rel=\"shortcut icon\" href=\"assets/images/logo/favourite_icon_1.svg\">\r\n\r\n
+    \   <!-- Framework - CSS Include -->\r\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/bootstrap.min.css\">\r\n\r\n    <!-- Icon Font - CSS Include
+    -->\r\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/fontawesome.css\">\r\n\r\n
+    \   <!-- Animation - CSS Include -->\r\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/animate.css\">\r\n\r\n    <!-- Cursor - CSS Include -->\r\n
+    \   <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/cursor.css\">\r\n\r\n
+    \   <!-- Carousel - CSS Include -->\r\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/slick.css\">\r\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/slick-theme.css\">\r\n\r\n    <!-- Video & Image Popup - CSS
+    Include -->\r\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/magnific-popup.css\">\r\n\r\n
+    \   <!-- Vanilla Calendar - CSS Include -->\r\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/vanilla-calendar.min.css\">\r\n\r\n    <!-- Custom - CSS Include
+    -->\r\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/style.css\">\r\n\r\n
+    \ </head>\r\n\r\n\r\n  <body>\r\n\r\n    <!-- Body Wrap - Start -->\r\n    <div
+    class=\"page_wrapper\">\r\n\r\n      <!-- Back To Top - Start -->\r\n      <div
+    class=\"backtotop\">\r\n        <a href=\"#\" class=\"scroll\">\r\n          <i
+    class=\"far fa-arrow-up\"></i>\r\n        </a>\r\n      </div>\r\n      <!-- Back
+    To Top - End -->\r\n\r\n      <!-- Site Header - Start\r\n      ==================================================
+    -->\r\n      <header class=\"site_header site_header_1\">\r\n        <div class=\"container\">\r\n
+    \         <div class=\"row align-items-center\">\r\n            <div class=\"col
+    col-lg-3 col-5\">\r\n              <div class=\"site_logo\">\r\n                <a
+    class=\"site_link\" href=\"index.html\">\r\n                  <img src=\"assets/images/logo/site_logo.svg\"
+    \ >\r\n                </a>\r\n              </div>\r\n            </div>\r\n
+    \          \r\n          </div>\r\n        </div>\r\n      </header>\r\n      <!--
+    Site Header - End\r\n      ==================================================
+    -->\r\n\r\n      <!-- Main Body - Start\r\n      ==================================================
+    -->\r\n      <main class=\"page_content\">\r\n\r\n        <!-- Page Section -
+    Start\r\n        ================================================== -->\r\n        <section
+    class=\"page_banner\">\r\n          <div class=\"container\">\r\n            <div
+    class=\"content_wrapper\">\r\n              <div class=\"row align-items-center\">\r\n
+    \               <div class=\"col col-lg-6\">\r\n                  <ul class=\"breadcrumb_nav
+    unordered_list\">\r\n                    <li><a href=\"index.html\">Home</a></li>\r\n
+    \        \r\n                    <li>About</li>\r\n                  </ul>\r\n
+    \                 <h1 class=\"page_title\">About Us</h1>\r\n                  <p
+    class=\"page_description\">\r\n                    At betterproject, we’re passionate
+    about empowering learners with cutting-edge skills in UI/UX, Web Design, Animation,
+    DevOps, Node.js, Python, and more. Our mission is to provide high-quality, hands-on
+    learning experiences that prepare individuals and teams for success in the ever-evolving
+    tech industry. Whether you’re a beginner or seasoned professional, discover how
+    our expert-curated course bundles can accelerate your career growth and innovation.\r\n
+    \                 </p>\r\n                 \r\n                </div>\r\n              </div>\r\n
+    \           </div>\r\n          </div>\r\n        </section>\r\n        <!-- Page
+    Section - End\r\n        ================================================== -->\r\n\r\n
+    \       <!-- FAQ Section - Start\r\n        ==================================================
+    -->\r\n        <section class=\"faq_section section_space_lg\">\r\n          <div
+    class=\"container\">\r\n            <div class=\"section_heading text-center mb-3\">\r\n
+    \             <div class=\"row justify-content-center\">\r\n                <div
+    class=\"col col-lg-7\">\r\n                  <h2 class=\"heading_text\">\r\n                    Popular
+    Questions to Ask Before Choosing a Course\r\n                  </h2>\r\n                 \r\n
+    \               </div>\r\n              </div>\r\n            </div>\r\n\r\n            <div
+    class=\"row justify-content-center\">\r\n              <div class=\"col col-lg-6\">\r\n
+    \               <div class=\"accordion\" id=\"faq_accordion_1\">\r\n                  <div
+    class=\"accordion-item\">\r\n                    <div class=\"accordion-button\"
+    role=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#collapse_one\" aria-expanded=\"true\">\r\n
+    \                     What makes it different from other platforms?\r\n                    </div>\r\n
+    \                   <div id=\"collapse_one\" class=\"accordion-collapse collapse
+    show\" data-bs-parent=\"#faq_accordion_1\">\r\n                      <div class=\"accordion-body\">\r\n
+    \                       <p class=\"mb-0\">\r\n                          We differentiate
+    ourselves through our focus on practical, project-based learning. Our courses
+    are designed by industry experts to ensure you not only grasp concepts but also
+    gain hands-on experience that’s directly applicable in real-world scenarios. </p>\r\n
+    \                     </div>\r\n                    </div>\r\n                  </div>\r\n
+    \                 <div class=\"accordion-item\">\r\n                    <div class=\"accordion-button
+    collapsed\" role=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#collapse_two\"
+    aria-expanded=\"false\">\r\n                      How do I access the courses
+    after purchase?\r\n                    </div>\r\n                    <div id=\"collapse_two\"
+    class=\"accordion-collapse collapse\" data-bs-parent=\"#faq_accordion_1\">\r\n
+    \                     <div class=\"accordion-body\">\r\n                        <p
+    class=\"mb-0\">\r\n                          Upon purchase, you’ll receive instant
+    email for your course materials. You can download the file one time and then Learn
+    at your own pace, anytime and anywhere.</p>\r\n                      </div>\r\n
+    \                   </div>\r\n                  </div>\r\n                  <div
+    class=\"accordion-item\">\r\n                    <div class=\"accordion-button
+    collapsed\" role=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#collapse_three\"
+    aria-expanded=\"false\">\r\n                      Are the courses suitable for
+    beginners?\r\n                    </div>\r\n                    <div id=\"collapse_three\"
+    class=\"accordion-collapse collapse\" data-bs-parent=\"#faq_accordion_1\">\r\n
+    \                     <div class=\"accordion-body\">\r\n                        <p
+    class=\"mb-0\">\r\n                          Yes, our courses cater to all skill
+    levels. Whether you’re starting from scratch or looking to advance your skills,
+    our structured learning paths provide a seamless journey.   </p>\r\n                      </div>\r\n
+    \                   </div>\r\n                  </div>\r\n                  <div
+    class=\"accordion-item\">\r\n                    <div class=\"accordion-button
+    collapsed\" role=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#collapse_four\"
+    aria-expanded=\"false\">\r\n                      Can I interact with instructors
+    and other learners?\r\n                    </div>\r\n                    <div
+    id=\"collapse_four\" class=\"accordion-collapse collapse\" data-bs-parent=\"#faq_accordion_1\">\r\n
+    \                     <div class=\"accordion-body\">\r\n                        <p
+    class=\"mb-0\">\r\n                          Soon in future! Our courses encourage
+    interaction through discussion forums, live Q&A sessions, and instructor feedback.
+    Engage with a vibrant community of learners and experts  </p>\r\n                      </div>\r\n
+    \                   </div>\r\n                  </div>\r\n                </div>\r\n
+    \             </div>\r\n\r\n              <div class=\"col col-lg-6\">\r\n                <div
+    class=\"accordion\" id=\"faq_accordion_2\">\r\n                  <div class=\"accordion-item\">\r\n
+    \                   <div class=\"accordion-button\" role=\"button\" data-bs-toggle=\"collapse\"
+    data-bs-target=\"#a2_collapse_one\" aria-expanded=\"true\">\r\n                      Are
+    certificates provided upon course completion?\r\n                    </div>\r\n
+    \                   <div id=\"a2_collapse_one\" class=\"accordion-collapse collapse
+    show\" data-bs-parent=\"#faq_accordion_2\">\r\n                      <div class=\"accordion-body\">\r\n
+    \                       <p class=\"mb-0\">\r\n                          No, As
+    of now we are still building these features. But soon in future we will include
+    certificates. </p>\r\n                      </div>\r\n                    </div>\r\n
+    \                 </div>\r\n                  <div class=\"accordion-item\">\r\n
+    \                   <div class=\"accordion-button collapsed\" role=\"button\"
+    data-bs-toggle=\"collapse\" data-bs-target=\"#a2_collapse_two\" aria-expanded=\"false\">\r\n
+    \                     Can I Take More Than One Course at a Time?\r\n                    </div>\r\n
+    \                   <div id=\"a2_collapse_two\" class=\"accordion-collapse collapse\"
+    data-bs-parent=\"#faq_accordion_2\">\r\n                      <div class=\"accordion-body\">\r\n
+    \                       <p class=\"mb-0\">\r\n                          Yes you
+    can take as many courses as you wish. There is no limit to learning.\r\n                        </p>\r\n
+    \                     </div>\r\n                    </div>\r\n                  </div>\r\n
+    \                 <div class=\"accordion-item\">\r\n                    <div class=\"accordion-button
+    collapsed\" role=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#a2_collapse_three\"
+    aria-expanded=\"false\">\r\n                      Where can I go for help?\r\n
+    \                   </div>\r\n                    <div id=\"a2_collapse_three\"
+    class=\"accordion-collapse collapse\" data-bs-parent=\"#faq_accordion_2\">\r\n
+    \                     <div class=\"accordion-body\">\r\n                        <p
+    class=\"mb-0\">\r\n                         You can write us anytime at support@betterprojects.in
+    for any help. We will respond withing 24 hours.\r\n                        </p>\r\n
+    \                     </div>\r\n                    </div>\r\n                  </div>\r\n
+    \                 <div class=\"accordion-item\">\r\n                    <div class=\"accordion-button
+    collapsed\" role=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#a2_collapse_four\"
+    aria-expanded=\"false\">\r\n                      Why the prices are so low ?\r\n
+    \                   </div>\r\n                    <div id=\"a2_collapse_four\"
+    class=\"accordion-collapse collapse\" data-bs-parent=\"#faq_accordion_2\">\r\n
+    \                     <div class=\"accordion-body\">\r\n                        <p
+    class=\"mb-0\">\r\n                         Our aim is to encourage learning and
+    empower student and IT professionals. </p>\r\n                      </div>\r\n
+    \                   </div>\r\n                  </div>\r\n                </div>\r\n
+    \             </div>\r\n            </div>\r\n          </div>\r\n        </section>\r\n
+    \       <!-- FAQ Section - End\r\n        ==================================================
+    -->\r\n\r\n        <!-- Newslatter Section - Start\r\n        ==================================================
+    -->\r\n        <section class=\"newslatter_section\">\r\n          <div class=\"container\">\r\n
+    \           <div class=\"newslatter_box\" style=\"background-image: url('assets/images/shape/shape_img_6.svg');\">\r\n
+    \             <div class=\"row justify-content-center\">\r\n                <div
+    class=\"col col-lg-6\">\r\n                  <div class=\"section_heading text-center\">\r\n
+    \                   <h2 class=\"heading_text\">\r\n                      Join
+    our Newsletter to stay updated on Next Courses\r\n                    </h2>\r\n
+    \                   <p class=\"heading_description mb-0\">\r\n                      Subscribe
+    to our newsletter and stay informed about upcoming courses and updates. Don’t
+    miss out—join today!\r\n                    </p>\r\n                  </div>\r\n
+    \                 <form action=\"#\">\r\n                    <div class=\"form_item
+    m-0\">\r\n                      <input type=\"email\" name=\"email\" placeholder=\"Your
+    Email\">\r\n                      <button type=\"submit\" class=\"btn btn_dark\">\r\n
+    \                       <span>\r\n                          <small>Subsctibe</small>\r\n
+    \                         <small>Subsctibe</small>\r\n                        </span>\r\n
+    \                     </button>\r\n                    </div>\r\n                  </form>\r\n
+    \               </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n
+    \       </section>\r\n        <!-- Newslatter Section - End -->\r\n\r\n      </main>\r\n
+    \     <!-- Main Body - End\r\n      ==================================================
+    -->\r\n\r\n      <!-- Site Footer - Start\r\n      ==================================================
+    -->\r\n      <footer class=\"site_footer\">\r\n        <div class=\"footer_widget_area\">\r\n
+    \         <div class=\"container\">\r\n            <div class=\"row\">\r\n              <div
+    class=\"col col-lg-3 col-md-6 col-sm-6\">\r\n                <div class=\"footer_widget\">\r\n
+    \                 <div class=\"site_logo\">\r\n                    <a class=\"site_link\"
+    href=\"index.html\">\r\n                      <img src=\"assets/images/logo/site_logo_2.svg\"
+    \ >\r\n                    </a>\r\n                  </div>\r\n                 \r\n
+    \               </div>\r\n              </div>\r\n              <div class=\"col
+    col-lg-6\">\r\n                <div class=\"row\">\r\n                  <div class=\"col
+    col-md-4 col-sm-4\">\r\n                    <div class=\"footer_widget\">\r\n
+    \                     <ul class=\"page_list unordered_list_block\">\r\n                        <li>\r\n
+    \                         <a href=\"about.html\">\r\n                            <span
+    class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n                            <span
+    class=\"item_text\">About</span>\r\n                          </a>\r\n                        </li>\r\n
+    \                      \r\n                      </ul>\r\n                    </div>\r\n
+    \                 </div>\r\n                  <div class=\"col col-md-4 col-sm-4\">\r\n
+    \                   <div class=\"footer_widget\">\r\n                     \r\n
+    \                     <ul class=\"page_list unordered_list_block\">\r\n                        <li>\r\n
+    \                         <a href=\"contact.html\">\r\n                            <span
+    class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n                            <span
+    class=\"item_text\">Contact</span>\r\n                          </a>\r\n                        </li>\r\n
+    \                      \r\n                      </ul>\r\n                    </div>\r\n
+    \                 </div>\r\n                  <div class=\"col col-md-4 col-sm-4\">\r\n
+    \                   <div class=\"footer_widget\">\r\n                  \r\n                      <ul
+    class=\"page_list unordered_list_block\">\r\n                        <li>\r\n
+    \                         <a href=\"privacy_policy.html\">\r\n                            <span
+    class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n                            <span
+    class=\"item_text\">Private Policy</span>\r\n                          </a>\r\n
+    \                       </li>\r\n                       \r\n                      </ul>\r\n
+    \                   </div>\r\n                  </div>\r\n                </div>\r\n
+    \             </div>\r\n              <div class=\"col col-md-4 col-sm-4\">\r\n
+    \               <div class=\"footer_widget\">\r\n              \r\n                  <ul
+    class=\"page_list unordered_list_block\">\r\n                    <li>\r\n                      <a
+    href=\"service_terms.html\">\r\n                        <span class=\"item_icon\"><i
+    class=\"fas fa-caret-right\"></i></span>\r\n                        <span class=\"item_text\">Terms
+    and Conditions</span>\r\n                      </a>\r\n                    </li>\r\n
+    \                  \r\n                  </ul>\r\n                </div>\r\n              </div>\r\n\r\n
+    \             <div class=\"col col-md-4 col-sm-4\">\r\n                <div class=\"footer_widget\">\r\n
+    \             \r\n                  <ul class=\"page_list unordered_list_block\">\r\n
+    \                   <li>\r\n                      <a href=\"Refund_Policy.html\">\r\n
+    \                       <span class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n
+    \                       <span class=\"item_text\">Refund Policy</span>\r\n                      </a>\r\n
+    \                   </li>\r\n                   \r\n                  </ul>\r\n
+    \               </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n
+    \       </div>\r\n        \r\n      </footer>\r\n      <!-- Site Footer - End\r\n
+    \     ================================================== -->\r\n\r\n    </div>\r\n
+    \   <!-- Body Wrap - End -->\r\n\r\n    <!-- Framework - Jquery Include -->\r\n
+    \   <script src=\"assets/js/jquery.min.js\"></script>\r\n    <script src=\"assets/js/popper.min.js\"></script>\r\n
+    \   <script src=\"assets/js/bootstrap.min.js\"></script>\r\n    <script src=\"assets/js/bootstrap-dropdown-ml-hack.js\"></script>\r\n\r\n
+    \   <!-- animation - jquery include -->\r\n    <script src=\"assets/js/cursor.js\"></script>\r\n
+    \   <script src=\"assets/js/wow.min.js\"></script>\r\n    <script src=\"assets/js/tilt.min.js\"></script>\r\n
+    \   <script src=\"assets/js/parallax.min.js\"></script>\r\n    <script src=\"assets/js/parallax-scroll.js\"></script>\r\n\r\n
+    \   <!-- Carousel - Jquery Include -->\r\n    <script src=\"assets/js/slick.min.js\"></script>\r\n\r\n
+    \   <!-- Video & Image Popup - Jquery Include -->\r\n    <script src=\"assets/js/magnific-popup.min.js\"></script>\r\n\r\n
+    \   <!-- Counter Up - Jquery Include -->\r\n    <script src=\"assets/js/waypoint.js\"></script>\r\n
+    \   <script src=\"assets/js/counterup.min.js\"></script>\r\n\r\n    <!-- Countdown
+    Timer - jquery include -->\r\n    <script src=\"assets/js/countdown.js\"></script>\r\n\r\n
+    \   <!-- Vanilla Calendar - Jquery Include -->\r\n    <script src=\"assets/js/vanilla-calendar.min.js\"></script>\r\n\r\n
+    \   <!-- Custom - Jquery Include -->\r\n    <script src=\"assets/js/main.js\"></script>\r\n\r\n
+    \ </body>\r\n</html>\r\n"
+  contact.html: "<!doctype html>\r\n<html lang=\"en\">\r\n\r\n  <head>\r\n\r\n    <meta
+    charset=\"utf-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width,
+    initial-scale=1, shrink-to-fit=no\">\r\n    <meta http-equiv=\"x-ua-compatible\"
+    content=\"ie=edge\">\r\n\r\n    <title>Contact Us – betterproject</title>\r\n
+    \   <link rel=\"shortcut icon\" href=\"assets/images/logo/favourite_icon_1.svg\">\r\n\r\n
+    \   <!-- Framework - CSS Include -->\r\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/bootstrap.min.css\">\r\n\r\n    <!-- Icon Font - CSS Include
+    -->\r\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/fontawesome.css\">\r\n\r\n
+    \   <!-- Animation - CSS Include -->\r\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/animate.css\">\r\n\r\n    <!-- Cursor - CSS Include -->\r\n
+    \   <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/cursor.css\">\r\n\r\n
+    \   <!-- Carousel - CSS Include -->\r\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/slick.css\">\r\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/slick-theme.css\">\r\n\r\n    <!-- Video & Image Popup - CSS
+    Include -->\r\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/magnific-popup.css\">\r\n\r\n
+    \   <!-- Vanilla Calendar - CSS Include -->\r\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/vanilla-calendar.min.css\">\r\n\r\n    <!-- Custom - CSS Include
+    -->\r\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/style.css\">\r\n\r\n
+    \ </head>\r\n\r\n\r\n  <body>\r\n\r\n    <!-- Body Wrap - Start -->\r\n    <div
+    class=\"page_wrapper\">\r\n\r\n      <!-- Back To Top - Start -->\r\n      <div
+    class=\"backtotop\">\r\n        <a href=\"#\" class=\"scroll\">\r\n          <i
+    class=\"far fa-arrow-up\"></i>\r\n        </a>\r\n      </div>\r\n      <!-- Back
+    To Top - End -->\r\n\r\n      <!-- Site Header - Start\r\n      ==================================================
+    -->\r\n      <header class=\"site_header site_header_1\">\r\n        <div class=\"container\">\r\n
+    \         <div class=\"row align-items-center\">\r\n            <div class=\"col
+    col-lg-3 col-5\">\r\n              <div class=\"site_logo\">\r\n                <a
+    class=\"site_link\" href=\"index.html\">\r\n                  <img src=\"assets/images/logo/site_logo.svg\">\r\n
+    \               </a>\r\n              </div>\r\n            </div>\r\n\r\n          </div>\r\n
+    \       </div>\r\n      </header>\r\n      <!-- Site Header - End\r\n      ==================================================
+    -->\r\n\r\n      <!-- Main Body - Start\r\n      ==================================================
+    -->\r\n      <main class=\"page_content\">\r\n\r\n        <!-- Page Section -
+    Start\r\n        ================================================== -->\r\n\r\n
+    \       <!-- Page Section - End\r\n        ==================================================
+    -->\r\n\r\n        <!-- Contact Section - Start\r\n        ==================================================
+    -->\r\n        \r\n\r\n        <!-- Contact Form Section - Start\r\n        ==================================================
+    -->\r\n        <section class=\"contact_form_section section_space_lg bg_light
+    decoration_wrap overflow-hidden\">\r\n          <div class=\"container decoration_wrap\">\r\n
+    \           <div class=\"row justify-content-center\">\r\n              <div class=\"col
+    col-lg-7\">\r\n                <div class=\"section_heading text-center\">\r\n
+    \                 <ul class=\"breadcrumb_nav unordered_list\">\r\n                    <li><a
+    href=\"index.html\">Home</a></li>\r\n                    <li>Contact Us</li>\r\n
+    \                 </ul>\r\n                  <h2 class=\"heading_text mb-0\">\r\n
+    \                   Contact Our Support Team to Know What You Want\r\n                  </h2>\r\n
+    \               </div>\r\n              </div>\r\n            </div>\r\n\r\n            <form
+    action=\"#\">\r\n              <div class=\"row justify-content-center\">\r\n
+    \               <div class=\"col col-lg-8\">\r\n                  <div class=\"row\">\r\n
+    \                   <div class=\"col col-md-6\">\r\n                      <div
+    class=\"form_item m-0\">\r\n                        <label for=\"input_name\"
+    class=\"input_title\">Name</label>\r\n                        <input id=\"input_name\"
+    type=\"text\" name=\"name\" placeholder=\"Your Name\">\r\n                      </div>\r\n
+    \                   </div>\r\n                    <div class=\"col col-md-6\">\r\n
+    \                     <div class=\"form_item m-0\">\r\n                        <label
+    for=\"input_email\" class=\"input_title\">Email</label>\r\n                        <input
+    id=\"input_email\" type=\"email\" name=\"email\" placeholder=\"Your Email\">\r\n
+    \                     </div>\r\n                    </div>\r\n                    <div
+    class=\"col col-md-6\">\r\n                      <div class=\"form_item m-0\">\r\n
+    \                       <label for=\"input_phone\" class=\"input_title\">Phone</label>\r\n
+    \                       <input id=\"input_phone\" type=\"tel\" name=\"telephone\"
+    placeholder=\"Your Phone\">\r\n                      </div>\r\n                    </div>\r\n
+    \                   <div class=\"col col-md-6\">\r\n                      <div
+    class=\"form_item m-0\">\r\n                        <label for=\"input_jubject\"
+    class=\"input_title\">Subject</label>\r\n                        <select name=\"subject\"
+    id=\"input_jubject\">\r\n                          <option value=\"subject\" selected>Choose
+    Subject</option>\r\n                          <option value=\"volvo\">Volvo</option>\r\n
+    \                         <option value=\"saab\">Saab</option>\r\n                          <option
+    value=\"mercedes\">Mercedes</option>\r\n                          <option value=\"audi\">Audi</option>\r\n
+    \                       </select>\r\n                      </div>\r\n                    </div>\r\n
+    \                   <div class=\"col\">\r\n                      <div class=\"form_item\">\r\n
+    \                       <label for=\"input_message\" class=\"input_title\">Message</label>\r\n
+    \                       <textarea id=\"input_message\" name=\"message\" placeholder=\"Type
+    Your Message\"></textarea>\r\n                      </div>\r\n                      <button
+    type=\"submit\" class=\"btn btn_dark w-100 b-block\">\r\n                        <span>\r\n
+    \                         <small>Send Your Message</small>\r\n                          <small>Send
+    Your Message</small>\r\n                        </span>\r\n                      </button>\r\n
+    \                   </div>\r\n                  </div>\r\n                </div>\r\n
+    \             </div>\r\n            </form>\r\n\r\n            <div class=\"deco_item
+    shape_img_1 wow fadeInUp\" data-wow-delay=\".2s\">\r\n              <img src=\"assets/images/shape/shape_img_7.png\"
+    \ >\r\n            </div>\r\n            <div class=\"deco_item shape_img_2 wow
+    fadeInUp\" data-wow-delay=\".4s\">\r\n              <img src=\"assets/images/shape/shape_img_7.png\"
+    \ >\r\n            </div>\r\n          </div>\r\n\r\n          <div class=\"deco_item
+    shape_img_3 wow fadeInLeft\" data-wow-delay=\".2s\">\r\n            <img src=\"assets/images/shape/shape_img_7.png\"
+    \ >\r\n          </div>\r\n          <div class=\"deco_item shape_img_4 wow fadeInRight\"
+    data-wow-delay=\".4s\">\r\n            <img src=\"assets/images/shape/shape_img_7.png\"
+    \ >\r\n          </div>\r\n        </section>\r\n        <!-- Contact Form Section
+    - End\r\n        ================================================== -->\r\n\r\n
+    \       <!-- Brands Section - Start\r\n        ==================================================
+    -->\r\n        <section class=\"brands_section section_space_lg\">\r\n          <div
+    class=\"container\">\r\n            <div class=\"section_heading text-center mb-lg-5\">\r\n
+    \             <h2 class=\"heading_text mb-0\">\r\n                Employees of
+    These <span class=\"d-md-block\">Companies Study With Us</span>\r\n              </h2>\r\n
+    \           </div>\r\n            <ul class=\"brands_logo_list style_2 unordered_list\">\r\n
+    \             <li>\r\n                <a href=\"#!\">\r\n                  <img
+    src=\"assets/images/brands/logo_microsoft.png\" alt=\"Microsoft\">\r\n                </a>\r\n
+    \             </li>\r\n              <li>\r\n                <a href=\"#!\">\r\n
+    \                 <img src=\"assets/images/brands/logo_intel.png\" alt=\"Intel\">\r\n
+    \               </a>\r\n              </li>\r\n              <li>\r\n                <a
+    href=\"#!\">\r\n                  <img src=\"assets/images/brands/logo_alphabet.png\"
+    alt=\"Alphabet\">\r\n                </a>\r\n              </li>\r\n              <li>\r\n
+    \               <a href=\"#!\">\r\n                  <img src=\"assets/images/brands/logo_wix_com_website.png\"
+    alt=\"Wix\">\r\n                </a>\r\n              </li>\r\n              <li>\r\n
+    \               <a href=\"#!\">\r\n                  <img src=\"assets/images/brands/logo_cisco.png\"
+    alt=\"Cisco\">\r\n                </a>\r\n              </li>\r\n              <li>\r\n
+    \               <a href=\"#!\">\r\n                  <img src=\"assets/images/brands/logo_amazon.png\"
+    alt=\"Amazon\">\r\n                </a>\r\n              </li>\r\n            </ul>\r\n
+    \         </div>\r\n        </section>\r\n        <!-- Brands Section - End\r\n
+    \       ================================================== -->\r\n\r\n        <!--
+    Newslatter Section - Start\r\n        ==================================================
+    -->\r\n        <section class=\"newslatter_section\">\r\n          <div class=\"container\">\r\n
+    \           <div class=\"newslatter_box\" style=\"background-image: url('assets/images/shape/shape_img_6.svg');\">\r\n
+    \             <div class=\"row justify-content-center\">\r\n                <div
+    class=\"col col-lg-6\">\r\n                  <div class=\"section_heading text-center\">\r\n
+    \                   <h2 class=\"heading_text\">\r\n                      Join
+    our Newsletter to stay updated on Next Courses\r\n                    </h2>\r\n
+    \                   <p class=\"heading_description mb-0\">\r\n                      Subscribe
+    to our newsletter and stay informed about upcoming courses and updates. Don’t
+    miss out—join today!\r\n                    </p>\r\n                  </div>\r\n
+    \                 <form action=\"#\">\r\n                    <div class=\"form_item
+    m-0\">\r\n                      <input type=\"email\" name=\"email\" placeholder=\"Your
+    Email\">\r\n                      <button type=\"submit\" class=\"btn btn_dark\">\r\n
+    \                       <span>\r\n                          <small>Subsctibe</small>\r\n
+    \                         <small>Subsctibe</small>\r\n                        </span>\r\n
+    \                     </button>\r\n                    </div>\r\n                  </form>\r\n
+    \               </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n
+    \       </section>\r\n        <!-- Newslatter Section - End\r\n        ==================================================
+    -->\r\n\r\n      </main>\r\n      <!-- Main Body - End\r\n      ==================================================
+    -->\r\n      <!-- Site Footer - Start\r\n      ==================================================
+    -->\r\n      <footer class=\"site_footer\">\r\n        <div class=\"footer_widget_area\">\r\n
+    \         <div class=\"container\">\r\n            <div class=\"row\">\r\n              <div
+    class=\"col col-lg-3 col-md-6 col-sm-6\">\r\n                <div class=\"footer_widget\">\r\n
+    \                 <div class=\"site_logo\">\r\n                    <a class=\"site_link\"
+    href=\"index.html\">\r\n                      <img src=\"assets/images/logo/site_logo_2.svg\"
+    \ >\r\n                    </a>\r\n                  </div>\r\n                 \r\n
+    \               </div>\r\n              </div>\r\n              <div class=\"col
+    col-lg-6\">\r\n                <div class=\"row\">\r\n                  <div class=\"col
+    col-md-4 col-sm-4\">\r\n                    <div class=\"footer_widget\">\r\n
+    \                     <ul class=\"page_list unordered_list_block\">\r\n                        <li>\r\n
+    \                         <a href=\"about.html\">\r\n                            <span
+    class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n                            <span
+    class=\"item_text\">About</span>\r\n                          </a>\r\n                        </li>\r\n
+    \                      \r\n                      </ul>\r\n                    </div>\r\n
+    \                 </div>\r\n                  <div class=\"col col-md-4 col-sm-4\">\r\n
+    \                   <div class=\"footer_widget\">\r\n                     \r\n
+    \                     <ul class=\"page_list unordered_list_block\">\r\n                        <li>\r\n
+    \                         <a href=\"contact.html\">\r\n                            <span
+    class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n                            <span
+    class=\"item_text\">Contact</span>\r\n                          </a>\r\n                        </li>\r\n
+    \                      \r\n                      </ul>\r\n                    </div>\r\n
+    \                 </div>\r\n                  <div class=\"col col-md-4 col-sm-4\">\r\n
+    \                   <div class=\"footer_widget\">\r\n                  \r\n                      <ul
+    class=\"page_list unordered_list_block\">\r\n                        <li>\r\n
+    \                         <a href=\"privacy_policy.html\">\r\n                            <span
+    class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n                            <span
+    class=\"item_text\">Private Policy</span>\r\n                          </a>\r\n
+    \                       </li>\r\n                       \r\n                      </ul>\r\n
+    \                   </div>\r\n                  </div>\r\n                </div>\r\n
+    \             </div>\r\n              <div class=\"col col-md-4 col-sm-4\">\r\n
+    \               <div class=\"footer_widget\">\r\n              \r\n                  <ul
+    class=\"page_list unordered_list_block\">\r\n                    <li>\r\n                      <a
+    href=\"service_terms.html\">\r\n                        <span class=\"item_icon\"><i
+    class=\"fas fa-caret-right\"></i></span>\r\n                        <span class=\"item_text\">Terms
+    and Conditions</span>\r\n                      </a>\r\n                    </li>\r\n
+    \                  \r\n                  </ul>\r\n                </div>\r\n              </div>\r\n\r\n
+    \             <div class=\"col col-md-4 col-sm-4\">\r\n                <div class=\"footer_widget\">\r\n
+    \             \r\n                  <ul class=\"page_list unordered_list_block\">\r\n
+    \                   <li>\r\n                      <a href=\"Refund_Policy.html\">\r\n
+    \                       <span class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n
+    \                       <span class=\"item_text\">Refund Policy</span>\r\n                      </a>\r\n
+    \                   </li>\r\n                   \r\n                  </ul>\r\n
+    \               </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n
+    \       </div>\r\n       \r\n      </footer>\r\n      <!-- Site Footer - End\r\n
+    \     ================================================== -->\r\n    </div>\r\n
+    \   <!-- Body Wrap - End -->\r\n\r\n    <!-- Framework - Jquery Include -->\r\n
+    \   <script src=\"assets/js/jquery.min.js\"></script>\r\n    <script src=\"assets/js/popper.min.js\"></script>\r\n
+    \   <script src=\"assets/js/bootstrap.min.js\"></script>\r\n    <script src=\"assets/js/bootstrap-dropdown-ml-hack.js\"></script>\r\n\r\n
+    \   <!-- animation - jquery include -->\r\n    <script src=\"assets/js/cursor.js\"></script>\r\n
+    \   <script src=\"assets/js/wow.min.js\"></script>\r\n    <script src=\"assets/js/tilt.min.js\"></script>\r\n
+    \   <script src=\"assets/js/parallax.min.js\"></script>\r\n    <script src=\"assets/js/parallax-scroll.js\"></script>\r\n\r\n
+    \   <!-- Carousel - Jquery Include -->\r\n    <script src=\"assets/js/slick.min.js\"></script>\r\n\r\n
+    \   <!-- Video & Image Popup - Jquery Include -->\r\n    <script src=\"assets/js/magnific-popup.min.js\"></script>\r\n\r\n
+    \   <!-- Counter Up - Jquery Include -->\r\n    <script src=\"assets/js/waypoint.js\"></script>\r\n
+    \   <script src=\"assets/js/counterup.min.js\"></script>\r\n\r\n    <!-- Countdown
+    Timer - jquery include -->\r\n    <script src=\"assets/js/countdown.js\"></script>\r\n\r\n
+    \   <!-- Vanilla Calendar - Jquery Include -->\r\n    <script src=\"assets/js/vanilla-calendar.min.js\"></script>\r\n\r\n
+    \   <!-- Custom - Jquery Include -->\r\n    <script src=\"assets/js/main.js\"></script>\r\n\r\n
+    \ </body>\r\n</html>\r\n"
+  course_details.html: "<!doctype html>\r\n<html lang=\"en\">\r\n\r\n  <head>\r\n\r\n
+    \   <meta charset=\"utf-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width,
+    initial-scale=1, shrink-to-fit=no\">\r\n    <meta http-equiv=\"x-ua-compatible\"
+    content=\"ie=edge\">\r\n\r\n    <title>Project</title>\r\n    <link rel=\"shortcut
+    icon\" href=\"assets/images/logo/favourite_icon_1.svg\">\r\n\r\n    <!-- Framework
+    - CSS Include -->\r\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/bootstrap.min.css\">\r\n\r\n
+    \   <!-- Icon Font - CSS Include -->\r\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/fontawesome.css\">\r\n\r\n    <!-- Animation - CSS Include -->\r\n
+    \   <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/animate.css\">\r\n\r\n
+    \   <!-- Cursor - CSS Include -->\r\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/cursor.css\">\r\n\r\n    <!-- Carousel - CSS Include -->\r\n
+    \   <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/slick.css\">\r\n
+    \   <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/slick-theme.css\">\r\n\r\n
+    \   <!-- Video & Image Popup - CSS Include -->\r\n    <link rel=\"stylesheet\"
+    type=\"text/css\" href=\"assets/css/magnific-popup.css\">\r\n\r\n    <!-- Vanilla
+    Calendar - CSS Include -->\r\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/vanilla-calendar.min.css\">\r\n\r\n
+    \   <!-- Custom - CSS Include -->\r\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/style.css\">\r\n\r\n  </head>\r\n\r\n\r\n  <body>\r\n\r\n    <!--
+    Body Wrap - Start -->\r\n    <div class=\"page_wrapper\">\r\n\r\n      <!-- Back
+    To Top - Start -->\r\n      <div class=\"backtotop\">\r\n        <a href=\"#\"
+    class=\"scroll\">\r\n          <i class=\"far fa-arrow-up\"></i>\r\n        </a>\r\n
+    \     </div>\r\n      <!-- Back To Top - End -->\r\n\r\n      <!-- Site Header
+    - Start\r\n      ================================================== -->\r\n      <header
+    class=\"site_header site_header_1\">\r\n        <div class=\"container\">\r\n
+    \         <div class=\"row align-items-center\">\r\n            <div class=\"col
+    col-lg-3 col-5\">\r\n              <div class=\"site_logo\">\r\n                <a
+    class=\"site_link\" href=\"index.html\">\r\n                  <img src=\"assets/images/logo/site_logo.svg\"
+    \ >\r\n                </a>\r\n              </div>\r\n            </div>\r\n
+    \     \r\n          </div>\r\n        </div>\r\n      </header>\r\n      <!--
+    Site Header - End\r\n      ==================================================
+    -->\r\n\r\n      <!-- Main Body - Start\r\n      ==================================================
+    -->\r\n      <main class=\"page_content\">\r\n\r\n        <!-- Page Section -
+    Start\r\n        ================================================== -->\r\n        <section
+    class=\"page_banner\">\r\n          <div class=\"container\">\r\n            <div
+    class=\"content_wrapper\">\r\n              <div class=\"row align-items-center\">\r\n
+    \               <div class=\"col col-lg-7\">\r\n                  <ul class=\"breadcrumb_nav
+    unordered_list\">\r\n                    <li><a href=\"index.html\">Home</a></li>\r\n
+    \           \r\n                    <li>Project Details</li>\r\n                  </ul>\r\n
+    \                 <div id=\"projectsDetails\"> \r\n                    <h1 class=\"page_title\"
+    id=\"projectTitle\">\r\n                      \r\n                    </h1>\r\n
+    \                   <ul class=\"info_list unordered_list_block pb-0\">\r\n                      <li>\r\n
+    \                       <i class=\"fas fa-check\"></i>\r\n                        <span
+    id=\"projectDescription\">\r\n                        </span>\r\n                      </li>\r\n
+    \                   </ul>\r\n                  </div>\r\n                </div>\r\n
+    \             </div>\r\n            </div>\r\n          </section>\r\n          <!--
+    Page Section - End\r\n          ==================================================
+    -->\r\n  \r\n          <!-- Course Details Section - Start\r\n          ==================================================
+    -->\r\n          <section class=\"details_section course_details_section\">\r\n
+    \           <div class=\"container\">\r\n              <div class=\"row\">\r\n
+    \               <div class=\"col col-lg-8\">\r\n                  <div class=\"section_space_lg
+    pb-lg-0\">\r\n                    <div class=\"pe-lg-5\">\r\n                      <div
+    class=\"course_info_card d-lg-none\">\r\n                        <div class=\"details_image\"
+    id=\"projectImage\">\r\n                          \r\n                        </div>
+    \                       \r\n                        <div class=\"item_price\">\r\n
+    \                         <span class=\"sale_price\" id=\"price1\"></span>\r\n
+    \                       </div>\r\n                        <div id=\"buy2\"></div>\r\n
+    \                       <!-- <a href=\"pricing.html\" class=\"btn btn_dark\">
+    -->\r\n                          <!-- <span>\r\n                            <small>Buy
+    Now</small>\r\n                            <small>Buy Now</small>\r\n                          </span>
+    -->\r\n                        </a>\r\n                        <ul class=\"course_info_list
+    unordered_list_block\">                          \r\n                          <li>\r\n
+    \                           <span><i class=\"fas fa-clock\"></i> Duration</span>\r\n
+    \                           <strong id=\"duration1\"></strong>\r\n                          </li>\r\n
+    \                         <li>\r\n                            <span><i class=\"fas
+    fa-video\"></i> Projects</span>\r\n                            <strong id=\"project1\"></strong>\r\n
+    \                         </li>\r\n                         \r\n                        </ul>\r\n
+    \                     </div>\r\n  \r\n                      <div class=\"section_heading\">\r\n
+    \                       <h2 class=\"heading_text\">\r\n                          Project
+    Content\r\n                        </h2>\r\n                      </div>\r\n\r\n
+    \                     <div id=\"projectContent\"></div>\r\n  \r\n                    </div>\r\n
+    \                 </div>\r\n                </div>\r\n  \r\n                <div
+    class=\"col col-lg-4\">\r\n                  <aside class=\"sidebar\">\r\n                    <div
+    class=\"course_info_card d-none d-lg-block\">\r\n                      <div class=\"details_image\"
+    id=\"projectImage2\">\r\n                      </div>\r\n                      <div
+    class=\"item_price\">\r\n                        <span class=\"sale_price\" id=\"price2\"></span>\r\n
+    \                     </div>\r\n                      <div id=\"buy1\"></div>\r\n
+    \                     <!-- <a href=\"pricing.html\" class=\"btn btn_dark\"> -->\r\n
+    \                       <!-- <span>\r\n                          <small>Buy Now</small>\r\n
+    \                         <small>Buy Now</small>\r\n                        </span>
+    -->\r\n                      </a>\r\n                      <ul class=\"course_info_list
+    unordered_list_block\">                       \r\n                        <li>\r\n
+    \                         <span><i class=\"fas fa-clock\"></i> Duration</span>\r\n
+    \                         <strong id=\"duration2\"></strong>\r\n                        </li>\r\n
+    \                       <li>\r\n                          <span><i class=\"fas
+    fa-video\"></i> Project</span>\r\n                          <strong id=\"project2\"></strong>\r\n
+    \                       </li>\r\n                        \r\n                      </ul>\r\n
+    \                   </div>\r\n  \r\n                    \r\n  \r\n                   \r\n
+    \                 </aside>\r\n                </div>\r\n              </div>\r\n
+    \           </div>\r\n          </section>\r\n      \r\n\r\n                  </div>\r\n
+    \                 \r\n                  \r\n      \r\n       \r\n\r\n         <!--
+    Newslatter Section - Start\r\n        ==================================================
+    -->\r\n        <section class=\"newslatter_section\">\r\n          <div class=\"container\">\r\n
+    \           <div class=\"newslatter_box\" style=\"background-image: url('assets/images/shape/shape_img_6.svg');\">\r\n
+    \             <div class=\"row justify-content-center\">\r\n                <div
+    class=\"col col-lg-6\">\r\n                  <div class=\"section_heading text-center\">\r\n
+    \                   <h2 class=\"heading_text\">\r\n                      Join
+    our Newsletter to stay updated on Next Courses\r\n                    </h2>\r\n
+    \                   <p class=\"heading_description mb-0\">\r\n                      Subscribe
+    to our newsletter and stay informed about upcoming courses and updates. Don’t
+    miss out—join today!\r\n                    </p>\r\n                  </div>\r\n
+    \                 <form action=\"#\">\r\n                    <div class=\"form_item
+    m-0\">\r\n                      <input type=\"email\" name=\"email\" placeholder=\"Your
+    Email\">\r\n                      <button type=\"submit\" class=\"btn btn_dark\">\r\n
+    \                       <span>\r\n                          <small>Subsctibe</small>\r\n
+    \                         <small>Subsctibe</small>\r\n                        </span>\r\n
+    \                     </button>\r\n                    </div>\r\n                  </form>\r\n
+    \               </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n
+    \       </section>\r\n        <!-- Newslatter Section - End\r\n        ==================================================
+    -->\r\n\r\n      </main>\r\n      <!-- Main Body - End\r\n      ==================================================
+    -->\r\n\r\n      <!-- Site Footer - Start\r\n      ==================================================
+    -->\r\n      <footer class=\"site_footer\">\r\n        <div class=\"footer_widget_area\">\r\n
+    \         <div class=\"container\">\r\n            <div class=\"row\">\r\n              <div
+    class=\"col col-lg-3 col-md-6 col-sm-6\">\r\n                <div class=\"footer_widget\">\r\n
+    \                 <div class=\"site_logo\">\r\n                    <a class=\"site_link\"
+    href=\"index.html\">\r\n                      <img src=\"assets/images/logo/site_logo_2.svg\"
+    \ >\r\n                    </a>\r\n                  </div>\r\n                 \r\n
+    \               </div>\r\n              </div>\r\n              <div class=\"col
+    col-lg-6\">\r\n                <div class=\"row\">\r\n                  <div class=\"col
+    col-md-4 col-sm-4\">\r\n                    <div class=\"footer_widget\">\r\n
+    \                     <ul class=\"page_list unordered_list_block\">\r\n                        <li>\r\n
+    \                         <a href=\"about.html\">\r\n                            <span
+    class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n                            <span
+    class=\"item_text\">About</span>\r\n                          </a>\r\n                        </li>\r\n
+    \                      \r\n                      </ul>\r\n                    </div>\r\n
+    \                 </div>\r\n                  <div class=\"col col-md-4 col-sm-4\">\r\n
+    \                   <div class=\"footer_widget\">\r\n                     \r\n
+    \                     <ul class=\"page_list unordered_list_block\">\r\n                        <li>\r\n
+    \                         <a href=\"contact.html\">\r\n                            <span
+    class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n                            <span
+    class=\"item_text\">Contact</span>\r\n                          </a>\r\n                        </li>\r\n
+    \                      \r\n                      </ul>\r\n                    </div>\r\n
+    \                 </div>\r\n                  <div class=\"col col-md-4 col-sm-4\">\r\n
+    \                   <div class=\"footer_widget\">\r\n                  \r\n                      <ul
+    class=\"page_list unordered_list_block\">\r\n                        <li>\r\n
+    \                         <a href=\"privacy_policy.html\">\r\n                            <span
+    class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n                            <span
+    class=\"item_text\">Private Policy</span>\r\n                          </a>\r\n
+    \                       </li>\r\n                       \r\n                      </ul>\r\n
+    \                   </div>\r\n                  </div>\r\n                </div>\r\n
+    \             </div>\r\n              <div class=\"col col-md-4 col-sm-4\">\r\n
+    \               <div class=\"footer_widget\">\r\n              \r\n                  <ul
+    class=\"page_list unordered_list_block\">\r\n                    <li>\r\n                      <a
+    href=\"service_terms.html\">\r\n                        <span class=\"item_icon\"><i
+    class=\"fas fa-caret-right\"></i></span>\r\n                        <span class=\"item_text\">Terms
+    and Conditions</span>\r\n                      </a>\r\n                    </li>\r\n
+    \                  \r\n                  </ul>\r\n                </div>\r\n              </div>\r\n\r\n
+    \             <div class=\"col col-md-4 col-sm-4\">\r\n                <div class=\"footer_widget\">\r\n
+    \             \r\n                  <ul class=\"page_list unordered_list_block\">\r\n
+    \                   <li>\r\n                      <a href=\"Refund_Policy.html\">\r\n
+    \                       <span class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n
+    \                       <span class=\"item_text\">Refund Policy</span>\r\n                      </a>\r\n
+    \                   </li>\r\n                   \r\n                  </ul>\r\n
+    \               </div>\r\n              </div>\r\n              \r\n            </div>\r\n
+    \         </div>\r\n        </div>\r\n        \r\n      </footer>\r\n      <!--
+    Site Footer - End\r\n      ==================================================
+    -->\r\n\r\n    </div>\r\n    <!-- Body Wrap - End -->\r\n\r\n    <!-- Framework
+    - Jquery Include -->\r\n    <script src=\"assets/js/jquery.min.js\"></script>\r\n
+    \   <script src=\"assets/js/popper.min.js\"></script>\r\n    <script src=\"assets/js/bootstrap.min.js\"></script>\r\n
+    \   <script src=\"assets/js/bootstrap-dropdown-ml-hack.js\"></script>\r\n\r\n
+    \   <!-- animation - jquery include -->\r\n    <script src=\"assets/js/cursor.js\"></script>\r\n
+    \   <script src=\"assets/js/wow.min.js\"></script>\r\n    <script src=\"assets/js/tilt.min.js\"></script>\r\n
+    \   <script src=\"assets/js/parallax.min.js\"></script>\r\n    <script src=\"assets/js/parallax-scroll.js\"></script>\r\n\r\n
+    \   <!-- Carousel - Jquery Include -->\r\n    <script src=\"assets/js/slick.min.js\"></script>\r\n\r\n
+    \   <!-- Video & Image Popup - Jquery Include -->\r\n    <script src=\"assets/js/magnific-popup.min.js\"></script>\r\n\r\n
+    \   <!-- Counter Up - Jquery Include -->\r\n    <script src=\"assets/js/waypoint.js\"></script>\r\n
+    \   <script src=\"assets/js/counterup.min.js\"></script>\r\n\r\n    <!-- Countdown
+    Timer - jquery include -->\r\n    <script src=\"assets/js/countdown.js\"></script>\r\n\r\n
+    \   <!-- Vanilla Calendar - Jquery Include -->\r\n    <script src=\"assets/js/vanilla-calendar.min.js\"></script>\r\n\r\n
+    \   <!-- Custom - Jquery Include -->\r\n    <script src=\"assets/js/main.js\"></script>\r\n
+    \   <script src=\"https://checkout.razorpay.com/v1/checkout.js\"></script>\r\n
+    \   <script src=\"courseScript.js\"></script>\r\n\r\n  </body>\r\n</html>\r\n"
+  error.html: "<!doctype html>\r\n<html lang=\"en\">\r\n\r\n  <head>\r\n\r\n  \t<meta
+    charset=\"utf-8\">\r\n  \t<meta name=\"viewport\" content=\"width=device-width,
+    initial-scale=1, shrink-to-fit=no\">\r\n  \t<meta http-equiv=\"x-ua-compatible\"
+    content=\"ie=edge\">\r\n\r\n  \t<title>404 Page not found – betterproject</title>\r\n
+    \ \t<link rel=\"shortcut icon\" href=\"assets/images/logo/favourite_icon_1.svg\">\r\n\r\n
+    \ \t<!-- Framework - CSS Include -->\r\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/bootstrap.min.css\">\r\n\r\n    <!-- Icon Font - CSS Include
+    -->\r\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/fontawesome.css\">\r\n\r\n
+    \   <!-- Animation - CSS Include -->\r\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/animate.css\">\r\n\r\n    <!-- Cursor - CSS Include -->\r\n
+    \   <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/cursor.css\">\r\n\r\n
+    \   <!-- Carousel - CSS Include -->\r\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/slick.css\">\r\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/slick-theme.css\">\r\n\r\n    <!-- Video & Image Popup - CSS
+    Include -->\r\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/magnific-popup.css\">\r\n\r\n
+    \   <!-- Vanilla Calendar - CSS Include -->\r\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/vanilla-calendar.min.css\">\r\n\r\n    <!-- Custom - CSS Include
+    -->\r\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/style.css\">\r\n\r\n
+    \ </head>\r\n\r\n\r\n  <body>\r\n\r\n    <!-- Body Wrap - Start -->\r\n    <div
+    class=\"page_wrapper\">\r\n\r\n      <!-- Main Body - Start\r\n      ==================================================
+    -->\r\n      <main class=\"page_content\">\r\n\r\n        <!-- Error Section -
+    Start\r\n        ================================================== -->\r\n        <section
+    class=\"error_section text-center decoration_wrap\">\r\n          <div class=\"container
+    decoration_wrap\">\r\n            <div class=\"error_image\">\r\n              <img
+    src=\"assets/images/error_image.png\"  >\r\n            </div>\r\n            <h1
+    class=\"error_title\">There was an error</h1>\r\n            <p class=\"error_description\">\r\n
+    \           For any queries, please contact us at <a href=\"mailto:support@betterprojects.in\">support@betterprojects.in</a>
+    or <a href=\"/contact.html\">contact us</a>\r\n            </p>\r\n          \r\n\r\n
+    \           <div class=\"deco_item shape_img_1 wow fadeInUp\" data-wow-delay=\".2s\">\r\n
+    \             <img src=\"assets/images/shape/shape_img_7.png\"  >\r\n            </div>\r\n
+    \           <div class=\"deco_item shape_img_2 wow fadeInUp\" data-wow-delay=\".4s\">\r\n
+    \             <img src=\"assets/images/shape/shape_img_7.png\"  >\r\n            </div>\r\n
+    \         </div>\r\n\r\n          <div class=\"deco_item shape_img_3 wow fadeInLeft\"
+    data-wow-delay=\".2s\">\r\n            <img src=\"assets/images/shape/shape_img_7.png\"
+    \ >\r\n          </div>\r\n          <div class=\"deco_item shape_img_4 wow fadeInRight\"
+    data-wow-delay=\".4s\">\r\n            <img src=\"assets/images/shape/shape_img_7.png\"
+    \ >\r\n          </div>\r\n        </section>\r\n        <!-- Error Section -
+    End\r\n        ================================================== -->\r\n\r\n
+    \     </main>\r\n      <!-- Main Body - End\r\n      ==================================================
+    -->\r\n\r\n    </div>\r\n    <!-- Body Wrap - End -->\r\n\r\n    <!-- Framework
+    - Jquery Include -->\r\n    <script src=\"assets/js/jquery.min.js\"></script>\r\n
+    \   <script src=\"assets/js/popper.min.js\"></script>\r\n    <script src=\"assets/js/bootstrap.min.js\"></script>\r\n
+    \   <script src=\"assets/js/bootstrap-dropdown-ml-hack.js\"></script>\r\n\r\n
+    \   <!-- animation - jquery include -->\r\n    <script src=\"assets/js/cursor.js\"></script>\r\n
+    \   <script src=\"assets/js/wow.min.js\"></script>\r\n    <script src=\"assets/js/tilt.min.js\"></script>\r\n
+    \   <script src=\"assets/js/parallax.min.js\"></script>\r\n    <script src=\"assets/js/parallax-scroll.js\"></script>\r\n\r\n
+    \   <!-- Carousel - Jquery Include -->\r\n    <script src=\"assets/js/slick.min.js\"></script>\r\n\r\n
+    \   <!-- Video & Image Popup - Jquery Include -->\r\n    <script src=\"assets/js/magnific-popup.min.js\"></script>\r\n\r\n
+    \   <!-- Counter Up - Jquery Include -->\r\n    <script src=\"assets/js/waypoint.js\"></script>\r\n
+    \   <script src=\"assets/js/counterup.min.js\"></script>\r\n\r\n    <!-- Countdown
+    Timer - jquery include -->\r\n    <script src=\"assets/js/countdown.js\"></script>\r\n\r\n
+    \   <!-- Vanilla Calendar - Jquery Include -->\r\n    <script src=\"assets/js/vanilla-calendar.min.js\"></script>\r\n\r\n
+    \   <!-- Custom - Jquery Include -->\r\n    <script src=\"assets/js/main.js\"></script>\r\n\r\n
+    \ </body>\r\n</html>\r\n"
+  index.html: "<!doctype html>\r\n<html lang=\"en\">\r\n\r\n  <head>\r\n\r\n  \t<meta
+    charset=\"utf-8\">\r\n  \t<meta name=\"viewport\" content=\"width=device-width,
+    initial-scale=1, shrink-to-fit=no\">\r\n  \t<meta http-equiv=\"x-ua-compatible\"
+    content=\"ie=edge\">\r\n\r\n  \t<title>BetterProjects – Elevate Your Projects
+    with Ease</title>\r\n  \t<link rel=\"shortcut icon\" href=\"assets/images/logo/favourite_icon_1.svg\">\r\n\r\n
+    \ \t<!-- Framework - CSS Include -->\r\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/bootstrap.min.css\">\r\n\r\n    <!-- Icon Font - CSS Include
+    -->\r\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/fontawesome.css\">\r\n\r\n
+    \   <!-- Animation - CSS Include -->\r\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/animate.css\">\r\n\r\n    <!-- Cursor - CSS Include -->\r\n
+    \   <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/cursor.css\">\r\n\r\n
+    \   <!-- Carousel - CSS Include -->\r\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/slick.css\">\r\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/slick-theme.css\">\r\n\r\n    <!-- Video & Image Popup - CSS
+    Include -->\r\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/magnific-popup.css\">\r\n\r\n
+    \   <!-- Vanilla Calendar - CSS Include -->\r\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/vanilla-calendar.min.css\">\r\n\r\n    <!-- Custom - CSS Include
+    -->\r\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/style.css\">\r\n\r\n
+    \ </head>\r\n\r\n\r\n  <body>\r\n\r\n    <!-- Body Wrap - Start -->\r\n    <div
+    class=\"page_wrapper\">\r\n\r\n      <!-- Back To Top - Start -->\r\n      <div
+    class=\"backtotop\">\r\n        <a href=\"#\" class=\"scroll\">\r\n          <i
+    class=\"far fa-arrow-up\"></i>\r\n        </a>\r\n      </div>\r\n      <!-- Back
+    To Top - End -->\r\n\r\n      <!-- Site Header - Start\r\n      ==================================================
+    -->\r\n      <header class=\"site_header\">\r\n        <div class=\"container\">\r\n
+    \         <div class=\"row align-items-center\">\r\n            <div class=\"col
+    col-lg-3 col-5\">\r\n              <div class=\"site_logo\">\r\n                <a
+    class=\"site_link\" href=\"index.html\">\r\n                  <img src=\"assets/images/logo/site_logo.svg\"
+    alt=\"BetterProjects – Elevate Your Projects with Ease\">\r\n                </a>\r\n
+    \             </div>\r\n            </div>\r\n        \r\n          </div>\r\n
+    \       </div>\r\n      </header>\r\n      <!-- Site Header - End\r\n      ==================================================
+    -->\r\n\r\n      <!-- Main Body - Start\r\n      ==================================================
+    -->\r\n      <main class=\"page_content\">\r\n\r\n        <!-- Banner Section
+    - Start\r\n        ================================================== -->\r\n
+    \       <section class=\"hero_banner style_2 mouse_move\" style=\"background-image:
+    url('assets/images/shape/shape_img_6.svg');\">\r\n          <div class=\"container\">\r\n
+    \           <div class=\"row align-items-center\">\r\n              <div class=\"col
+    col-lg-6\">\r\n                <h1 class=\"banner_big_title\">\r\n                  Master
+    Your Skills with Expert Course Bundles\r\n                </h1>\r\n                <p
+    class=\"banner_description\">\r\n                  Boost your creativity and productivity,
+    from UI/UX to Python – with our affordable, high-quality project bundles. \r\n
+    \               </p>\r\n                <form action=\"#\">\r\n      \r\n                </form>\r\n
+    \               <ul class=\"tags_list unordered_list\">\r\n                  <li><a
+    href=\"#projectsContainer\">Animation</a></li>\r\n                  <li><a href=\"#projectsContainer\">UI
+    design</a></li>\r\n                  <li><a href=\"#projectsContainer\">Web development</a></li>\r\n\r\n
+    \               </ul>\r\n              </div>\r\n              <div class=\"col
+    col-lg-6\">\r\n                <div class=\"banner_image_2\">\r\n                  <div
+    class=\"image_wrap_1\">\r\n                    <div class=\"layer\" data-depth=\"0.1\">\r\n
+    \                     <img src=\"assets/images/banner/hero_banner_img_2.png\"
+    \ >\r\n                    </div>\r\n                  </div>\r\n                  <div
+    class=\"child_image image_wrap_2\">\r\n                    <div class=\"layer\"
+    data-depth=\"0.3\">\r\n                      <img src=\"assets/images/banner/hero_banner_img_3.jpg\"
+    \ >\r\n                    </div>\r\n                  </div>\r\n                  <div
+    class=\"child_image image_wrap_3\">\r\n                    <div class=\"layer\"
+    data-depth=\"0.2\">\r\n                      <img src=\"assets/images/banner/hero_banner_img_4.jpg\"
+    \ >\r\n                    </div>\r\n                  </div>\r\n                  <div
+    class=\"child_image image_wrap_4\">\r\n                    <div class=\"layer\"
+    data-depth=\"0.4\">\r\n                      <img src=\"assets/images/banner/hero_banner_img_5.jpg\"
+    \ >\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n
+    \             </div>\r\n            </div>\r\n          </div>\r\n        </section>\r\n
+    \       <!-- Banner Section - End\r\n        ==================================================
+    -->\r\n\r\n        <!-- Courses Section - Start\r\n        ==================================================
+    -->\r\n        <section class=\"courses_section section_space_lg\">\r\n          <div
+    class=\"container\">\r\n            <div class=\"section_heading\">\r\n              <div
+    class=\"row align-items-center\">\r\n                <div class=\"col col-md-6\">\r\n
+    \                 <h2 class=\"heading_text mb-0\">\r\n                    Our
+    Courses\r\n                  </h2>\r\n                </div>\r\n              \r\n
+    \             </div>\r\n            </div>\r\n\r\n            <div class=\"row\"
+    id=\"projectsContainer\">\r\n            </div>\r\n\r\n            <div class=\"btn_wrap
+    d-block d-lg-none pb-0 text-center\">\r\n              <a class=\"btn border_dark\"
+    href=\"course.html\">\r\n                <span>\r\n                  <small>Explore
+    Courses</small>\r\n                  <small>Explore Courses</small>\r\n                </span>\r\n
+    \             </a>\r\n            </div>\r\n          </div>\r\n        </section>\r\n
+    \       <!-- Courses Section - End\r\n        ==================================================
+    -->\r\n\r\n        <!-- Intro Video Section - Start\r\n        ==================================================
+    -->\r\n        <section class=\"intro_video_section section_space_lg bg_light_2
+    overflow-hidden decoration_wrap\">\r\n          <div class=\"container position-relative\">\r\n
+    \           <div class=\"section_heading text-center\">\r\n              <h2 class=\"heading_text
+    mb-0\">\r\n                Our Сourses are Suitable for…\r\n              </h2>\r\n
+    \           </div>\r\n           \r\n            <div class=\"row\">\r\n              <div
+    class=\"col col-lg-3 col-md-6 col-sm-6\">\r\n                <div class=\"iconbox_item\">\r\n
+    \                 <div class=\"title_wrap\">\r\n                    <div class=\"item_icon\">\r\n
+    \                     <i class=\"fas fa-signal-1\"></i>\r\n                    </div>\r\n
+    \                   <h3 class=\"item_title mb-0\">\r\n                      <span
+    class=\"d-block\">For Beginners</span>\r\n                      Students\r\n                    </h3>\r\n
+    \                 </div>\r\n                  <p class=\"mb-0\">\r\n                    Structured
+    introduction to UI/UX, Web Design, Animation, DevOps, Node.js, Python, and more.\r\n
+    \                 </p>\r\n                </div>\r\n              </div>\r\n              <div
+    class=\"col col-lg-3 col-md-6 col-sm-6\">\r\n                <div class=\"iconbox_item\">\r\n
+    \                 <div class=\"title_wrap\">\r\n                    <div class=\"item_icon\">\r\n
+    \                     <i class=\"fas fa-signal-2\"></i>\r\n                    </div>\r\n
+    \                   <h3 class=\"item_title mb-0\">\r\n                      <span
+    class=\"d-block\">Beginners</span>\r\n                      IT Specialists\r\n
+    \                   </h3>\r\n                  </div>\r\n                  <p
+    class=\"mb-0\">\r\n                    Foundational knowledge in UI/UX, Web Design,
+    Animation, DevOps, Node.js, Python, and beyond.\r\n                  </p>\r\n
+    \               </div>\r\n              </div>\r\n              <div class=\"col
+    col-lg-3 col-md-6 col-sm-6\">\r\n                <div class=\"iconbox_item\">\r\n
+    \                 <div class=\"title_wrap\">\r\n                    <div class=\"item_icon\">\r\n
+    \                     <i class=\"fas fa-signal-3\"></i>\r\n                    </div>\r\n
+    \                   <h3 class=\"item_title mb-0\">\r\n                      <span
+    class=\"d-block\">Current</span>\r\n                      IT Specialists\r\n                    </h3>\r\n
+    \                 </div>\r\n                  <p class=\"mb-0\">\r\n                    Advanced
+    techniques and industry trends in UI/UX, Web Design, Animation, DevOps, Node.js,
+    Python, and more\r\n                  </p>\r\n                </div>\r\n              </div>\r\n
+    \             <div class=\"col col-lg-3 col-md-6 col-sm-6\">\r\n                <div
+    class=\"iconbox_item\">\r\n                  <div class=\"title_wrap\">\r\n                    <div
+    class=\"item_icon\">\r\n                      <i class=\"fas fa-signal-4\"></i>\r\n
+    \                   </div>\r\n                    <h3 class=\"item_title mb-0\">\r\n
+    \                     <span class=\"d-block\">Corporate</span>\r\n                      Customers\r\n
+    \                   </h3>\r\n                  </div>\r\n                  <p
+    class=\"mb-0\">\r\n                    Scalable learning for teams in UI/UX, Web
+    Design, Animation, DevOps, Node.js, Python, and more.\r\n                  </p>\r\n
+    \               </div>\r\n              </div>\r\n            </div>\r\n\r\n            <div
+    class=\"deco_item shape_img_1\" data-parallax='{\"y\" : 130, \"smoothness\": 6}'>\r\n
+    \             <img src=\"assets/images/shape/shape_img_7.png\"  >\r\n            </div>\r\n
+    \           <div class=\"deco_item shape_img_2\" data-parallax='{\"y\" : -130,
+    \"smoothness\": 6}'>\r\n              <img src=\"assets/images/shape/shape_img_7.png\"
+    \ >\r\n            </div>\r\n          </div>\r\n          <div class=\"deco_item
+    shape_img_3\" data-parallax='{\"y\" : -130, \"smoothness\": 6}'>\r\n            <img
+    src=\"assets/images/shape/shape_img_7.png\"  >\r\n          </div>\r\n        </section>\r\n
+    \       <!-- Intro Video Section - End\r\n        ==================================================
+    -->\r\n\r\n\r\n        <!-- Testimonial Section - Start\r\n        ==================================================
+    -->\r\n        <section class=\"testimonial_section section_space_lg\">\r\n          <div
+    class=\"container\">\r\n            <div class=\"testimonial_carousel\">\r\n              <div
+    class=\"common_carousel_1col\" data-cursor-text=\"Drag\" data-slick='{\"dots\":false}'>\r\n
+    \               <div class=\"carousel_item\">\r\n                  <div class=\"testimonial_item_2\">\r\n
+    \                   <div class=\"testimonial_image ms-0\" style=\"background-image:
+    url('assets/images/shape/shape_img_6.svg');\">\r\n                      <img src=\"assets/images/testimonial/testimonial_img_3.png\"
+    \ >\r\n                    </div>\r\n                    <div class=\"testimonial_content\">\r\n
+    \                     <div class=\"quote_icon\">\r\n                        <img
+    src=\"assets/images/icon/icon_quote.svg\"  >\r\n                      </div>\r\n
+    \                     <h3 class=\"testimonial_title\">\r\n                        Game-Changer
+    for My Career\r\n                      </h3>\r\n                      <p>\r\n
+    \                       The courses on UI/UX, Web Design, and Python offered by
+    9 have been a game-changer for my career. As someone transitioning into the tech
+    industry, these comprehensive and well-structured courses provided me with the
+    skills and confidence to tackle real-world challenges. The practical projects
+    were particularly valuable, allowing me to apply theoretical knowledge in a hands-on
+    manner. Thanks to these courses, I not only enhanced my technical proficiency
+    but also stood out during job interviews. I highly recommend betterprojects to
+    anyone looking to advance their career in tech!\r\n                      </p>\r\n
+    \                     <div class=\"testimonial_admin\">\r\n                        <!--
+    \ <div class=\"admin_image\">\r\n                          <img src=\"assets/images/meta/testimonial_thumbnail_1.jpg\"
+    \ >\r\n                        </div> -->\r\n                        <div class=\"admin_content\">\r\n
+    \                         <h5 class=\"testimonial_name\">Jyoti Patel</h5>\r\n
+    \                         <span class=\"testimonial_designation\">Product Designer</span>\r\n
+    \                       </div>\r\n                      </div>\r\n                    </div>\r\n
+    \                 </div>\r\n                </div>\r\n                <div class=\"carousel_item\">\r\n
+    \                 <div class=\"testimonial_item_2\">\r\n                    <div
+    class=\"testimonial_image ms-0\" style=\"background-image: url('assets/images/shape/shape_img_6.svg');\">\r\n
+    \                     <img src=\"assets/images/testimonial/testimonial_img_4.png\"
+    \ >\r\n                    </div>\r\n                    <div class=\"testimonial_content\">\r\n
+    \                     <div class=\"quote_icon\">\r\n                        <img
+    src=\"assets/images/icon/icon_quote.svg\"  >\r\n                      </div>\r\n
+    \                     <h3 class=\"testimonial_title\">\r\n                        Perfect
+    for Beginners\r\n                      </h3>\r\n                      <p>\r\n
+    \                       I started my journey in DevOps and Node.js with betterproject’s
+    beginner-friendly courses, and I couldn’t be happier with my progress. The courses
+    are meticulously designed with clear explanations and step-by-step instructions,
+    making complex concepts easy to understand. What I appreciated the most were the
+    practical projects that accompanied each module—they allowed me to apply what
+    I learned in a practical setting, building my skills and boosting my confidence.
+    Whether you’re new to tech or looking to expand your knowledge, these courses
+    are a perfect choice\r\n                      </p>\r\n                      <div
+    class=\"testimonial_admin\">\r\n                       <!-- <div class=\"admin_image\">\r\n
+    \                         <img src=\"assets/images/meta/testimonial_thumbnail_1.jpg\"
+    \ >\r\n                        </div> -->\r\n                        <div class=\"admin_content\">\r\n
+    \                         <h5 class=\"testimonial_name\">Satyaki Dey</h5>\r\n
+    \                         <span class=\"testimonial_designation\">Btech Student,
+    4th Year</span>\r\n                        </div>\r\n                      </div>\r\n
+    \                   </div>\r\n                  </div>\r\n                </div>\r\n
+    \               <div class=\"carousel_item\">\r\n                  <div class=\"testimonial_item_2\">\r\n
+    \                   <div class=\"testimonial_image ms-0\" style=\"background-image:
+    url('assets/images/shape/shape_img_6.svg');\">\r\n                      <img src=\"assets/images/testimonial/testimonial_img_5.png\"
+    \ >\r\n                    </div>\r\n                    <div class=\"testimonial_content\">\r\n
+    \                     <div class=\"quote_icon\">\r\n                        <img
+    src=\"assets/images/icon/icon_quote.svg\"  >\r\n                      </div>\r\n
+    \                     <h3 class=\"testimonial_title\">\r\n                        Advanced
+    Learning Made Easy\r\n                      </h3>\r\n                      <p>\r\n
+    \                       Having worked in IT for several years, I was looking to
+    deepen my expertise in Animation and Web Design. The advanced courses offered
+    by betterproject exceeded my expectations. The content was not only comprehensive
+    but also up-to-date with industry trends, ensuring that I stayed ahead in my field.
+    The instructors were knowledgeable and provided valuable insights, which I found
+    incredibly valuable. The practical exercises and projects challenged me to think
+    creatively and apply new techniques to real-world scenarios. If you’re a seasoned
+    professional looking to enhance your skills, I highly recommend betterproject’s
+    advanced learning programs.\r\n                      </p>\r\n                      <div
+    class=\"testimonial_admin\">\r\n                         <!-- <div class=\"admin_image\">\r\n
+    \                         <img src=\"assets/images/meta/testimonial_thumbnail_1.jpg\"
+    \ >\r\n                        </div> -->\r\n                        <div class=\"admin_content\">\r\n
+    \                         <h5 class=\"testimonial_name\">Bharat Kumar</h5>\r\n
+    \                         <span class=\"testimonial_designation\">Senior UI Designer</span>\r\n
+    \                       </div>\r\n                      </div>\r\n                    </div>\r\n
+    \                 </div>\r\n                </div>\r\n              </div>\r\n
+    \           </div>\r\n          </div>\r\n        </section>\r\n        <!-- Testimonial
+    Section - End\r\n        ================================================== -->\r\n\r\n
+    \       <!-- Call To Action Section - Start\r\n        ==================================================
+    -->\r\n        <section class=\"calltoaction_section section_space_lg bg_dark
+    decoration_wrap\">\r\n          <div class=\"container\">\r\n            <div
+    class=\"row align-items-center\">\r\n              <div class=\"col col-lg-7\">\r\n
+    \               <div class=\"section_heading mb-lg-0\">\r\n                  <h2
+    class=\"heading_text text-white\">\r\n                    Are you interested in
+    our full course programs?\r\n                  </h2>\r\n                  <p class=\"heading_description
+    mb-0 text-white\">\r\n                    Join our waitlist for exclusive access
+    to our full course programs in UI/UX, Web Design, Animation, DevOps, Node.js,
+    Python, and more. Secure your spot and start advancing your skills soon!\r\n                  </p>\r\n
+    \               </div>\r\n              </div>\r\n              <div class=\"col
+    col-lg-5\">\r\n                <div class=\"calltoaction_form\">\r\n                  <form
+    action=\"#\">\r\n                    <h3 class=\"form_title\">Join our Waitlist</h3>\r\n
+    \                   <div class=\"form_item\">\r\n                      <label
+    for=\"input_name\" class=\"input_title text-uppercase\">Name</label>\r\n                      <input
+    id=\"input_name\" type=\"text\" name=\"name\" placeholder=\"Your Name\">\r\n                    </div>\r\n
+    \                   <div class=\"form_item\">\r\n                      <label
+    for=\"input_phone\" class=\"input_title text-uppercase\">Phone number</label>\r\n
+    \                     <input id=\"input_phone\" type=\"tel\" name=\"tel\" placeholder=\"Your
+    phone number\">\r\n                    </div>\r\n                    <div class=\"form_item\">\r\n
+    \                     <label for=\"input_email\" class=\"input_title text-uppercase\">Email</label>\r\n
+    \                     <input id=\"input_email\" type=\"email\" name=\"email\"
+    placeholder=\"Your Email\">\r\n                    </div>\r\n                    <button
+    type=\"submit\" class=\"btn btn_dark w-100\">\r\n                      <span>\r\n
+    \                       <small>Join our Waitlist</small>\r\n                        <small>Join
+    our Waitlist</small>\r\n                      </span>\r\n                    </button>\r\n
+    \                 </form>\r\n                </div>\r\n              </div>\r\n
+    \           </div>\r\n          </div>\r\n          <div class=\"deco_item shape_img_1\"
+    data-parallax='{\"x\" : 130, \"smoothness\": 6}'>\r\n            <img src=\"assets/images/shape/shape_img_5.png\"
+    \ >\r\n          </div>\r\n          <div class=\"deco_item shape_img_2\" data-parallax='{\"x\"
+    : -130, \"smoothness\": 6}'>\r\n            <img src=\"assets/images/shape/shape_img_4.png\"
+    \ >\r\n          </div>\r\n        </section>\r\n        <!-- Call To Action Section
+    - End\r\n        ================================================== -->\r\n\r\n
+    \       <!-- Brands Section - Start\r\n        ==================================================
+    -->\r\n        <section class=\"brands_section section_space_lg pb-0\">\r\n          <div
+    class=\"container\">\r\n            <div class=\"section_heading text-center\">\r\n
+    \             <h2 class=\"heading_text mb-0\">\r\n                Learn from Industry
+    Expert Courses\r\n              </h2>\r\n            </div>\r\n            <ul
+    class=\"brands_logo_list unordered_list\">\r\n              <li>\r\n                <a
+    href=\"#!\">\r\n                  <img src=\"assets/images/brands/logo_microsoft.png\"
+    alt=\"Microsoft\">\r\n                </a>\r\n              </li>\r\n              <li>\r\n
+    \               <a href=\"#!\">\r\n                  <img src=\"assets/images/brands/logo_alphabet.png\"
+    alt=\"Alphabet\">\r\n                </a>\r\n              </li>\r\n              <li>\r\n
+    \               <a href=\"#!\">\r\n                  <img src=\"assets/images/brands/logo_intel.png\"
+    alt=\"Intel\">\r\n                </a>\r\n              </li>\r\n              <li>\r\n
+    \               <a href=\"#!\">\r\n                  <img src=\"assets/images/brands/logo_cisco.png\"
+    alt=\"Cisco\">\r\n                </a>\r\n              </li>\r\n              <li>\r\n
+    \               <a href=\"#!\">\r\n                  <img src=\"assets/images/brands/logo_verizon_communications.png\"
+    alt=\"Verizon Communications\">\r\n                </a>\r\n              </li>\r\n
+    \             <li>\r\n                <a href=\"#!\">\r\n                  <img
+    src=\"assets/images/brands/logo_infopulse.png\" alt=\"Infopulse.png\">\r\n                </a>\r\n
+    \             </li>\r\n              <li>\r\n                <a href=\"#!\">\r\n
+    \                 <img src=\"assets/images/brands/logo_amazon.png\" alt=\"Amazon\">\r\n
+    \               </a>\r\n              </li>\r\n              <li>\r\n                <a
+    href=\"#!\">\r\n                  <img src=\"assets/images/brands/logo_wix_com_website.png\"
+    alt=\"Wix\">\r\n                </a>\r\n              </li>\r\n            </ul>\r\n
+    \         </div>\r\n        </section>\r\n        <!-- Brands Section - End\r\n
+    \       ================================================== -->\r\n\r\n       \r\n\r\n
+    \       <!-- Newslatter Section - Start\r\n        ==================================================
+    -->\r\n        <section class=\"newslatter_section\">\r\n          <div class=\"container\">\r\n
+    \           <div class=\"newslatter_box\" style=\"background-image: url('assets/images/shape/shape_img_6.svg');\">\r\n
+    \             <div class=\"row justify-content-center\">\r\n                <div
+    class=\"col col-lg-6\">\r\n                  <div class=\"section_heading text-center\">\r\n
+    \                   <h2 class=\"heading_text\">\r\n                      Join
+    our Newsletter to stay updated on Next Courses\r\n                    </h2>\r\n
+    \                   <p class=\"heading_description mb-0\">\r\n                      Subscribe
+    to our newsletter and stay informed about upcoming courses and updates. Don’t
+    miss out—join today!\r\n                  </div>\r\n                  <form action=\"#\">\r\n
+    \                   <div class=\"form_item m-0\">\r\n                      <input
+    type=\"email\" name=\"email\" placeholder=\"Your Email\">\r\n                      <button
+    type=\"submit\" class=\"btn btn_dark\">\r\n                        <span>\r\n
+    \                         <small>Subsctibe</small>\r\n                          <small>Subsctibe</small>\r\n
+    \                       </span>\r\n                      </button>\r\n                    </div>\r\n
+    \                 </form>\r\n                </div>\r\n              </div>\r\n
+    \           </div>\r\n          </div>\r\n        </section>\r\n        <!-- Newslatter
+    Section - End\r\n        ================================================== -->\r\n\r\n
+    \     </main>\r\n      <!-- Main Body - End\r\n      ==================================================
+    -->\r\n\r\n      <!-- Site Footer - Start\r\n      ==================================================
+    -->\r\n      <footer class=\"site_footer\">\r\n        <div class=\"footer_widget_area\">\r\n
+    \         <div class=\"container\">\r\n            <div class=\"row\">\r\n              <div
+    class=\"col col-lg-3 col-md-6 col-sm-6\">\r\n                <div class=\"footer_widget\">\r\n
+    \                 <div class=\"site_logo\">\r\n                    <a class=\"site_link\"
+    href=\"index.html\">\r\n                      <img src=\"assets/images/logo/site_logo_2.svg\"
+    \ >\r\n                    </a>\r\n                  </div>\r\n                 \r\n
+    \               </div>\r\n              </div>\r\n              <div class=\"col
+    col-lg-6\">\r\n                <div class=\"row\">\r\n                  <div class=\"col
+    col-md-4 col-sm-4\">\r\n                    <div class=\"footer_widget\">\r\n
+    \                     <ul class=\"page_list unordered_list_block\">\r\n                        <li>\r\n
+    \                         <a href=\"about.html\">\r\n                            <span
+    class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n                            <span
+    class=\"item_text\">About</span>\r\n                          </a>\r\n                        </li>\r\n
+    \                      \r\n                      </ul>\r\n                    </div>\r\n
+    \                 </div>\r\n                  <div class=\"col col-md-4 col-sm-4\">\r\n
+    \                   <div class=\"footer_widget\">\r\n                     \r\n
+    \                     <ul class=\"page_list unordered_list_block\">\r\n                        <li>\r\n
+    \                         <a href=\"contact.html\">\r\n                            <span
+    class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n                            <span
+    class=\"item_text\">Contact</span>\r\n                          </a>\r\n                        </li>\r\n
+    \                      \r\n                      </ul>\r\n                    </div>\r\n
+    \                 </div>\r\n                  <div class=\"col col-md-4 col-sm-4\">\r\n
+    \                   <div class=\"footer_widget\">\r\n                  \r\n                      <ul
+    class=\"page_list unordered_list_block\">\r\n                        <li>\r\n
+    \                         <a href=\"privacy_policy.html\">\r\n                            <span
+    class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n                            <span
+    class=\"item_text\">Private Policy</span>\r\n                          </a>\r\n
+    \                       </li>\r\n                       \r\n                      </ul>\r\n
+    \                   </div>\r\n                  </div>\r\n                </div>\r\n
+    \             </div>\r\n             \r\n                <div class=\"col col-md-4
+    col-sm-4\">\r\n                    <div class=\"footer_widget\">\r\n                  \r\n
+    \                     <ul class=\"page_list unordered_list_block\">\r\n                        <li>\r\n
+    \                         <a href=\"service_terms.html\">\r\n                            <span
+    class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n                            <span
+    class=\"item_text\">Terms and Conditions</span>\r\n                          </a>\r\n
+    \                       </li>\r\n                       \r\n                      </ul>\r\n
+    \                   </div>\r\n                  </div>\r\n\r\n                  <div
+    class=\"col col-md-4 col-sm-4\">\r\n                    <div class=\"footer_widget\">\r\n
+    \                 \r\n                      <ul class=\"page_list unordered_list_block\">\r\n
+    \                       <li>\r\n                          <a href=\"Refund_Policy.html\">\r\n
+    \                           <span class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n
+    \                           <span class=\"item_text\">Refund Policy</span>\r\n
+    \                         </a>\r\n                        </li>\r\n                       \r\n
+    \                     </ul>\r\n                    </div>\r\n                  </div>\r\n\r\n
+    \                 \r\n            \r\n          </div>\r\n        </div>\r\n       \r\n
+    \     </footer>\r\n      <!-- Site Footer - End\r\n      ==================================================
+    -->\r\n\r\n    </div>\r\n    <!-- Body Wrap - End -->\r\n\r\n    <!-- Framework
+    - Jquery Include -->\r\n    <script src=\"assets/js/jquery.min.js\"></script>\r\n
+    \   <script src=\"assets/js/popper.min.js\"></script>\r\n    <script src=\"assets/js/bootstrap.min.js\"></script>\r\n
+    \   <script src=\"assets/js/bootstrap-dropdown-ml-hack.js\"></script>\r\n\r\n
+    \   <!-- animation - jquery include -->\r\n    <script src=\"assets/js/cursor.js\"></script>\r\n
+    \   <script src=\"assets/js/wow.min.js\"></script>\r\n    <script src=\"assets/js/tilt.min.js\"></script>\r\n
+    \   <script src=\"assets/js/parallax.min.js\"></script>\r\n    <script src=\"assets/js/parallax-scroll.js\"></script>\r\n\r\n
+    \   <!-- Carousel - Jquery Include -->\r\n    <script src=\"assets/js/slick.min.js\"></script>\r\n\r\n
+    \   <!-- Video & Image Popup - Jquery Include -->\r\n    <script src=\"assets/js/magnific-popup.min.js\"></script>\r\n\r\n
+    \   <!-- Counter Up - Jquery Include -->\r\n    <script src=\"assets/js/waypoint.js\"></script>\r\n
+    \   <script src=\"assets/js/counterup.min.js\"></script>\r\n\r\n    <!-- Countdown
+    Timer - jquery include -->\r\n    <script src=\"assets/js/countdown.js\"></script>\r\n\r\n
+    \   <!-- Vanilla Calendar - Jquery Include -->\r\n    <script src=\"assets/js/vanilla-calendar.min.js\"></script>\r\n\r\n
+    \   <!-- Custom - Jquery Include -->\r\n    <script src=\"assets/js/main.js\"></script>\r\n
+    \   <script src=\"https://checkout.razorpay.com/v1/checkout.js\"></script>\r\n
+    \   <script src=\"script.js\"></script> \r\n\r\n  </body>\r\n</html>\r\n"
+  payment_success.html: "<!doctype html>\n<html lang=\"en\">\n\n  <head>\n\n  \t<meta
+    charset=\"utf-8\">\n  \t<meta name=\"viewport\" content=\"width=device-width,
+    initial-scale=1, shrink-to-fit=no\">\n  \t<meta http-equiv=\"x-ua-compatible\"
+    content=\"ie=edge\">\n\n  \t<title>Payment confirmation  – betterproject</title>\n
+    \ \t<link rel=\"shortcut icon\" href=\"assets/images/logo/favourite_icon_1.svg\">\n\n
+    \ \t<!-- Framework - CSS Include -->\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/bootstrap.min.css\">\n\n    <!-- Icon Font - CSS Include -->\n
+    \   <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/fontawesome.css\">\n\n
+    \   <!-- Animation - CSS Include -->\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/animate.css\">\n\n    <!-- Cursor - CSS Include -->\n    <link
+    rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/cursor.css\">\n\n    <!--
+    Carousel - CSS Include -->\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/slick.css\">\n
+    \   <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/slick-theme.css\">\n\n
+    \   <!-- Video & Image Popup - CSS Include -->\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/magnific-popup.css\">\n\n    <!-- Vanilla Calendar - CSS Include
+    -->\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/vanilla-calendar.min.css\">\n\n
+    \   <!-- Custom - CSS Include -->\n    <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/style.css\">\n\n  </head>\n\n\n  <body>\n\n    <!-- Body Wrap
+    - Start -->\n    <div class=\"page_wrapper\">\n\n      <header class=\"site_header\">\n
+    \       <div class=\"container\">\n          <div class=\"row align-items-center\">\n
+    \           <div class=\"col col-lg-3 col-5\">\n              <div class=\"site_logo\">\n
+    \               <a class=\"site_link\" href=\"index.html\">\n                  <img
+    src=\"assets/images/logo/site_logo.svg\"  >\n                </a>\n              </div>\n
+    \           </div>\n        \n          </div>\n        </div>\n      </header>\n\n
+    \     <!-- Main Body - Start\n      ==================================================
+    -->\n      <main class=\"page_content\">\n\n        <!-- Error Section - Start\n
+    \       ================================================== -->\n        <section
+    class=\"error_section text-center decoration_wrap\">\n          <div class=\"container
+    decoration_wrap\">\n            <div class=\"error_image\">\n              <img
+    src=\"assets/images/banner/page_banner_image.png\"  >\n            </div>\n            <h1
+    class=\"error_title\">Payment success</h1>\n            <p class=\"error_description\">\n
+    \             You have successfully made a payment. Thank you for your purchase.
+    Please check your email for the project.\n            </p>\n          \n\n            <div
+    class=\"deco_item shape_img_1 wow fadeInUp\" data-wow-delay=\".2s\">\n              <img
+    src=\"assets/images/shape/shape_img_7.png\"  >\n            </div>\n            <div
+    class=\"deco_item shape_img_2 wow fadeInUp\" data-wow-delay=\".4s\">\n              <img
+    src=\"assets/images/shape/shape_img_7.png\"  >\n            </div>\n          </div>\n\n
+    \         <div class=\"deco_item shape_img_3 wow fadeInLeft\" data-wow-delay=\".2s\">\n
+    \           <img src=\"assets/images/shape/shape_img_7.png\"  >\n          </div>\n
+    \         <div class=\"deco_item shape_img_4 wow fadeInRight\" data-wow-delay=\".4s\">\n
+    \           <img src=\"assets/images/shape/shape_img_7.png\"  >\n          </div>\n
+    \       </section>\n        <!-- Error Section - End\n        ==================================================
+    -->\n\n      </main>\n      <!-- Main Body - End\n      ==================================================
+    -->\n\n    </div>\n    <!-- Body Wrap - End -->\n\n    <!-- Framework - Jquery
+    Include -->\n    <script src=\"assets/js/jquery.min.js\"></script>\n    <script
+    src=\"assets/js/popper.min.js\"></script>\n    <script src=\"assets/js/bootstrap.min.js\"></script>\n
+    \   <script src=\"assets/js/bootstrap-dropdown-ml-hack.js\"></script>\n\n    <!--
+    animation - jquery include -->\n    <script src=\"assets/js/cursor.js\"></script>\n
+    \   <script src=\"assets/js/wow.min.js\"></script>\n    <script src=\"assets/js/tilt.min.js\"></script>\n
+    \   <script src=\"assets/js/parallax.min.js\"></script>\n    <script src=\"assets/js/parallax-scroll.js\"></script>\n\n
+    \   <!-- Carousel - Jquery Include -->\n    <script src=\"assets/js/slick.min.js\"></script>\n\n
+    \   <!-- Video & Image Popup - Jquery Include -->\n    <script src=\"assets/js/magnific-popup.min.js\"></script>\n\n
+    \   <!-- Counter Up - Jquery Include -->\n    <script src=\"assets/js/waypoint.js\"></script>\n
+    \   <script src=\"assets/js/counterup.min.js\"></script>\n\n    <!-- Countdown
+    Timer - jquery include -->\n    <script src=\"assets/js/countdown.js\"></script>\n\n
+    \   <!-- Vanilla Calendar - Jquery Include -->\n    <script src=\"assets/js/vanilla-calendar.min.js\"></script>\n\n
+    \   <!-- Custom - Jquery Include -->\n    <script src=\"assets/js/main.js\"></script>\n\n
+    \ </body>\n</html>\n"
+  privacy_policy.html: "<!doctype html>\r\n<html lang=\"en\">\r\n\r\n<head>\r\n\r\n
+    \ <meta charset=\"utf-8\">\r\n  <meta name=\"viewport\" content=\"width=device-width,
+    initial-scale=1, shrink-to-fit=no\">\r\n  <meta http-equiv=\"x-ua-compatible\"
+    content=\"ie=edge\">\r\n\r\n  <title>Privacy Policy – betterproject</title>\r\n
+    \ <link rel=\"shortcut icon\" href=\"assets/images/logo/favourite_icon_1.svg\">\r\n\r\n
+    \ <!-- Framework - CSS Include -->\r\n  <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/bootstrap.min.css\">\r\n\r\n  <!-- Icon Font - CSS Include -->\r\n
+    \ <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/fontawesome.css\">\r\n\r\n
+    \ <!-- Animation - CSS Include -->\r\n  <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/animate.css\">\r\n\r\n  <!-- Cursor - CSS Include -->\r\n  <link
+    rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/cursor.css\">\r\n\r\n  <!--
+    Carousel - CSS Include -->\r\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/slick.css\">\r\n
+    \ <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/slick-theme.css\">\r\n\r\n
+    \ <!-- Video & Image Popup - CSS Include -->\r\n  <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/magnific-popup.css\">\r\n\r\n  <!-- Vanilla Calendar - CSS Include
+    -->\r\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/vanilla-calendar.min.css\">\r\n\r\n
+    \ <!-- Custom - CSS Include -->\r\n  <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/style.css\">\r\n\r\n</head>\r\n\r\n\r\n<body>\r\n\r\n  <!--
+    Body Wrap - Start -->\r\n  <div class=\"page_wrapper\">\r\n\r\n    <!-- Back To
+    Top - Start -->\r\n    <div class=\"backtotop\">\r\n      <a href=\"#\" class=\"scroll\">\r\n
+    \       <i class=\"far fa-arrow-up\"></i>\r\n      </a>\r\n    </div>\r\n    <!--
+    Back To Top - End -->\r\n\r\n    <!-- Site Header - Start\r\n      ==================================================
+    -->\r\n    <header class=\"site_header site_header_1\">\r\n      <div class=\"container\">\r\n
+    \       <div class=\"row align-items-center\">\r\n          <div class=\"col col-lg-3
+    col-5\">\r\n            <div class=\"site_logo\">\r\n              <a class=\"site_link\"
+    href=\"index.html\">\r\n                <img src=\"assets/images/logo/site_logo.svg\">\r\n
+    \             </a>\r\n            </div>\r\n          </div>\r\n\r\n        </div>\r\n
+    \     </div>\r\n    </header>\r\n    <!-- Site Header - End\r\n      ==================================================
+    -->\r\n\r\n    <!-- Main Body - Start\r\n      ==================================================
+    -->\r\n    <main class=\"page_content\">\r\n\r\n      <!-- Page Section - Start\r\n
+    \       ================================================== -->\r\n\r\n      <!--
+    Page Section - End\r\n        ==================================================
+    -->\r\n\r\n      <!-- FAQ Section - Start\r\n        ==================================================
+    -->\r\n      <section class=\"faq_section section_space_lg\">\r\n        <div
+    class=\"container\">\r\n          <div class=\"section_heading text-center mb-3\">\r\n
+    \           <div class=\"row justify-content-center\">\r\n              <div class=\"col
+    col-lg-8\" style=\"text-align: left\">\r\n                <h1>Privacy Policy</h1>\r\n
+    \               <p>Last updated: June 29, 2024</p>\r\n                <p>This
+    Privacy Policy describes Our policies and procedures on the collection, use and
+    disclosure of\r\n                  Your information when You use the Service and
+    tells You about Your privacy rights and how the law\r\n                  protects
+    You.</p>\r\n                <p>We use Your Personal data to provide and improve
+    the Service. By using the Service, You agree to the\r\n                  collection
+    and use of information in accordance with this Privacy Policy. This Privacy Policy
+    has been\r\n                  created with the help of the <a\r\n                    href=\"https://www.freeprivacypolicy.com/free-privacy-policy-generator/\"
+    target=\"_blank\">Free Privacy\r\n                    Policy Generator</a>.</p>\r\n
+    \               <h2>Interpretation and Definitions</h2>\r\n                <h3>Interpretation</h3>\r\n
+    \               <p>The words of which the initial letter is capitalized have meanings
+    defined under the following\r\n                  conditions. The following definitions
+    shall have the same meaning regardless of whether they appear in\r\n                  singular
+    or in plural.</p>\r\n                <h3>Definitions</h3>\r\n                <p>For
+    the purposes of this Privacy Policy:</p>\r\n                <ul>\r\n                  <li>\r\n
+    \                   <p><strong>Account</strong> means a unique account created
+    for You to access our Service or parts of\r\n                      our Service.</p>\r\n
+    \                 </li>\r\n                  <li>\r\n                    <p><strong>Affiliate</strong>
+    means an entity that controls, is controlled by or is under common\r\n                      control
+    with a party, where &quot;control&quot; means ownership of 50% or more of the
+    shares,\r\n                      equity interest or other securities entitled
+    to vote for election of directors or other managing\r\n                      authority.</p>\r\n
+    \                 </li>\r\n                  <li>\r\n                    <p><strong>Company</strong>
+    (referred to as either &quot;the Company&quot;, &quot;We&quot;,\r\n                      &quot;Us&quot;
+    or &quot;Our&quot; in this Agreement) refers to Slab.ai, Bengaluru, Karnataka.</p>\r\n
+    \                 </li>\r\n                  <li>\r\n                    <p><strong>Cookies</strong>
+    are small files that are placed on Your computer, mobile device or any\r\n                      other
+    device by a website, containing the details of Your browsing history on that website
+    among\r\n                      its many uses.</p>\r\n                  </li>\r\n
+    \                 <li>\r\n                    <p><strong>Country</strong> refers
+    to: Karnataka, India</p>\r\n                  </li>\r\n                  <li>\r\n
+    \                   <p><strong>Device</strong> means any device that can access
+    the Service such as a computer, a\r\n                      cellphone or a digital
+    tablet.</p>\r\n                  </li>\r\n                  <li>\r\n                    <p><strong>Personal
+    Data</strong> is any information that relates to an identified or identifiable\r\n
+    \                     individual.</p>\r\n                  </li>\r\n                  <li>\r\n
+    \                   <p><strong>Service</strong> refers to the Website.</p>\r\n
+    \                 </li>\r\n                  <li>\r\n                    <p><strong>Service
+    Provider</strong> means any natural or legal person who processes the data on\r\n
+    \                     behalf of the Company. It refers to third-party companies
+    or individuals employed by the Company\r\n                      to facilitate
+    the Service, to provide the Service on behalf of the Company, to perform services\r\n
+    \                     related to the Service or to assist the Company in analyzing
+    how the Service is used.</p>\r\n                  </li>\r\n                  <li>\r\n
+    \                   <p><strong>Usage Data</strong> refers to data collected automatically,
+    either generated by the use\r\n                      of the Service or from the
+    Service infrastructure itself (for example, the duration of a page\r\n                      visit).</p>\r\n
+    \                 </li>\r\n                  <li>\r\n                    <p><strong>Website</strong>
+    refers to Better Projects, accessible from <a\r\n                        href=\"https://betterprojects.in\"
+    rel=\"external nofollow noopener\"\r\n                        target=\"_blank\">https://betterprojects.in</a></p>\r\n
+    \                 </li>\r\n                  <li>\r\n                    <p><strong>You</strong>
+    means the individual accessing or using the Service, or the company, or\r\n                      other
+    legal entity on behalf of which such individual is accessing or using the Service,
+    as\r\n                      applicable.</p>\r\n                  </li>\r\n                </ul>\r\n
+    \               <h2>Collecting and Using Your Personal Data</h2>\r\n                <h3>Types
+    of Data Collected</h3>\r\n                <h4>Personal Data</h4>\r\n                <p>While
+    using Our Service, We may ask You to provide Us with certain personally identifiable\r\n
+    \                 information that can be used to contact or identify You. Personally
+    identifiable information may\r\n                  include, but is not limited
+    to:</p>\r\n                <ul>\r\n                  <li>\r\n                    <p>Email
+    address</p>\r\n                  </li>\r\n                  <li>\r\n                    <p>First
+    name and last name</p>\r\n                  </li>\r\n                  <li>\r\n
+    \                   <p>Phone number</p>\r\n                  </li>\r\n                  <li>\r\n
+    \                   <p>Address, State, Province, ZIP/Postal code, City</p>\r\n
+    \                 </li>\r\n                  <li>\r\n                    <p>Usage
+    Data</p>\r\n                  </li>\r\n                </ul>\r\n                <h4>Usage
+    Data</h4>\r\n                <p>Usage Data is collected automatically when using
+    the Service.</p>\r\n                <p>Usage Data may include information such
+    as Your Device's Internet Protocol address (e.g. IP address),\r\n                  browser
+    type, browser version, the pages of our Service that You visit, the time and date
+    of Your\r\n                  visit, the time spent on those pages, unique device
+    identifiers and other diagnostic data.</p>\r\n                <p>When You access
+    the Service by or through a mobile device, We may collect certain information\r\n
+    \                 automatically, including, but not limited to, the type of mobile
+    device You use, Your mobile device\r\n                  unique ID, the IP address
+    of Your mobile device, Your mobile operating system, the type of mobile\r\n                  Internet
+    browser You use, unique device identifiers and other diagnostic data.</p>\r\n
+    \               <p>We may also collect information that Your browser sends whenever
+    You visit our Service or when You\r\n                  access the Service by or
+    through a mobile device.</p>\r\n                <h4>Tracking Technologies and
+    Cookies</h4>\r\n                <p>We use Cookies and similar tracking technologies
+    to track the activity on Our Service and store\r\n                  certain information.
+    Tracking technologies used are beacons, tags, and scripts to collect and track\r\n
+    \                 information and to improve and analyze Our Service. The technologies
+    We use may include:</p>\r\n                <ul>\r\n                  <li><strong>Cookies
+    or Browser Cookies.</strong> A cookie is a small file placed on Your Device. You\r\n
+    \                   can instruct Your browser to refuse all Cookies or to indicate
+    when a Cookie is being sent. However,\r\n                    if You do not accept
+    Cookies, You may not be able to use some parts of our Service. Unless you have\r\n
+    \                   adjusted Your browser setting so that it will refuse Cookies,
+    our Service may use Cookies.</li>\r\n                  <li><strong>Web Beacons.</strong>
+    Certain sections of our Service and our emails may contain small\r\n                    electronic
+    files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel\r\n
+    \                   gifs) that permit the Company, for example, to count users
+    who have visited those pages or opened an\r\n                    email and for
+    other related website statistics (for example, recording the popularity of a certain\r\n
+    \                   section and verifying system and server integrity).</li>\r\n
+    \               </ul>\r\n                <p>Cookies can be &quot;Persistent&quot;
+    or &quot;Session&quot; Cookies. Persistent Cookies remain on\r\n                  Your
+    personal computer or mobile device when You go offline, while Session Cookies
+    are deleted as soon\r\n                  as You close Your web browser. Learn
+    more about cookies on the <a\r\n                    href=\"https://www.freeprivacypolicy.com/blog/sample-privacy-policy-template/#Use_Of_Cookies_And_Tracking\"\r\n
+    \                   target=\"_blank\">Free Privacy Policy website</a> article.</p>\r\n
+    \               <p>We use both Session and Persistent Cookies for the purposes
+    set out below:</p>\r\n                <ul>\r\n                  <li>\r\n                    <p><strong>Necessary
+    / Essential Cookies</strong></p>\r\n                    <p>Type: Session Cookies</p>\r\n
+    \                   <p>Administered by: Us</p>\r\n                    <p>Purpose:
+    These Cookies are essential to provide You with services available through the
+    Website\r\n                      and to enable You to use some of its features.
+    They help to authenticate users and prevent\r\n                      fraudulent
+    use of user accounts. Without these Cookies, the services that You have asked
+    for\r\n                      cannot be provided, and We only use these Cookies
+    to provide You with those services.</p>\r\n                  </li>\r\n                  <li>\r\n
+    \                   <p><strong>Cookies Policy / Notice Acceptance Cookies</strong></p>\r\n
+    \                   <p>Type: Persistent Cookies</p>\r\n                    <p>Administered
+    by: Us</p>\r\n                    <p>Purpose: These Cookies identify if users
+    have accepted the use of cookies on the Website.</p>\r\n                  </li>\r\n
+    \                 <li>\r\n                    <p><strong>Functionality Cookies</strong></p>\r\n
+    \                   <p>Type: Persistent Cookies</p>\r\n                    <p>Administered
+    by: Us</p>\r\n                    <p>Purpose: These Cookies allow us to remember
+    choices You make when You use the Website, such as\r\n                      remembering
+    your login details or language preference. The purpose of these Cookies is to
+    provide\r\n                      You with a more personal experience and to avoid
+    You having to re-enter your preferences every\r\n                      time You
+    use the Website.</p>\r\n                  </li>\r\n                </ul>\r\n                <p>For
+    more information about the cookies we use and your choices regarding cookies,
+    please visit our\r\n                  Cookies Policy or the Cookies section of
+    our Privacy Policy.</p>\r\n                <h3>Use of Your Personal Data</h3>\r\n
+    \               <p>The Company may use Personal Data for the following purposes:</p>\r\n
+    \               <ul>\r\n                  <li>\r\n                    <p><strong>To
+    provide and maintain our Service</strong>, including to monitor the usage of our\r\n
+    \                     Service.</p>\r\n                  </li>\r\n                  <li>\r\n
+    \                   <p><strong>To manage Your Account:</strong> to manage Your
+    registration as a user of the Service.\r\n                      The Personal Data
+    You provide can give You access to different functionalities of the Service that\r\n
+    \                     are available to You as a registered user.</p>\r\n                  </li>\r\n
+    \                 <li>\r\n                    <p><strong>For the performance of
+    a contract:</strong> the development, compliance and undertaking\r\n                      of
+    the purchase contract for the products, items or services You have purchased or
+    of any other\r\n                      contract with Us through the Service.</p>\r\n
+    \                 </li>\r\n                  <li>\r\n                    <p><strong>To
+    contact You:</strong> To contact You by email, telephone calls, SMS, or other\r\n
+    \                     equivalent forms of electronic communication, such as a
+    mobile application's push notifications\r\n                      regarding updates
+    or informative communications related to the functionalities, products or\r\n
+    \                     contracted services, including the security updates, when
+    necessary or reasonable for their\r\n                      implementation.</p>\r\n
+    \                 </li>\r\n                  <li>\r\n                    <p><strong>To
+    provide You</strong> with news, special offers and general information about other\r\n
+    \                     goods, services and events which we offer that are similar
+    to those that you have already\r\n                      purchased or enquired
+    about unless You have opted not to receive such information.</p>\r\n                  </li>\r\n
+    \                 <li>\r\n                    <p><strong>To manage Your requests:</strong>
+    To attend and manage Your requests to Us.</p>\r\n                  </li>\r\n                  <li>\r\n
+    \                   <p><strong>For business transfers:</strong> We may use Your
+    information to evaluate or conduct a\r\n                      merger, divestiture,
+    restructuring, reorganization, dissolution, or other sale or transfer of some\r\n
+    \                     or all of Our assets, whether as a going concern or as part
+    of bankruptcy, liquidation, or similar\r\n                      proceeding, in
+    which Personal Data held by Us about our Service users is among the assets\r\n
+    \                     transferred.</p>\r\n                  </li>\r\n                  <li>\r\n
+    \                   <p><strong>For other purposes</strong>: We may use Your information
+    for other purposes, such as data\r\n                      analysis, identifying
+    usage trends, determining the effectiveness of our promotional campaigns and\r\n
+    \                     to evaluate and improve our Service, products, services,
+    marketing and your experience.</p>\r\n                  </li>\r\n                </ul>\r\n
+    \               <p>We may share Your personal information in the following situations:</p>\r\n
+    \               <ul>\r\n                  <li><strong>With Service Providers:</strong>
+    We may share Your personal information with Service\r\n                    Providers
+    to monitor and analyze the use of our Service, to contact You.</li>\r\n                  <li><strong>For
+    business transfers:</strong> We may share or transfer Your personal information
+    in\r\n                    connection with, or during negotiations of, any merger,
+    sale of Company assets, financing, or\r\n                    acquisition of all
+    or a portion of Our business to another company.</li>\r\n                  <li><strong>With
+    Affiliates:</strong> We may share Your information with Our affiliates, in which
+    case\r\n                    we will require those affiliates to honor this Privacy
+    Policy. Affiliates include Our parent company\r\n                    and any other
+    subsidiaries, joint venture partners or other companies that We control or that
+    are\r\n                    under common control with Us.</li>\r\n                  <li><strong>With
+    business partners:</strong> We may share Your information with Our business partners\r\n
+    \                   to offer You certain products, services or promotions.</li>\r\n
+    \                 <li><strong>With other users:</strong> when You share personal
+    information or otherwise interact in\r\n                    the public areas with
+    other users, such information may be viewed by all users and may be publicly\r\n
+    \                   distributed outside.</li>\r\n                  <li><strong>With
+    Your consent</strong>: We may disclose Your personal information for any other\r\n
+    \                   purpose with Your consent.</li>\r\n                </ul>\r\n
+    \               <h3>Retention of Your Personal Data</h3>\r\n                <p>The
+    Company will retain Your Personal Data only for as long as is necessary for the
+    purposes set out\r\n                  in this Privacy Policy. We will retain and
+    use Your Personal Data to the extent necessary to comply\r\n                  with
+    our legal obligations (for example, if we are required to retain your data to
+    comply with\r\n                  applicable laws), resolve disputes, and enforce
+    our legal agreements and policies.</p>\r\n                <p>The Company will
+    also retain Usage Data for internal analysis purposes. Usage Data is generally\r\n
+    \                 retained for a shorter period of time, except when this data
+    is used to strengthen the security or to\r\n                  improve the functionality
+    of Our Service, or We are legally obligated to retain this data for longer\r\n
+    \                 time periods.</p>\r\n                <h3>Transfer of Your Personal
+    Data</h3>\r\n                <p>Your information, including Personal Data, is
+    processed at the Company's operating offices and in any\r\n                  other
+    places where the parties involved in the processing are located. It means that
+    this information\r\n                  may be transferred to — and maintained on
+    — computers located outside of Your state, province, country\r\n                  or
+    other governmental jurisdiction where the data protection laws may differ than
+    those from Your\r\n                  jurisdiction.</p>\r\n                <p>Your
+    consent to this Privacy Policy followed by Your submission of such information
+    represents Your\r\n                  agreement to that transfer.</p>\r\n                <p>The
+    Company will take all steps reasonably necessary to ensure that Your data is treated
+    securely and\r\n                  in accordance with this Privacy Policy and no
+    transfer of Your Personal Data will take place to an\r\n                  organization
+    or a country unless there are adequate controls in place including the security
+    of Your\r\n                  data and other personal information.</p>\r\n                <h3>Delete
+    Your Personal Data</h3>\r\n                <p>You have the right to delete or
+    request that We assist in deleting the Personal Data that We have\r\n                  collected
+    about You.</p>\r\n                <p>Our Service may give You the ability to delete
+    certain information about You from within the Service.\r\n                </p>\r\n
+    \               <p>You may update, amend, or delete Your information at any time
+    by signing in to Your Account, if you\r\n                  have one, and visiting
+    the account settings section that allows you to manage Your personal\r\n                  information.
+    You may also contact Us to request access to, correct, or delete any personal
+    information\r\n                  that You have provided to Us.</p>\r\n                <p>Please
+    note, however, that We may need to retain certain information when we have a legal
+    obligation\r\n                  or lawful basis to do so.</p>\r\n                <h3>Disclosure
+    of Your Personal Data</h3>\r\n                <h4>Business Transactions</h4>\r\n
+    \               <p>If the Company is involved in a merger, acquisition or asset
+    sale, Your Personal Data may be\r\n                  transferred. We will provide
+    notice before Your Personal Data is transferred and becomes subject to a\r\n                  different
+    Privacy Policy.</p>\r\n                <h4>Law enforcement</h4>\r\n                <p>Under
+    certain circumstances, the Company may be required to disclose Your Personal Data
+    if required\r\n                  to do so by law or in response to valid requests
+    by public authorities (e.g. a court or a government\r\n                  agency).</p>\r\n
+    \               <h4>Other legal requirements</h4>\r\n                <p>The Company
+    may disclose Your Personal Data in the good faith belief that such action is necessary\r\n
+    \                 to:</p>\r\n                <ul>\r\n                  <li>Comply
+    with a legal obligation</li>\r\n                  <li>Protect and defend the rights
+    or property of the Company</li>\r\n                  <li>Prevent or investigate
+    possible wrongdoing in connection with the Service</li>\r\n                  <li>Protect
+    the personal safety of Users of the Service or the public</li>\r\n                  <li>Protect
+    against legal liability</li>\r\n                </ul>\r\n                <h3>Security
+    of Your Personal Data</h3>\r\n                <p>The security of Your Personal
+    Data is important to Us, but remember that no method of transmission\r\n                  over
+    the Internet, or method of electronic storage is 100% secure. While We strive
+    to use commercially\r\n                  acceptable means to protect Your Personal
+    Data, We cannot guarantee its absolute security.</p>\r\n                <h2>Children's
+    Privacy</h2>\r\n                <p>Our Service does not address anyone under the
+    age of 13. We do not knowingly collect personally\r\n                  identifiable
+    information from anyone under the age of 13. If You are a parent or guardian and
+    You are\r\n                  aware that Your child has provided Us with Personal
+    Data, please contact Us. If We become aware that\r\n                  We have
+    collected Personal Data from anyone under the age of 13 without verification of
+    parental\r\n                  consent, We take steps to remove that information
+    from Our servers.</p>\r\n                <p>If We need to rely on consent as a
+    legal basis for processing Your information and Your country\r\n                  requires
+    consent from a parent, We may require Your parent's consent before We collect
+    and use that\r\n                  information.</p>\r\n                <h2>Links
+    to Other Websites</h2>\r\n                <p>Our Service may contain links to
+    other websites that are not operated by Us. If You click on a third\r\n                  party
+    link, You will be directed to that third party's site. We strongly advise You
+    to review the\r\n                  Privacy Policy of every site You visit.</p>\r\n
+    \               <p>We have no control over and assume no responsibility for the
+    content, privacy policies or practices\r\n                  of any third party
+    sites or services.</p>\r\n                <h2>Changes to this Privacy Policy</h2>\r\n
+    \               <p>We may update Our Privacy Policy from time to time. We will
+    notify You of any changes by posting the\r\n                  new Privacy Policy
+    on this page.</p>\r\n                <p>We will let You know via email and/or
+    a prominent notice on Our Service, prior to the change becoming\r\n                  effective
+    and update the &quot;Last updated&quot; date at the top of this Privacy Policy.</p>\r\n
+    \               <p>You are advised to review this Privacy Policy periodically
+    for any changes. Changes to this Privacy\r\n                  Policy are effective
+    when they are posted on this page.</p>\r\n                <h2>Contact Us</h2>\r\n
+    \               <p>If you have any questions about this Privacy Policy, You can
+    contact us:</p>\r\n                <ul>\r\n                  <li>\r\n                    <p>By
+    email: <a href=\"/cdn-cgi/l/email-protection\" class=\"__cf_email__\"\r\n                        data-cfemail=\"2a595f5a5a45585e6a484f5e5e4f585a5845404f495e59044344\">[email&#160;protected]</a>\r\n
+    \                   </p>\r\n                  </li>\r\n                  <li>\r\n
+    \                   <p>By visiting this page on our website: <a href=\"https://betterprojects.in/contactus.html\"\r\n
+    \                       rel=\"external nofollow noopener\" target=\"_blank\">https://betterprojects.in/contactus.html</a>\r\n
+    \                   </p>\r\n                  </li>\r\n                </ul>\r\n
+    \             </div>\r\n            </div>\r\n          </div>\r\n\r\n        </div>\r\n
+    \     </section>\r\n      <!-- FAQ Section - End\r\n        ==================================================
+    -->\r\n\r\n      <!-- Newslatter Section - Start\r\n        ==================================================
+    -->\r\n      <section class=\"newslatter_section\">\r\n        <div class=\"container\">\r\n
+    \         <div class=\"newslatter_box\" style=\"background-image: url('assets/images/shape/shape_img_6.svg');\">\r\n
+    \           <div class=\"row justify-content-center\">\r\n              <div class=\"col
+    col-lg-6\">\r\n                <div class=\"section_heading text-center\">\r\n
+    \                 <h2 class=\"heading_text\">\r\n                    Join our
+    Newsletter to stay updated on Next Courses\r\n                  </h2>\r\n                  <p
+    class=\"heading_description mb-0\">\r\n                    Subscribe to our newsletter
+    and stay informed about upcoming courses and updates. Don’t miss\r\n                    out—join
+    today!\r\n                  </p>\r\n                </div>\r\n                <form
+    action=\"#\">\r\n                  <div class=\"form_item m-0\">\r\n                    <input
+    type=\"email\" name=\"email\" placeholder=\"Your Email\">\r\n                    <button
+    type=\"submit\" class=\"btn btn_dark\">\r\n                      <span>\r\n                        <small>Subsctibe</small>\r\n
+    \                       <small>Subsctibe</small>\r\n                      </span>\r\n
+    \                   </button>\r\n                  </div>\r\n                </form>\r\n
+    \             </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n
+    \     </section>\r\n      <!-- Newslatter Section - End -->\r\n\r\n    </main>\r\n
+    \   <!-- Main Body - End\r\n      ==================================================
+    -->\r\n\r\n    <!-- Site Footer - Start\r\n      ==================================================
+    -->\r\n    <footer class=\"site_footer\">\r\n      <div class=\"footer_widget_area\">\r\n
+    \       <div class=\"container\">\r\n          <div class=\"row\">\r\n            <div
+    class=\"col col-lg-3 col-md-6 col-sm-6\">\r\n              <div class=\"footer_widget\">\r\n
+    \               <div class=\"site_logo\">\r\n                  <a class=\"site_link\"
+    href=\"index.html\">\r\n                    <img src=\"assets/images/logo/site_logo_2.svg\">\r\n
+    \                 </a>\r\n                </div>\r\n\r\n              </div>\r\n
+    \           </div>\r\n            <div class=\"col col-lg-6\">\r\n              <div
+    class=\"row\">\r\n                <div class=\"col col-md-4 col-sm-4\">\r\n                  <div
+    class=\"footer_widget\">\r\n                    <ul class=\"page_list unordered_list_block\">\r\n
+    \                     <li>\r\n                        <a href=\"about.html\">\r\n
+    \                         <span class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n
+    \                         <span class=\"item_text\">About</span>\r\n                        </a>\r\n
+    \                     </li>\r\n\r\n                    </ul>\r\n                  </div>\r\n
+    \               </div>\r\n                <div class=\"col col-md-4 col-sm-4\">\r\n
+    \                 <div class=\"footer_widget\">\r\n\r\n                    <ul
+    class=\"page_list unordered_list_block\">\r\n                      <li>\r\n                        <a
+    href=\"course_details.html\">\r\n                          <span class=\"item_icon\"><i
+    class=\"fas fa-caret-right\"></i></span>\r\n                          <span class=\"item_text\">Contact</span>\r\n
+    \                       </a>\r\n                      </li>\r\n\r\n                    </ul>\r\n
+    \                 </div>\r\n                </div>\r\n                <div class=\"col
+    col-md-4 col-sm-4\">\r\n                  <div class=\"footer_widget\">\r\n\r\n
+    \                   <ul class=\"page_list unordered_list_block\">\r\n                      <li>\r\n
+    \                       <a href=\"privacy_policy.html\">\r\n                          <span
+    class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n                          <span
+    class=\"item_text\">Privacy Policy</span>\r\n                        </a>\r\n
+    \                     </li>\r\n\r\n                    </ul>\r\n                  </div>\r\n
+    \               </div>\r\n              </div>\r\n            </div>\r\n            <div
+    class=\"col col-md-4 col-sm-4\">\r\n              <div class=\"footer_widget\">\r\n
+    \           \r\n                <ul class=\"page_list unordered_list_block\">\r\n
+    \                 <li>\r\n                    <a href=\"service_terms.html\">\r\n
+    \                     <span class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n
+    \                     <span class=\"item_text\">Terms and Conditions</span>\r\n
+    \                   </a>\r\n                  </li>\r\n                 \r\n                </ul>\r\n
+    \             </div>\r\n            </div>\r\n\r\n            <div class=\"col
+    col-md-4 col-sm-4\">\r\n              <div class=\"footer_widget\">\r\n            \r\n
+    \               <ul class=\"page_list unordered_list_block\">\r\n                  <li>\r\n
+    \                   <a href=\"Refund_Policy.html\">\r\n                      <span
+    class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n                      <span
+    class=\"item_text\">Refund Policy</span>\r\n                    </a>\r\n                  </li>\r\n
+    \                \r\n                </ul>\r\n              </div>\r\n            </div>\r\n
+    \         </div>\r\n        </div>\r\n      </div>\r\n\r\n    </footer>\r\n    <!--
+    Site Footer - End\r\n      ==================================================
+    -->\r\n\r\n  </div>\r\n  <!-- Body Wrap - End -->\r\n\r\n  <!-- Framework - Jquery
+    Include -->\r\n  <script src=\"assets/js/jquery.min.js\"></script>\r\n  <script
+    src=\"assets/js/popper.min.js\"></script>\r\n  <script src=\"assets/js/bootstrap.min.js\"></script>\r\n
+    \ <script src=\"assets/js/bootstrap-dropdown-ml-hack.js\"></script>\r\n\r\n  <!--
+    animation - jquery include -->\r\n  <script src=\"assets/js/cursor.js\"></script>\r\n
+    \ <script src=\"assets/js/wow.min.js\"></script>\r\n  <script src=\"assets/js/tilt.min.js\"></script>\r\n
+    \ <script src=\"assets/js/parallax.min.js\"></script>\r\n  <script src=\"assets/js/parallax-scroll.js\"></script>\r\n\r\n
+    \ <!-- Carousel - Jquery Include -->\r\n  <script src=\"assets/js/slick.min.js\"></script>\r\n\r\n
+    \ <!-- Video & Image Popup - Jquery Include -->\r\n  <script src=\"assets/js/magnific-popup.min.js\"></script>\r\n\r\n
+    \ <!-- Counter Up - Jquery Include -->\r\n  <script src=\"assets/js/waypoint.js\"></script>\r\n
+    \ <script src=\"assets/js/counterup.min.js\"></script>\r\n\r\n  <!-- Countdown
+    Timer - jquery include -->\r\n  <script src=\"assets/js/countdown.js\"></script>\r\n\r\n
+    \ <!-- Vanilla Calendar - Jquery Include -->\r\n  <script src=\"assets/js/vanilla-calendar.min.js\"></script>\r\n\r\n
+    \ <!-- Custom - Jquery Include -->\r\n  <script src=\"assets/js/main.js\"></script>\r\n\r\n</body>\r\n\r\n</html>"
+  service_terms.html: "<!doctype html>\r\n<html lang=\"en\">\r\n\r\n<head>\r\n\r\n
+    \ <meta charset=\"utf-8\">\r\n  <meta name=\"viewport\" content=\"width=device-width,
+    initial-scale=1, shrink-to-fit=no\">\r\n  <meta http-equiv=\"x-ua-compatible\"
+    content=\"ie=edge\">\r\n\r\n  <title>Terms and Service – betterproject</title>\r\n
+    \ <link rel=\"shortcut icon\" href=\"assets/images/logo/favourite_icon_1.svg\">\r\n\r\n
+    \ <!-- Framework - CSS Include -->\r\n  <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/bootstrap.min.css\">\r\n\r\n  <!-- Icon Font - CSS Include -->\r\n
+    \ <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/fontawesome.css\">\r\n\r\n
+    \ <!-- Animation - CSS Include -->\r\n  <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/animate.css\">\r\n\r\n  <!-- Cursor - CSS Include -->\r\n  <link
+    rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/cursor.css\">\r\n\r\n  <!--
+    Carousel - CSS Include -->\r\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/slick.css\">\r\n
+    \ <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/slick-theme.css\">\r\n\r\n
+    \ <!-- Video & Image Popup - CSS Include -->\r\n  <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/magnific-popup.css\">\r\n\r\n  <!-- Vanilla Calendar - CSS Include
+    -->\r\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/vanilla-calendar.min.css\">\r\n\r\n
+    \ <!-- Custom - CSS Include -->\r\n  <link rel=\"stylesheet\" type=\"text/css\"
+    href=\"assets/css/style.css\">\r\n\r\n</head>\r\n\r\n\r\n<body>\r\n\r\n  <!--
+    Body Wrap - Start -->\r\n  <div class=\"page_wrapper\">\r\n\r\n    <!-- Back To
+    Top - Start -->\r\n    <div class=\"backtotop\">\r\n      <a href=\"#\" class=\"scroll\">\r\n
+    \       <i class=\"far fa-arrow-up\"></i>\r\n      </a>\r\n    </div>\r\n    <!--
+    Back To Top - End -->\r\n\r\n    <!-- Site Header - Start\r\n      ==================================================
+    -->\r\n    <header class=\"site_header site_header_1\">\r\n      <div class=\"container\">\r\n
+    \       <div class=\"row align-items-center\">\r\n          <div class=\"col col-lg-3
+    col-5\">\r\n            <div class=\"site_logo\">\r\n              <a class=\"site_link\"
+    href=\"index.html\">\r\n                <img src=\"assets/images/logo/site_logo.svg\">\r\n
+    \             </a>\r\n            </div>\r\n          </div>\r\n\r\n        </div>\r\n
+    \     </div>\r\n    </header>\r\n    <!-- Site Header - End\r\n      ==================================================
+    -->\r\n\r\n    <!-- Main Body - Start\r\n      ==================================================
+    -->\r\n    <main class=\"page_content\">\r\n\r\n      <!-- Page Section - Start\r\n
+    \       ================================================== -->\r\n      <section
+    class=\"page_banner\">\r\n        <div class=\"container\">\r\n          <div
+    class=\"content_wrapper\">\r\n            <div class=\"row align-items-center\">\r\n
+    \             <div class=\"col col-lg-6\">\r\n                <ul class=\"breadcrumb_nav
+    unordered_list\">\r\n                  <li><a href=\"index.html\">Home</a></li>\r\n\r\n
+    \                 <li>Terms and Service</li>\r\n                </ul>\r\n                <h1
+    class=\"page_title\">Terms and Services</h1>\r\n\r\n\r\n              </div>\r\n
+    \           </div>\r\n          </div>\r\n        </div>\r\n      </section>\r\n
+    \     <!-- Page Section - End\r\n        ==================================================
+    -->\r\n\r\n      <!-- FAQ Section - Start\r\n        ==================================================
+    -->\r\n      <section class=\"faq_section section_space_lg\">\r\n        <div
+    class=\"container\">\r\n          <div class=\"section_heading text-center mb-3\">\r\n
+    \           <div class=\"row justify-content-center\">\r\n              <div class=\"col
+    col-lg-8\" style=\"text-align:left\">\r\n                <h1>OVERVIEW</h1>\r\n
+    \               <p>This website is operated by Better Projects. Throughout the
+    site, the terms “we”, “us” and “our”\r\n                  refer to Better Projects.
+    Better Projects offers this website, including all information, tools and\r\n
+    \                 Services available from this site to you, the user, conditioned
+    upon your acceptance of all terms,\r\n                  conditions, policies and
+    notices stated here.</p>\r\n                <p>By visiting our site and/ or purchasing
+    something from us, you engage in our “Service” and agree to\r\n                  be
+    bound by the following terms and conditions (“Terms of Service”, “Terms”), including
+    those\r\n                  additional terms and conditions and policies referenced
+    herein and/or available by hyperlink. These\r\n                  Terms of Service
+    apply to all users of the site, including without limitation users who are browsers,\r\n
+    \                 vendors, customers, merchants, and/ or contributors of content.</p>\r\n
+    \               <p>Please read these Terms of Service carefully before accessing
+    or using our website. By accessing or\r\n                  using any part of the
+    site, you agree to be bound by these Terms of Service. If you do not agree to\r\n
+    \                 all the terms and conditions of this agreement, then you may
+    not access the website or use any\r\n                  Services. If these Terms
+    of Service are considered an offer, acceptance is expressly limited to these\r\n
+    \                 Terms of Service.</p>\r\n                <p>Any new features
+    or tools which are added to the current store shall also be subject to the Terms
+    of\r\n                  Service. You can review the most current version of the
+    Terms of Service at any time on this page. We\r\n                  reserve the
+    right to update, change or replace any part of these Terms of Service by posting
+    updates\r\n                  and/or changes to our website. It is your responsibility
+    to check this page periodically for changes.\r\n                  Your continued
+    use of or access to the website following the posting of any changes constitutes\r\n
+    \                 acceptance of those changes.</p>\r\n                <p>Our store
+    is hosted on Shopify Inc. They provide us with the online e-commerce platform
+    that allows\r\n                  us to sell our products and Services to you.</p>\r\n\r\n
+    \               <h2>SECTION 1 - ONLINE STORE TERMS</h2>\r\n                <p>By
+    agreeing to these Terms of Service, you represent that you are at least the age
+    of majority in\r\n                  your state or province of residence, or that
+    you are the age of majority in your state or province of\r\n                  residence
+    and you have given us your consent to allow any of your minor dependents to use
+    this site.\r\n                </p>\r\n                <p>You may not use our products
+    for any illegal or unauthorized purpose nor may you, in the use of the\r\n                  Service,
+    violate any laws in your jurisdiction (including but not limited to copyright
+    laws).</p>\r\n                <p>You must not transmit any worms or viruses or
+    any code of a destructive nature.</p>\r\n                <p>A breach or violation
+    of any of the Terms will result in an immediate termination of your Services.\r\n
+    \               </p>\r\n\r\n                <h2>SECTION 2 - GENERAL CONDITIONS</h2>\r\n
+    \               <p>We reserve the right to refuse service to anyone for any reason
+    at any time.</p>\r\n                <p>You understand that your content (not including
+    credit card information), may be transferred\r\n                  unencrypted
+    and involve (a) transmissions over various networks; and (b) changes to conform
+    and adapt\r\n                  to technical requirements of connecting networks
+    or devices. Credit card information is always\r\n                  encrypted during
+    transfer over networks.</p>\r\n                <p>You agree not to reproduce,
+    duplicate, copy, sell, resell or exploit any portion of the Service, use\r\n                  of
+    the Service, or access to the Service or any contact on the website through which
+    the service is\r\n                  provided, without express written permission
+    by us.</p>\r\n                <p>The headings used in this agreement are included
+    for convenience only and will not limit or otherwise\r\n                  affect
+    these Terms.</p>\r\n\r\n                <h2>SECTION 3 - ACCURACY, COMPLETENESS
+    AND TIMELINESS OF INFORMATION</h2>\r\n                <p>We are not responsible
+    if information made available on this site is not accurate, complete or\r\n                  current.
+    The material on this site is provided for general information only and should
+    not be relied\r\n                  upon or used as the sole basis for making decisions
+    without consulting primary, more accurate, more\r\n                  complete
+    or more timely sources of information. Any reliance on the material on this site
+    is at your\r\n                  own risk.</p>\r\n                <p>This site
+    may contain certain historical information. Historical information, necessarily,
+    is not\r\n                  current and is provided for your reference only. We
+    reserve the right to modify the contents of this\r\n                  site at
+    any time, but we have no obligation to update any information on our site. You
+    agree that it\r\n                  is your responsibility to monitor changes to
+    our site.</p>\r\n\r\n                <h2>SECTION 4 - MODIFICATIONS TO THE SERVICE
+    AND PRICES</h2>\r\n                <p>Prices for our products are subject to change
+    without notice.</p>\r\n                <p>We reserve the right at any time to
+    modify or discontinue the Service (or any part or content\r\n                  thereof)
+    without notice at any time.</p>\r\n                <p>We shall not be liable to
+    you or to any third-party for any modification, price change, suspension or\r\n
+    \                 discontinuance of the Service.</p>\r\n\r\n                <h2>SECTION
+    5 - PRODUCTS OR SERVICES (if applicable)</h2>\r\n                <p>Certain products
+    or Services may be available exclusively online through the website. These products\r\n
+    \                 or Services may have limited quantities and are subject to return
+    or exchange only according to our\r\n                  Return Policy. To view
+    our Return Policy, please visit [LINK TO RETURN POLICY]</p>\r\n                <p>We
+    have made every effort to display as accurately as possible the colors and images
+    of our products\r\n                  that appear at the store. We cannot guarantee
+    that your computer monitor's display of any color will\r\n                  be
+    accurate.</p>\r\n                <p>We reserve the right, but are not obligated,
+    to limit the sales of our products or Services to any\r\n                  person,
+    geographic region or jurisdiction. We may exercise this right on a case-by-case
+    basis. We\r\n                  reserve the right to limit the quantities of any
+    products or Services that we offer. All descriptions\r\n                  of products
+    or product pricing are subject to change at anytime without notice, at the sole
+    discretion\r\n                  of us. We reserve the right to discontinue any
+    product at any time. Any offer for any product or\r\n                  service
+    made on this site is void where prohibited.</p>\r\n                <p>We do not
+    warrant that the quality of any products, Services, information, or other material\r\n
+    \                 purchased or obtained by you will meet your expectations, or
+    that any errors in the Service will be\r\n                  corrected.</p>\r\n\r\n
+    \               <h2>SECTION 6 - ACCURACY OF BILLING AND ACCOUNT INFORMATION</h2>\r\n
+    \               <p>We reserve the right to refuse any order you place with us.
+    We may, in our sole discretion, limit or\r\n                  cancel quantities
+    purchased per person, per household or per order. These restrictions may include\r\n
+    \                 orders placed by or under the same customer account, the same
+    credit card, and/or orders that use the\r\n                  same billing and/or
+    shipping address. In the event that we make a change to or cancel an order, we
+    may\r\n                  attempt to notify you by contacting the e-mail and/or
+    billing address/phone number provided at the\r\n                  time the order
+    was made. We reserve the right to limit or prohibit orders that, in our sole judgment,\r\n
+    \                 appear to be placed by dealers, resellers or distributors.</p>\r\n
+    \               <p>You agree to provide current, complete and accurate purchase
+    and account information for all\r\n                  purchases made at our store.
+    You agree to promptly update your account and other information,\r\n                  including
+    your email address and credit card numbers and expiration dates, so that we can
+    complete\r\n                  your transactions and contact you as needed.</p>\r\n
+    \               <p>For more detail, please review our Returns Policy.</p>\r\n\r\n
+    \               <h2>SECTION 7 - OPTIONAL TOOLS</h2>\r\n                <p>We may
+    provide you with access to third-party tools over which we neither monitor nor
+    have any\r\n                  control nor input.</p>\r\n                <p>You
+    acknowledge and agree that we provide access to such tools ”as is” and “as available”
+    without any\r\n                  warranties, representations or conditions of
+    any kind and without any endorsement. We shall have no\r\n                  liability
+    whatsoever arising from or relating to your use of optional third-party tools.</p>\r\n
+    \               <p>Any use by you of the optional tools offered through the site
+    is entirely at your own risk and\r\n                  discretion and you should
+    ensure that you are familiar with and approve of the terms on which tools\r\n
+    \                 are provided by the relevant third-party provider(s).</p>\r\n
+    \               <p>We may also, in the future, offer new Services and/or features
+    through the website (including, the\r\n                  release of new tools
+    and resources). Such new features and/or Services shall also be subject to these\r\n
+    \                 Terms of Service.</p>\r\n              </div>\r\n            </div>\r\n
+    \         </div>\r\n\r\n        </div>\r\n      </section>\r\n      <!-- FAQ Section
+    - End\r\n        ================================================== -->\r\n\r\n
+    \     <!-- Newslatter Section - Start\r\n        ==================================================
+    -->\r\n      <section class=\"newslatter_section\">\r\n        <div class=\"container\">\r\n
+    \         <div class=\"newslatter_box\" style=\"background-image: url('assets/images/shape/shape_img_6.svg');\">\r\n
+    \           <div class=\"row justify-content-center\">\r\n              <div class=\"col
+    col-lg-6\">\r\n                <div class=\"section_heading text-center\">\r\n
+    \                 <h2 class=\"heading_text\">\r\n                    Join our
+    Newsletter to stay updated on Next Courses\r\n                  </h2>\r\n                  <p
+    class=\"heading_description mb-0\">\r\n                    Subscribe to our newsletter
+    and stay informed about upcoming courses and updates. Don’t miss\r\n                    out—join
+    today!\r\n                  </p>\r\n                </div>\r\n                <form
+    action=\"#\">\r\n                  <div class=\"form_item m-0\">\r\n                    <input
+    type=\"email\" name=\"email\" placeholder=\"Your Email\">\r\n                    <button
+    type=\"submit\" class=\"btn btn_dark\">\r\n                      <span>\r\n                        <small>Subsctibe</small>\r\n
+    \                       <small>Subsctibe</small>\r\n                      </span>\r\n
+    \                   </button>\r\n                  </div>\r\n                </form>\r\n
+    \             </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n
+    \     </section>\r\n      <!-- Newslatter Section - End -->\r\n\r\n    </main>\r\n
+    \   <!-- Main Body - End\r\n      ==================================================
+    -->\r\n\r\n    <!-- Site Footer - Start\r\n      ==================================================
+    -->\r\n    <footer class=\"site_footer\">\r\n      <div class=\"footer_widget_area\">\r\n
+    \       <div class=\"container\">\r\n          <div class=\"row\">\r\n            <div
+    class=\"col col-lg-3 col-md-6 col-sm-6\">\r\n              <div class=\"footer_widget\">\r\n
+    \               <div class=\"site_logo\">\r\n                  <a class=\"site_link\"
+    href=\"index.html\">\r\n                    <img src=\"assets/images/logo/site_logo_2.svg\">\r\n
+    \                 </a>\r\n                </div>\r\n\r\n              </div>\r\n
+    \           </div>\r\n            <div class=\"col col-lg-6\">\r\n              <div
+    class=\"row\">\r\n                <div class=\"col col-md-4 col-sm-4\">\r\n                  <div
+    class=\"footer_widget\">\r\n                    <ul class=\"page_list unordered_list_block\">\r\n
+    \                     <li>\r\n                        <a href=\"about.html\">\r\n
+    \                         <span class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n
+    \                         <span class=\"item_text\">About</span>\r\n                        </a>\r\n
+    \                     </li>\r\n\r\n                    </ul>\r\n                  </div>\r\n
+    \               </div>\r\n                <div class=\"col col-md-4 col-sm-4\">\r\n
+    \                 <div class=\"footer_widget\">\r\n\r\n                    <ul
+    class=\"page_list unordered_list_block\">\r\n                      <li>\r\n                        <a
+    href=\"course_details.html\">\r\n                          <span class=\"item_icon\"><i
+    class=\"fas fa-caret-right\"></i></span>\r\n                          <span class=\"item_text\">Contact</span>\r\n
+    \                       </a>\r\n                      </li>\r\n\r\n                    </ul>\r\n
+    \                 </div>\r\n                </div>\r\n                <div class=\"col
+    col-md-4 col-sm-4\">\r\n                  <div class=\"footer_widget\">\r\n\r\n
+    \                   <ul class=\"page_list unordered_list_block\">\r\n                      <li>\r\n
+    \                       <a href=\"privacy_policy.html\">\r\n                          <span
+    class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n                          <span
+    class=\"item_text\">Privacy Policy</span>\r\n                        </a>\r\n
+    \                     </li>\r\n\r\n                    </ul>\r\n                  </div>\r\n
+    \               </div>\r\n              </div>\r\n            </div>\r\n            <div
+    class=\"col col-md-4 col-sm-4\">\r\n              <div class=\"footer_widget\">\r\n
+    \           \r\n                <ul class=\"page_list unordered_list_block\">\r\n
+    \                 <li>\r\n                    <a href=\"service_terms.html\">\r\n
+    \                     <span class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n
+    \                     <span class=\"item_text\">Terms and Conditions</span>\r\n
+    \                   </a>\r\n                  </li>\r\n                 \r\n                </ul>\r\n
+    \             </div>\r\n            </div>\r\n\r\n            <div class=\"col
+    col-md-4 col-sm-4\">\r\n              <div class=\"footer_widget\">\r\n            \r\n
+    \               <ul class=\"page_list unordered_list_block\">\r\n                  <li>\r\n
+    \                   <a href=\"Refund_Policy.html\">\r\n                      <span
+    class=\"item_icon\"><i class=\"fas fa-caret-right\"></i></span>\r\n                      <span
+    class=\"item_text\">Refund Policy</span>\r\n                    </a>\r\n                  </li>\r\n
+    \                \r\n                </ul>\r\n              </div>\r\n            </div>\r\n
+    \         </div>\r\n        </div>\r\n      </div>\r\n\r\n    </footer>\r\n    <!--
+    Site Footer - End\r\n      ==================================================
+    -->\r\n\r\n  </div>\r\n  <!-- Body Wrap - End -->\r\n\r\n  <!-- Framework - Jquery
+    Include -->\r\n  <script src=\"assets/js/jquery.min.js\"></script>\r\n  <script
+    src=\"assets/js/popper.min.js\"></script>\r\n  <script src=\"assets/js/bootstrap.min.js\"></script>\r\n
+    \ <script src=\"assets/js/bootstrap-dropdown-ml-hack.js\"></script>\r\n\r\n  <!--
+    animation - jquery include -->\r\n  <script src=\"assets/js/cursor.js\"></script>\r\n
+    \ <script src=\"assets/js/wow.min.js\"></script>\r\n  <script src=\"assets/js/tilt.min.js\"></script>\r\n
+    \ <script src=\"assets/js/parallax.min.js\"></script>\r\n  <script src=\"assets/js/parallax-scroll.js\"></script>\r\n\r\n
+    \ <!-- Carousel - Jquery Include -->\r\n  <script src=\"assets/js/slick.min.js\"></script>\r\n\r\n
+    \ <!-- Video & Image Popup - Jquery Include -->\r\n  <script src=\"assets/js/magnific-popup.min.js\"></script>\r\n\r\n
+    \ <!-- Counter Up - Jquery Include -->\r\n  <script src=\"assets/js/waypoint.js\"></script>\r\n
+    \ <script src=\"assets/js/counterup.min.js\"></script>\r\n\r\n  <!-- Countdown
+    Timer - jquery include -->\r\n  <script src=\"assets/js/countdown.js\"></script>\r\n\r\n
+    \ <!-- Vanilla Calendar - Jquery Include -->\r\n  <script src=\"assets/js/vanilla-calendar.min.js\"></script>\r\n\r\n
+    \ <!-- Custom - Jquery Include -->\r\n  <script src=\"assets/js/main.js\"></script>\r\n\r\n</body>\r\n\r\n</html>"
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: frontend-files
+  namespace: e2e-devops

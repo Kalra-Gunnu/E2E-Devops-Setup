@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: payment-service
-        image: <your docker hub user>/e2e-devops-payment-service:latest
+        image: prag1402/e2e-devops-payment-service:latest
         ports:
         - containerPort: 3000
         env:
@@ -28,11 +28,11 @@ spec:
               key: NODE_ENV
         - name: PORT
           value: "3000"
-        - name: MONGODB_URI
+        - name: MONGO_URI
           valueFrom:
             secretKeyRef:
               name: app-secrets
-              key: MONGODB_URI
+              key: MONGO_URI
         - name: RAZORPAY_KEY_ID
           valueFrom:
             secretKeyRef:
