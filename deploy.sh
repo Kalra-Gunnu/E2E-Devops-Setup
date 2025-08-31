@@ -9,16 +9,15 @@ NC='\033[0m' # No Color
 
 echo -e "${BLUE}🚀 Starting Kubernetes deployment...${NC}"
 
-# Check if minikube is running
-if ! minikube status | grep -q "Running"; then
-    echo -e "${YELLOW}⚠️  Minikube is not running. Starting minikube...${NC}"
-    minikube start --cpus=4 --memory=4096 --disk-size=20g
+# Check if kind cluster is running
+if ! kubectl cluster-info &> /dev/null; then
+    echo -e "${YELLOW}⚠️  Kind cluster is not running. Please start Docker Desktop with Kubernetes enabled.${NC}"
+    exit 1
 fi
+echo -e "${GREEN}✅ Kind cluster is running${NC}"
 
-# Enable addons
-echo -e "${YELLOW}🔧 Enabling required addons...${NC}"
-minikube addons enable ingress
-minikube addons enable metrics-server
+# Check if ingress controller is available
+echo -e "${YELLOW}🔧 Checking ingress controller...${NC}"
 
 # Wait for ingress controller to be ready
 echo -e "${YELLOW}⏳ Waiting for ingress controller to be ready...${NC}"
@@ -89,16 +88,16 @@ kubectl wait --namespace e2e-devops \
   --selector=app=frontend \
   --timeout=120s
 
-# Get minikube IP
-MINIKUBE_IP=$(minikube ip)
+# Get cluster IP (for kind, we'll use localhost)
+CLUSTER_IP="localhost"
 
 echo -e "${GREEN}🎉 Deployment completed successfully!${NC}"
 echo ""
 echo -e "${GREEN}📋 Service URLs:${NC}"
-echo -e "  • Frontend: http://${MINIKUBE_IP}"
-echo -e "  • Payment Service: http://${MINIKUBE_IP}/api/payment"
-echo -e "  • Project Service: http://${MINIKUBE_IP}/api/project"
-echo -e "  • User Service: http://${MINIKUBE_IP}/api/user"
+echo -e "  • Frontend: http://${CLUSTER_IP}"
+echo -e "  • Payment Service: http://${CLUSTER_IP}/api/payment"
+echo -e "  • Project Service: http://${CLUSTER_IP}/api/project"
+echo -e "  • User Service: http://${CLUSTER_IP}/api/user"
 echo ""
 echo -e "${GREEN}🔍 Check deployment status:${NC}"
 echo -e "  kubectl get pods -n e2e-devops"

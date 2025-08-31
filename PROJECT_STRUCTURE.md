@@ -150,7 +150,7 @@ E2E-Devops-Setup/
 ## 🚀 Deployment Flow
 
 ```
-1. Build Docker Images → 2. Push to DockerHub → 3. Start Minikube → 4. Deploy Infrastructure → 5. Deploy Services → 6. Configure Ingress → 7. Verify Deployment
+1. Build Docker Images → 2. Push to DockerHub → 3. Enable Kubernetes in Docker Desktop → 4. Deploy Infrastructure → 5. Deploy Services → 6. Configure Ingress → 7. Verify Deployment
 ```
 
 ## 🔍 Troubleshooting Resources
@@ -158,7 +158,7 @@ E2E-Devops-Setup/
 - **Logs**: `kubectl logs -f deployment/[service-name] -n e2e-devops`
 - **Status**: `kubectl get pods -n e2e-devops`
 - **Services**: `kubectl get services -n e2e-devops`
-- **Dashboard**: `minikube dashboard`
+- **Dashboard**: `kubectl proxy` then visit Kubernetes dashboard
 
 ---
 

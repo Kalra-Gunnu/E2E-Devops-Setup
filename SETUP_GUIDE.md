@@ -5,7 +5,7 @@
 Before you begin, ensure you have the following installed:
 
 - **Docker** - [Install Docker](https://docs.docker.com/get-docker/)
-- **Minikube** - [Install Minikube](https://minikube.sigs.k8s.io/docs/start/)
+- **Docker Desktop with Kubernetes** - Enable Kubernetes in Docker Desktop settings
 - **kubectl** - [Install kubectl](https://kubernetes.io/docs/tasks/tools/)
 - **Node.js** (v18 or higher) - [Install Node.js](https://nodejs.org/)
 
@@ -36,15 +36,14 @@ This will:
 - Push them to DockerHub under `prag1402/e2e-devops/`
 - Create images: `payment-service`, `project-service`, `user-service`
 
-### 4. Start Minikube
-```bash
-# Start minikube with sufficient resources
-minikube start --cpus=4 --memory=8192 --disk-size=20g
+### 4. Enable Kubernetes in Docker Desktop
 
-# Enable required addons
-minikube addons enable ingress
-minikube addons enable metrics-server
-```
+1. Open Docker Desktop
+2. Go to Settings/Preferences
+3. Click on Kubernetes tab
+4. Check "Enable Kubernetes"
+5. Click "Apply & Restart"
+6. Wait for Kubernetes to start (you'll see "kind" cluster running)
 
 ### 5. Deploy to Kubernetes
 ```bash
@@ -86,15 +85,12 @@ chmod +x deploy.sh
 
 After deployment, access your application at:
 
-- **Frontend**: http://[MINIKUBE_IP]
-- **Payment API**: http://[MINIKUBE_IP]/api/payment
-- **Project API**: http://[MINIKUBE_IP]/api/project
-- **User API**: http://[MINIKUBE_IP]/api/user
+- **Frontend**: http://localhost
+- **Payment API**: http://localhost/api/payment
+- **Project API**: http://localhost/api/project
+- **User API**: http://localhost/api/user
 
-Get Minikube IP:
-```bash
-minikube ip
-```
+Note: Since you're using Docker Desktop with kind, all services are accessible via localhost
 
 ## 🔍 Monitoring and Debugging
 
@@ -132,10 +128,10 @@ kubectl exec -it [POD_NAME] -n e2e-devops -- /bin/sh
 kubectl delete namespace e2e-devops
 ```
 
-### Stop Minikube
+### Stop Kubernetes Cluster
 ```bash
-minikube stop
-minikube delete
+# If using Docker Desktop, simply disable Kubernetes in settings
+# Or restart Docker Desktop to stop the cluster
 ```
 
 ## 🔐 Environment Variables
@@ -161,23 +157,23 @@ echo -n "your-actual-value" | base64
 
 ### Useful Commands
 ```bash
-# Check minikube status
-minikube status
+# Check cluster status
+kubectl cluster-info
 
-# Check addons
-minikube addons list
-
-# View minikube dashboard
-minikube dashboard
+# Check node status
+kubectl get nodes
 
 # Check ingress controller
 kubectl get pods -n ingress-nginx
+
+# View cluster resources
+kubectl get all --all-namespaces
 ```
 
 ## 📚 Additional Resources
 
 - [Kubernetes Documentation](https://kubernetes.io/docs/)
-- [Minikube Documentation](https://minikube.sigs.k8s.io/docs/)
+- [Kind Documentation](https://kind.sigs.k8s.io/)
 - [Docker Documentation](https://docs.docker.com/)
 - [Nginx Ingress Controller](https://kubernetes.github.io/ingress-nginx/)
 

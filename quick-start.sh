@@ -26,12 +26,13 @@ if ! docker pull hello-world:latest > /dev/null 2>&1; then
 fi
 echo -e "${GREEN}✅ DockerHub login verified${NC}"
 
-# Check if minikube is installed
-if ! command -v minikube &> /dev/null; then
-    echo -e "${RED}❌ Minikube is not installed. Please install minikube first.${NC}"
-    echo -e "${YELLOW}   Visit: https://minikube.sigs.k8s.io/docs/start/${NC}"
+# Check if kind cluster is running
+if ! kubectl cluster-info &> /dev/null; then
+    echo -e "${RED}❌ Kind cluster is not running. Please enable Kubernetes in Docker Desktop.${NC}"
+    echo -e "${YELLOW}   Go to Docker Desktop > Settings > Kubernetes > Enable Kubernetes${NC}"
     exit 1
 fi
+echo -e "${GREEN}✅ Kind cluster is running${NC}"
 
 # Check if kubectl is installed
 if ! command -v kubectl &> /dev/null; then
@@ -39,6 +40,17 @@ if ! command -v kubectl &> /dev/null; then
     echo -e "${YELLOW}   Visit: https://kubernetes.io/docs/tasks/tools/${NC}"
     exit 1
 fi
+
+# Install NGINX Ingress Controller for Docker Desktop Kubernetes
+echo -e "${YELLOW} Installing NGINX Ingress Controller...${NC}"
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.10.1/deploy/static/provider/cloud/deploy.yaml
+
+# Wait for ingress controller to be ready
+echo -e "${YELLOW} Waiting for ingress controller to be ready...${NC}"
+kubectl wait --namespace ingress-nginx \
+--for=condition=ready pod \
+--selector=app.kubernetes.io/component=controller \
+--timeout=120s
 
 echo -e "${GREEN}✅ All prerequisites are met!${NC}"
 echo ""
@@ -68,15 +80,9 @@ fi
 echo -e "${GREEN}✅ Kubernetes manifests generated successfully!${NC}"
 echo ""
 
-# Step 2: Start Minikube
-echo -e "${YELLOW}🔧 Step 2: Starting Minikube...${NC}"
-if ! minikube status | grep -q "Running"; then
-    minikube start --cpus=4 --memory=4096 --disk-size=20g
-    minikube addons enable ingress
-    minikube addons enable metrics-server
-else
-    echo -e "${GREEN}✅ Minikube is already running${NC}"
-fi
+# Step 2: Verify Kind Cluster
+echo -e "${YELLOW}🔧 Step 2: Verifying Kind cluster...${NC}"
+echo -e "${GREEN}✅ Kind cluster is running via Docker Desktop${NC}"
 
 echo ""
 
@@ -93,19 +99,18 @@ echo ""
 echo -e "${GREEN}🎉 Application deployed successfully!${NC}"
 echo ""
 
-# Get minikube IP and display access information
-MINIKUBE_IP=$(minikube ip)
+# Display access information for kind cluster
 echo -e "${GREEN}📋 Access your application:${NC}"
-echo -e "  • Frontend: http://${MINIKUBE_IP}"
-echo -e "  • Payment API: http://${MINIKUBE_IP}/api/payment"
-echo -e "  • Project API: http://${MINIKUBE_IP}/api/project"
-echo -e "  • User API: http://${MINIKUBE_IP}/api/user"
+echo -e "  • Frontend: http://localhost"
+echo -e "  • Payment API: http://localhost/api/payment"
+echo -e "  • Project API: http://localhost/api/project"
+echo -e "  • User API: http://localhost/api/user"
 echo ""
 
 echo -e "${GREEN}🔍 Useful commands:${NC}"
 echo -e "  • Check status: kubectl get pods -n e2e-devops"
 echo -e "  • View logs: kubectl logs -f deployment/payment-service -n e2e-devops"
-echo -e "  • Minikube dashboard: minikube dashboard"
+echo -e "  • Kubernetes dashboard: kubectl proxy (then visit http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/)"
 echo ""
 
 echo -e "${GREEN}🚀 Your E2E DevOps application is now running on Kubernetes!${NC}"
