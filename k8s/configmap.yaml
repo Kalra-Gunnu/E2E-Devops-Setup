@@ -11,3 +11,11 @@ data:
   S3_BUCKET_NAME: "e2e-devops-bucket"
   RAZORPAY_KEY_ID: "your-razorpay-key-id"
   RAZORPAY_KEY_SECRET: "your-razorpay-key-secret"
+  
+  # Frontend Configuration
+  PROJECT_SERVICE_URL: "http://project-service:3002"
+  PAYMENT_SERVICE_URL: "http://payment-service:3003"
+  USER_SERVICE_URL: "http://user-service:3001"
+  RAZORPAY_KEY: "rzp_test_a6CEBoBbltCvzC"
+  COMPANY_NAME: "Dey Education And Research Private Limited"
+  CURRENCY: "INR"

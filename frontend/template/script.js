@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function fetchProjects() {
-    fetch('http://localhost:3002/api/projects')
+    fetch(window.getApiUrl('PROJECT_SERVICE', '/api/projects'))
         .then(response => response.json())
         .then(projects => {
             const container = document.getElementById('projectsContainer');
@@ -65,7 +65,7 @@ function initiatePayment(event, projectId, price) {
         amount: price
     };
 
-    fetch('http://localhost:3003/api/payment/create-order', {
+            fetch(window.getApiUrl('PAYMENT_SERVICE', '/api/payment/create-order'), {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -110,7 +110,7 @@ function openRazorpayCheckout(orderDetails, userDetails) {
 }
 
 function verifyPayment(paymentResponse, orderId, userDetails) {
-    fetch('http://localhost:3003/api/payment/verify-payment', {
+            fetch(window.getApiUrl('PAYMENT_SERVICE', '/api/payment/verify-payment'), {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

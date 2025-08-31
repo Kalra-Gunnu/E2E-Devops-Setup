@@ -2,7 +2,7 @@ const currentUrl = window.location.href;
 const urlParams = new URLSearchParams(new URL(currentUrl).search);
 const projectId = urlParams.get("id");
 console.log("projectId: ", projectId);
-fetch(`http://localhost:3002/api/projects/${projectId}`)
+fetch(window.getApiUrl('PROJECT_SERVICE', `/api/projects/${projectId}`))
   .then((response) => response.json())
   .then((project) => {
     console.log("project details: ", project);
@@ -113,7 +113,7 @@ fetch(`http://localhost:3002/api/projects/${projectId}`)
         amount: price
     };
 
-    fetch('http://localhost:3003/api/payment/create-order', {
+    fetch(window.getApiUrl('PAYMENT_SERVICE', '/api/payment/create-order'), {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -131,10 +131,10 @@ fetch(`http://localhost:3002/api/projects/${projectId}`)
 
 function openRazorpayCheckout(orderDetails, userDetails) {
     const options = {
-        "key": "rzp_test_a6CEBoBbltCvzC",  // Your Key
+        "key": window.getConfig('RAZORPAY_KEY'),
         "amount": orderDetails.amount,
         "currency": "INR",
-        "name": "Dey Education And Research Private Limited",
+        "name": window.getConfig('COMPANY_NAME'),
         "description": "Project Payment",
         "order_id": orderDetails.id,
         "handler": function (response) {
@@ -158,7 +158,7 @@ function openRazorpayCheckout(orderDetails, userDetails) {
 }
 
 function verifyPayment(paymentResponse, orderId, userDetails) {
-    fetch('http://localhost:3003/api/payment/verify-payment', {
+    fetch(window.getApiUrl('PAYMENT_SERVICE', '/api/payment/verify-payment'), {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

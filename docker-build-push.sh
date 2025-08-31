@@ -73,12 +73,14 @@ echo -e "${GREEN}✅ DockerHub login verified${NC}"
 build_and_push_service "payment-service" "./backend/paymentService" 3000
 build_and_push_service "project-service" "./backend/projectService" 3001
 build_and_push_service "user-service" "./backend/userService" 3002
+build_and_push_service "frontend" "./frontend" 80
 
 echo -e "${GREEN}🎉 All services have been built and pushed successfully!${NC}"
 echo ""
 echo -e "${GREEN}📋 Image URLs:${NC}"
-echo -e "  • ${DOCKER_USERNAME}/${REPO_NAME}/payment-service:latest"
-echo -e "  • ${DOCKER_USERNAME}/${REPO_NAME}/project-service:latest"
-echo -e "  • ${DOCKER_USERNAME}/${REPO_NAME}/user-service:latest"
+echo -e "  • ${DOCKER_USERNAME}/${REPO_NAME}-payment-service:latest"
+echo -e "  • ${DOCKER_USERNAME}/${REPO_NAME}-project-service:latest"
+echo -e "  • ${DOCKER_USERNAME}/${REPO_NAME}-user-service:latest"
+echo -e "  • ${DOCKER_USERNAME}/${REPO_NAME}-frontend:latest"
 echo ""
 echo -e "${GREEN}🚀 Ready to deploy on Kubernetes!${NC}"
