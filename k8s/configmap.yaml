@@ -2,20 +2,20 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: app-config
-  namespace: e2e-devops
+  namespace: ${DOCKER_REPO_NAME}
 data:
   NODE_ENV: "production"
-  MONGO_URI: "mongodb://mongodb-service:27017/e2e-devops"
+  MONGO_URI: "mongodb://mongodb-service:27017/${DOCKER_REPO_NAME}"
   REDIS_URL: "redis://redis-service:6379"
   AWS_REGION: "us-east-1"
-  S3_BUCKET_NAME: "e2e-devops-bucket"
+  S3_BUCKET_NAME: "${DOCKER_REPO_NAME}-bucket"
   RAZORPAY_KEY_ID: "your-razorpay-key-id"
   RAZORPAY_KEY_SECRET: "your-razorpay-key-secret"
   
   # Frontend Configuration
-  PROJECT_SERVICE_URL: "http://project-service:3002"
-  PAYMENT_SERVICE_URL: "http://payment-service:3003"
-  USER_SERVICE_URL: "http://user-service:3001"
+  PAYMENT_SERVICE_URL: "http://payment-service:3000"
+  PROJECT_SERVICE_URL: "http://project-service:3001"
+  USER_SERVICE_URL: "http://user-service:3002"
   RAZORPAY_KEY: "rzp_test_a6CEBoBbltCvzC"
   COMPANY_NAME: "Dey Education And Research Private Limited"
   CURRENCY: "INR"

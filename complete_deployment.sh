@@ -9,16 +9,17 @@ NC='\033[0m' # No Color
 
 # Load configuration from config.env file
 if [ -f "config.env" ]; then
+    set -a  # Auto-export all variables
     source config.env
-    echo -e "${GREEN}✅ Configuration loaded from config.env${NC}"
+    set +a  # Turn off auto-export
+    echo -e "${GREEN}✅ Configuration loaded and exported from config.env${NC}"
 else
     echo -e "${YELLOW}⚠️  config.env not found, using default values${NC}"
     # Default values
     DOCKER_USERNAME="prag1402"
     DOCKER_REPO_NAME="e2e-devops"
+    export DOCKER_USERNAME DOCKER_REPO_NAME
 fi
-
-ECR_REGISTRY=${DOCKER_USERNAME}
 
 echo -e "${BLUE}🚀 E2E DevOps Fullstack Application - Quick Start${NC}"
 echo -e "${BLUE}================================================${NC}"
@@ -26,7 +27,7 @@ echo ""
 
 # Step 1: Build and Push Docker Images
 echo -e "${YELLOW}📦 Step 1: Building and pushing Docker images...${NC}"
-sh ./scripts/1-docker-build-push.sh ${IMAGE_TAG} ${DOCKER_USERNAME} ${DOCKER_REPO_NAME}
+./scripts/1-docker-build-push.sh
 
 if [ $? -ne 0 ]; then
     echo -e "${RED}❌ Docker build failed. Please check the errors above.${NC}"
@@ -35,7 +36,7 @@ fi
 
 # Step 2: Scan Images with Trivy
 echo -e "${YELLOW}🚀 Step 2: Scanning images with Trivy...${NC}"
-sh ./scripts/2-trivy-scan-all.sh ${IMAGE_TAG} ${DOCKER_USERNAME} ${DOCKER_REPO_NAME}
+./scripts/2-trivy-scan-all.sh
 
 # if [ $? -ne 0 ]; then
 #     echo -e "${RED}❌ Trivy scan failed. Please check the errors above.${NC}"
@@ -56,7 +57,7 @@ echo ""
 
 # Step 2: Deploy to Kubernetes
 echo -e "${YELLOW}🚀 Step 3: Deploying to Kubernetes...${NC}"
-sh ./scripts/4-deploy-kube-cluster.sh ${IMAGE_TAG} ${ECR_REGISTRY} ${DOCKER_REPO_NAME}
+./scripts/4-deploy-kube-cluster.sh
 
 if [ $? -ne 0 ]; then
     echo -e "${RED}❌ Kubernetes deployment failed. Please check the errors above.${NC}"

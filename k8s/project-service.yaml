@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: project-service
-  namespace: e2e-devops
+  namespace: ${DOCKER_REPO_NAME}
   labels:
     app: project-service
 spec:
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: project-service
-        image: ${DOCKER_USERNAME}/e2e-devops-project-service:${TAG}
+        image: ${DOCKER_USERNAME}/${DOCKER_REPO_NAME}-project-service:${TAG}
         ports:
         - containerPort: 3001
         env:
@@ -82,7 +82,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: project-service
-  namespace: e2e-devops
+  namespace: ${DOCKER_REPO_NAME}
   labels:
     app: project-service
 spec:
