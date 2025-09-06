@@ -1,0 +1,91 @@
+pipeline {
+  agent any
+  environment {
+    AWS_DEFAULT_REGION = 'ap-south-1'
+    ECR_REGISTRY = "${env.AWS_ACCOUNT_ID}.dkr.ecr.${env.AWS_DEFAULT_REGION}.amazonaws.com"
+    IMAGE_TAG = "${env.BUILD_NUMBER}"
+  }
+
+  stages {
+    stage('Checkout') {
+      steps {
+        checkout scm
+      }
+    }
+
+    stage('Unit Tests & Lint') {
+      steps {
+        sh './scripts/run-unit-tests.sh'
+      }
+    }
+
+    stage('Build & Dockerize') {
+      steps {
+        sh "./scripts/build-all-and-tag.sh ${IMAGE_TAG}"
+      }
+    }
+
+    stage('Scan Images (Trivy)') {
+      steps {
+        sh "./scripts/trivy-scan-all.sh ${IMAGE_TAG}"
+      }
+    }
+
+    stage('Push to ECR') {
+      steps {
+        sh "./scripts/build-and-push-all.sh ${IMAGE_TAG} ${ECR_REGISTRY}"
+      }
+    }
+
+    stage('Terraform Plan/Apply') {
+      when { branch 'main' }
+      steps {
+        dir('infra/terraform/bootstrap') {
+          sh 'terraform init -backend-config=backend.conf'
+          sh 'terraform plan -out=tfplan'
+          sh 'terraform apply -auto-approve tfplan'
+        }
+        dir('infra/terraform/envs/prod') {
+          sh 'terraform init -backend-config=backend.conf'
+          sh 'terraform plan -out=tfplan'
+          sh 'terraform apply -auto-approve tfplan'
+        }
+      }
+    }
+
+    stage('Deploy to Kubernetes') {
+      steps {
+        dir('k8s') {
+          // Apply base manifests (namespaces, configmaps, secrets, ingress, etc.)
+          sh "kubectl apply -f base/ -n app"
+          sh "kubectl apply -f services/ -n app"
+
+          // Update all services with new image tag
+          sh "kubectl set image deployment/payment payment=${ECR_REGISTRY}/payment-service:${IMAGE_TAG} -n app"
+          sh "kubectl set image deployment/project project=${ECR_REGISTRY}/project-service:${IMAGE_TAG} -n app"
+          sh "kubectl set image deployment/user user=${ECR_REGISTRY}/user-service:${IMAGE_TAG} -n app"
+          sh "kubectl set image deployment/frontend frontend=${ECR_REGISTRY}/frontend:${IMAGE_TAG} -n app"
+
+          // Optionally wait for rollout success
+          sh "kubectl rollout status deployment/payment -n app"
+          sh "kubectl rollout status deployment/project -n app"
+          sh "kubectl rollout status deployment/user -n app"
+          sh "kubectl rollout status deployment/frontend -n app"
+        }
+      }
+    }
+
+    stage('Notify') {
+      steps {
+        echo "Send Slack/Email notifications here"
+      }
+    }
+  }
+
+  post {
+    failure {
+      echo "Pipeline failed 🚨"
+      // Add slackSend/email notification if configured
+    }
+  }
+}

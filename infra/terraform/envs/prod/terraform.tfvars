@@ -1,0 +1,5 @@
+aws_region = "us-east-1"
+aws_profile = ""
+env_name = "prod"
+tfstate_bucket = "app-tf-state-youraccount"
+tfstate_lock_table = "app-tf-locks-youraccount"
