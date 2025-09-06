@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: payment-service
-        image: prag1402/e2e-devops-payment-service:latest
+        image: ${DOCKER_USERNAME}/e2e-devops-payment-service:${TAG}
         ports:
         - containerPort: 3000
         env:

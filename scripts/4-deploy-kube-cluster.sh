@@ -7,17 +7,31 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-echo -e "${BLUE}🚀 Starting Kubernetes deployment...${NC}"
+ROOT_DIR="."
+K8_DIR="${ROOT_DIR}/k8s"
+TAG=${1:-latest}
+DOCKER_USERNAME=${2:-prag1402}
+DOCKER_REPO_NAME=${3:-e2e-devops}
 
-# Check if kind cluster is running
+## Check if kind cluster is running
 if ! kubectl cluster-info &> /dev/null; then
-    echo -e "${YELLOW}⚠️  Kind cluster is not running. Please start Docker Desktop with Kubernetes enabled.${NC}"
+    echo -e "${RED}❌ Kind cluster is not running. Please enable Kubernetes in Docker Desktop.${NC}"
+    echo -e "${YELLOW}   Go to Docker Desktop > Settings > Kubernetes > Enable Kubernetes${NC}"
     exit 1
 fi
 echo -e "${GREEN}✅ Kind cluster is running${NC}"
 
-# Check if ingress controller is available
-echo -e "${YELLOW}🔧 Installing ingress controller...${NC}"
+## Check if kubectl is installed
+if ! command -v kubectl &> /dev/null; then
+    echo -e "${RED}❌ kubectl is not installed. Please install kubectl first.${NC}"
+    echo -e "${YELLOW}   Visit: https://kubernetes.io/docs/tasks/tools/${NC}"
+    exit 1
+fi
+
+echo -e "${GREEN}✅ All Deployment Prerequisites are met!${NC}"
+echo ""
+
+echo -e "${BLUE}🚀 Starting Kubernetes deployment...${NC}"
 
 # Install NGINX Ingress Controller for Docker Desktop Kubernetes
 echo -e "${YELLOW} Installing NGINX Ingress Controller...${NC}"
@@ -30,19 +44,23 @@ kubectl wait --namespace ingress-nginx \
   --selector=app.kubernetes.io/component=controller \
   --timeout=120s
 
+# Install envsubst
+echo -e "${YELLOW}🔧 Installing envsubst...${NC}"
+sudo apt-get install -y gettext-base
+
 # Create namespace
 echo -e "${YELLOW}📦 Creating namespace...${NC}"
-kubectl apply -f k8s/namespace.yaml
+kubectl apply -f ${K8_DIR}/namespace.yaml
 
 # Apply ConfigMap and Secrets
 echo -e "${YELLOW}🔐 Applying ConfigMap and Secrets...${NC}"
-kubectl apply -f k8s/configmap.yaml
-kubectl apply -f k8s/secret.yaml
+kubectl apply -f ${K8_DIR}/configmap.yaml
+kubectl apply -f ${K8_DIR}/secret.yaml
 
 # Deploy databases
 echo -e "${YELLOW}🗄️  Deploying databases...${NC}"
-kubectl apply -f k8s/mongodb.yaml
-kubectl apply -f k8s/redis.yaml
+kubectl apply -f ${K8_DIR}/mongodb.yaml
+kubectl apply -f ${K8_DIR}/redis.yaml
 
 # Wait for databases to be ready
 echo -e "${YELLOW}⏳ Waiting for databases to be ready...${NC}"
@@ -58,17 +76,17 @@ kubectl wait --namespace e2e-devops \
 
 # Deploy backend services
 echo -e "${YELLOW}🔧 Deploying backend services...${NC}"
-kubectl apply -f k8s/payment-service.yaml
-kubectl apply -f k8s/project-service.yaml
-kubectl apply -f k8s/user-service.yaml
+envsubst < ${K8_DIR}/payment-service.yaml | kubectl apply -f -
+envsubst < ${K8_DIR}/project-service.yaml | kubectl apply -f -
+envsubst < ${K8_DIR}/user-service.yaml | kubectl apply -f -
 
 # Deploy frontend
 echo -e "${YELLOW}🌐 Deploying frontend...${NC}"
-kubectl apply -f k8s/frontend-service.yaml
+envsubst < ${K8_DIR}/frontend-service.yaml | kubectl apply -f -
 
 # Deploy ingress
 echo -e "${YELLOW}🚪 Deploying ingress...${NC}"
-kubectl apply -f k8s/ingress.yaml
+kubectl apply -f ${K8_DIR}/ingress.yaml
 
 # Wait for all pods to be ready
 echo -e "${YELLOW}⏳ Waiting for all services to be ready...${NC}"
@@ -92,9 +110,6 @@ kubectl wait --namespace e2e-devops \
   --selector=app=frontend \
   --timeout=120s
 
-# Get cluster IP (for kind, we'll use localhost)
-CLUSTER_IP="localhost"
-
 echo -e "${GREEN}🎉 Deployment completed successfully!${NC}"
 echo ""
 echo -e "${GREEN}📋 Service URLs:${NC}"
@@ -112,3 +127,6 @@ echo -e "${GREEN}📊 Monitor logs:${NC}"
 echo -e "  kubectl logs -f deployment/payment-service -n e2e-devops"
 echo -e "  kubectl logs -f deployment/project-service -n e2e-devops"
 echo -e "  kubectl logs -f deployment/user-service -n e2e-devops"
+echo ""
+echo -e "${YELLOW}🚀 Access Kubernetes dashboard:${NC}"
+echo -e "  kubectl proxy (then visit http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/)"

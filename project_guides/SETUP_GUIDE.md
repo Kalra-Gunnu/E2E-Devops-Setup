@@ -19,21 +19,21 @@ cd /Users/pragoy/projects/vlearn/E2E-Devops-Setup
 ### 2. Login to DockerHub
 ```bash
 docker login
-# Enter your DockerHub credentials (prag1402)
+# Enter your DockerHub credentials (${DOCKER_USERNAME})
 ```
 
 ### 3. Build and Push Docker Images
 ```bash
 # Make the script executable
-chmod +x docker-build-push.sh
+chmod +x ./scripts/1-docker-build-push.sh
 
 # Run the build and push script
-./docker-build-push.sh
+./scripts/1-docker-build-push.sh
 ```
 
 This will:
 - Build all backend services
-- Push them to DockerHub under `prag1402/e2e-devops/`
+- Push them to DockerHub under `${DOCKER_USERNAME}/e2e-devops/`
 - Create images: `payment-service`, `project-service`, `user-service`
 
 ### 4. Enable Kubernetes in Docker Desktop
@@ -48,10 +48,10 @@ This will:
 ### 5. Deploy to Kubernetes
 ```bash
 # Make the deployment script executable
-chmod +x deploy.sh
+chmod +x scripts/4-deploy-kube-cluster.sh
 
 # Run the deployment script
-./deploy.sh
+./scripts/4-deploy-kube-cluster.sh
 ```
 
 ## 🏗️ Architecture Overview

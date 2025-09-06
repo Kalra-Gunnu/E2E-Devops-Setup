@@ -58,7 +58,7 @@ E2E-Devops-Setup/
 │
 ├── 📄 docker-build-push.sh             # Docker Build & Push Script
 ├── 📄 deploy.sh                        # Kubernetes Deployment Script
-├── 📄 quick-start.sh                   # Complete Setup Script
+├── 📄 complete_deployment.sh           # Complete Setup Script
 ├── 📄 SETUP_GUIDE.md                   # Detailed Setup Instructions
 ├── 📄 PROJECT_STRUCTURE.md             # This File
 ├── 📄 Readme.md                        # Project Overview
@@ -97,7 +97,7 @@ E2E-Devops-Setup/
 
 ### 1. `docker-build-push.sh`
 - Builds Docker images for all backend services
-- Pushes images to DockerHub under `prag1402/e2e-devops/`
+- Pushes images to DockerHub under `${DOCKER_USERNAME}/e2e-devops/`
 - Includes error handling and status reporting
 
 ### 2. `deploy.sh`
@@ -106,7 +106,7 @@ E2E-Devops-Setup/
 - Waits for services to be ready
 - Provides deployment status and access URLs
 
-### 3. `quick-start.sh`
+### 3. `complete_deployment.sh`
 - Complete automation script
 - Checks prerequisites
 - Runs build, push, and deployment in sequence

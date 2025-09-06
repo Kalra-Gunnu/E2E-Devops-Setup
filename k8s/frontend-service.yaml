@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: prag1402/e2e-devops-frontend:latest
+        image: ${DOCKER_USERNAME}/e2e-devops-frontend:${TAG}
         ports:
         - containerPort: 80
         command: ["/bin/sh", "-c"]

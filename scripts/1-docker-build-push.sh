@@ -1,18 +1,9 @@
 #!/bin/bash
 
-# Load configuration from config.env file
-if [ -f "config.env" ]; then
-    source config.env
-    echo -e "${GREEN}✅ Configuration loaded from config.env${NC}"
-else
-    echo -e "${YELLOW}⚠️  config.env not found, using default values${NC}"
-    # Default values
-    DOCKER_USERNAME="prag1402"
-    DOCKER_REPO_NAME="e2e-devops"
-fi
-
-# Use DOCKER_REPO_NAME from config, fallback to REPO_NAME for backward compatibility
-REPO_NAME=${DOCKER_REPO_NAME:-"e2e-devops"}
+ROOT_DIR="."
+TAG=${1:-latest}
+DOCKER_USERNAME=${2:-prag1402}
+DOCKER_REPO_NAME=${3:-e2e-devops}
 
 # Colors for output
 RED='\033[0;31m'
@@ -31,7 +22,11 @@ build_and_push_service() {
     echo -e "${YELLOW}📦 Building ${service_name}...${NC}"
     
     # Build the Docker image
-    docker build -t ${DOCKER_USERNAME}/${REPO_NAME}-${service_name}:latest ${service_path}
+    if [ service_name == "frontend" ]; then
+        docker build -t ${DOCKER_USERNAME}/${DOCKER_REPO_NAME}-${service_name}:${TAG} ${service_path} --env-file ${ROOT_DIR}/config.env
+    else
+        docker build -t ${DOCKER_USERNAME}/${DOCKER_REPO_NAME}-${service_name}:${TAG} ${service_path}
+    fi
     
     if [ $? -eq 0 ]; then
         echo -e "${GREEN}✅ ${service_name} built successfully${NC}"
@@ -39,7 +34,7 @@ build_and_push_service() {
         echo -e "${YELLOW}🚀 Pushing ${service_name} to DockerHub...${NC}"
         
         # Push to DockerHub
-        docker push ${DOCKER_USERNAME}/${REPO_NAME}-${service_name}:latest
+        docker push ${DOCKER_USERNAME}/${DOCKER_REPO_NAME}-${service_name}:${TAG}
         
         if [ $? -eq 0 ]; then
             echo -e "${GREEN}✅ ${service_name} pushed successfully to DockerHub${NC}"
@@ -70,17 +65,17 @@ fi
 echo -e "${GREEN}✅ DockerHub login verified${NC}"
 
 # Build and push each service
-build_and_push_service "payment-service" "./backend/paymentService" 3000
-build_and_push_service "project-service" "./backend/projectService" 3001
-build_and_push_service "user-service" "./backend/userService" 3002
-build_and_push_service "frontend" "./frontend" 80
+build_and_push_service "payment-service" "${ROOT_DIR}/backend/paymentService" 3000
+build_and_push_service "project-service" "${ROOT_DIR}/backend/projectService" 3001
+build_and_push_service "user-service" "${ROOT_DIR}/backend/userService" 3002
+build_and_push_service "frontend" "${ROOT_DIR}/frontend" 80
 
 echo -e "${GREEN}🎉 All services have been built and pushed successfully!${NC}"
 echo ""
 echo -e "${GREEN}📋 Image URLs:${NC}"
-echo -e "  • ${DOCKER_USERNAME}/${REPO_NAME}-payment-service:latest"
-echo -e "  • ${DOCKER_USERNAME}/${REPO_NAME}-project-service:latest"
-echo -e "  • ${DOCKER_USERNAME}/${REPO_NAME}-user-service:latest"
-echo -e "  • ${DOCKER_USERNAME}/${REPO_NAME}-frontend:latest"
+echo -e "  • ${DOCKER_USERNAME}/${DOCKER_REPO_NAME}-payment-service:${TAG}"
+echo -e "  • ${DOCKER_USERNAME}/${DOCKER_REPO_NAME}-project-service:${TAG}"
+echo -e "  • ${DOCKER_USERNAME}/${DOCKER_REPO_NAME}-user-service:${TAG}"
+echo -e "  • ${DOCKER_USERNAME}/${DOCKER_REPO_NAME}-frontend:${TAG}"
 echo ""
 echo -e "${GREEN}🚀 Ready to deploy on Kubernetes!${NC}"
