@@ -11,7 +11,7 @@ const paymentRoutes = require('./routes/payment.route')
 const healthRoutes = require('./routes/health.route')
 
 app.use('/api/payment', paymentRoutes);
-app.use('/', healthRoutes);
+app.use('/api/payment', healthRoutes);
 
 
 const PORT = process.env.PORT;

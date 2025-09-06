@@ -12,7 +12,7 @@ app.use(cors());
 const healthRoutes = require('./routes/health.route')
 
 app.use('/api/userleads', userLeadRoutes);
-app.use('/', healthRoutes)
+app.use('/api/user', healthRoutes)
 
 const PORT = process.env.PORT;
 

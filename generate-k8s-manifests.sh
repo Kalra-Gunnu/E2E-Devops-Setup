@@ -76,13 +76,13 @@ spec:
             cpu: "500m"
         livenessProbe:
           httpGet:
-            path: /health
+            path: /api/payment/health
             port: 3000
           initialDelaySeconds: 30
           periodSeconds: 10
         readinessProbe:
           httpGet:
-            path: /health
+            path: /api/payment/health
             port: 3000
           initialDelaySeconds: 5
           periodSeconds: 5
@@ -175,13 +175,13 @@ spec:
             cpu: "500m"
         livenessProbe:
           httpGet:
-            path: /health
+            path: /api/project/health
             port: 3001
           initialDelaySeconds: 30
           periodSeconds: 10
         readinessProbe:
           httpGet:
-            path: /health
+            path: /api/project/health
             port: 3001
           initialDelaySeconds: 5
           periodSeconds: 5
@@ -249,13 +249,13 @@ spec:
             cpu: "500m"
         livenessProbe:
           httpGet:
-            path: /health
+            path: /api/user/health
             port: 3002
           initialDelaySeconds: 30
           periodSeconds: 10
         readinessProbe:
           httpGet:
-            path: /health
+            path: /api/user/health
             port: 3002
           initialDelaySeconds: 5
           periodSeconds: 5

@@ -4,35 +4,56 @@ metadata:
   name: app-ingress
   namespace: e2e-devops
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    # nginx.ingress.kubernetes.io/rewrite-target: /$2
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   ingressClassName: nginx
   rules:
   - http:
       paths:
-      - path: /api/payment(/|$)(.*)
-        pathType: ImplementationSpecific
+      - path: /api/payment
+        pathType: Prefix
         backend:
           service:
             name: payment-service
             port:
               number: 3000
-      - path: /api/project(/|$)(.*)
-        pathType: ImplementationSpecific
+      - path: /api/project
+        pathType: Prefix
         backend:
           service:
             name: project-service
             port:
               number: 3001
-      - path: /api/user(/|$)(.*)
-        pathType: ImplementationSpecific
+      - path: /api/user
+        pathType: Prefix
         backend:
           service:
             name: user-service
             port:
               number: 3002
-      - path: /(.*)
+      - path: /
+        pathType: Exact
+        backend:
+          service:
+            name: frontend-service
+            port:
+              number: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: frontend-ingress
+  namespace: e2e-devops
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths:
+      - path: /(.*|assets/*|testingUI/*)
         pathType: ImplementationSpecific
         backend:
           service:

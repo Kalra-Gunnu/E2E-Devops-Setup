@@ -16,7 +16,7 @@ const healthRoutes = require('./routes/health.route')
 app.use('/api/projectdomain', projectDomainRoutes);
 app.use('/api/projects', projectRoutes)
 app.use('/api/projectcontent', projectContentRoutes)
-app.use('/', healthRoutes)
+app.use('/api/project', healthRoutes)
 
 const PORT = process.env.PORT;
 
