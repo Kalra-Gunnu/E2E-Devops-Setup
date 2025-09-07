@@ -58,16 +58,32 @@ module "eks" {
   }
 }
 
-# IAM / IRSA for ExternalSecrets and other controllers
+# IAM / IRSA for ExternalSecrets
 module "iam_irsa" {
   source = "../../modules/iam_irsa"
-  cluster_name = module.eks.cluster_name
-  environment = local.env
-  tags = { Environment = local.env }
+  aws_region = var.aws_region
+  cluster_name = module.eks.name
+  
+  # --- THE CRITICAL FIX ---
+  # Pass the values directly from the EKS module outputs
+  oidc_provider_url        = module.eks.oidc_provider_url
+  oidc_provider_thumbprint = module.eks.oidc_provider_thumbprint # The EKS module provides this output
+  
+  # ... (other variables like external_secrets_namespace, etc.)
+    # Define the Kubernetes namespace for the External Secrets service account.
+  external_secrets_namespace = "external-secrets"
+
+  # Define the name of the Kubernetes service account for External Secrets.
+  external_secrets_sa = "external-secrets-sa"
+
+  # Tell the module not to use a wildcard for the IAM policy resource.
   external_secrets_arn_wildcard = false
+
+  # Provide the list of specific secrets the role should have access to.
   external_secrets_resources = [
     "arn:aws:secretsmanager:${var.aws_region}:${data.aws_caller_identity.current.account_id}:secret:/app/*"
   ]
+  tags = { Environment = local.env }
 }
 
 data "aws_caller_identity" "current" {}

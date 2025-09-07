@@ -35,3 +35,13 @@ variable "tags" {
     type = map(string)
     default = {} 
 }
+
+variable "oidc_provider_url" {
+  description = "The OIDC provider URL of the EKS cluster."
+  type        = string
+}
+
+variable "oidc_provider_thumbprint" {
+  description = "The thumbprint of the OIDC provider's root certificate."
+  type        = string
+}

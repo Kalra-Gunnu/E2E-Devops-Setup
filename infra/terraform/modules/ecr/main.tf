@@ -5,7 +5,3 @@ resource "aws_ecr_repository" "repos" {
   image_tag_mutability = var.image_tag_mutability
   tags                 = var.tags
 }
-
-output "repo_urls" {
-  value = { for k, r in aws_ecr_repository.repos : k => r.repository_url }
-}
