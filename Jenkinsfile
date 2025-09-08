@@ -90,20 +90,20 @@ pipeline {
       }
     }
 
-    stage('Plan Production') {
+    stage('Plan Development') {
       when { 
         branch 'main' 
       }
       steps {
-        dir('infra/terraform/envs/prod') {
+        dir('infra/terraform/envs/dev') {
           sh """
             terraform init \\
                 -backend-config="bucket=${env.TF_BACKEND_BUCKET}" \\
-                -backend-config="key=prod/terraform.tfstate" \\
+                -backend-config="key=dev/terraform.tfstate" \\
                 -backend-config="region=${env.TF_BACKEND_REGION}"
           """
           // Step 1: Create the plan file
-          sh 'terraform plan -var-file=terraform.tfvars -out=prod.tfplan'
+          sh 'terraform plan -var-file=terraform.tfvars -out=dev.tfplan'
 
           // Step 2: Convert the plan to JSON and check for destructions
           sh '''
@@ -111,11 +111,11 @@ pipeline {
             set -e
             
             # Convert plan to JSON
-            terraform show -json prod.tfplan > prod.json
+            terraform show -json dev.tfplan > dev.json
             
             # Check for any actions that are "delete"
             # The 'jq' tool is excellent for parsing JSON in shell scripts
-            deletions=$(jq -r '[.resource_changes[] | select(.change.actions[] == "delete")] | length' prod.json)
+            deletions=$(jq -r '[.resource_changes[] | select(.change.actions[] == "delete")] | length' dev.json)
             
             echo "Plan includes $deletions resource(s) to be destroyed."
             
@@ -128,14 +128,15 @@ pipeline {
       }
     }
 
-    stage('Apply Production') {
-      // This stage will now only run if the 'Plan Production' stage succeeds
+    stage('Apply Development') {
+      when { branch 'main' }
+      // This stage will now only run if the 'Plan Development' stage succeeds
       // (i.e., no destructive changes were found).
       when { branch 'main' }
       steps {
-        dir('infra/terraform/envs/prod') {
-            input "Plan is safe (no destructions). Proceed with applying to production?"
-            sh 'terraform apply -auto-approve prod.tfplan'
+        dir('infra/terraform/envs/dev') {
+            input "Plan is safe (no destructions). Proceed with applying to development?"
+            sh 'terraform apply -auto-approve dev.tfplan'
         }
       }
     }
