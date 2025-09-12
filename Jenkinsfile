@@ -141,6 +141,22 @@ pipeline {
       }
     }
 
+    stage("Set up Kubeconfig") {
+      steps {
+        dir("infra/terraform/envs/dev") {
+          // Extract cluster name and region from Terraform outputs
+          script {
+            env.CLUSTER_NAME = sh(script: "terraform output -raw cluster_name", returnStdout: true).trim()
+            env.AWS_REGION = sh(script: "terraform output -raw region", returnStdout: true).trim()
+          }
+        }
+        // Update kubeconfig to point to the new EKS cluster
+        sh '''
+          aws eks update-kubeconfig --region $AWS_REGION --name $CLUSTER_NAME
+        '''
+      }
+    }
+
 
     stage("Deploy to Kubernetes") {
       steps {
