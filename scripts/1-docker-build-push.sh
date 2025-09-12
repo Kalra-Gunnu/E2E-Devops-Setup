@@ -22,7 +22,7 @@ build_and_push_service() {
     echo -e "${YELLOW}📦 Building ${service_name}...${NC}"
     
     # Build the Docker image
-    if [ service_name == "frontend" ]; then
+    if [ "$service_name" == "frontend" ]; then
         docker build -t ${DOCKER_USERNAME}/${DOCKER_REPO_NAME}-${service_name}:${TAG} ${service_path} --env-file ${ROOT_DIR}/config.env
     else
         docker build -t ${DOCKER_USERNAME}/${DOCKER_REPO_NAME}-${service_name}:${TAG} ${service_path}
