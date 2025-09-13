@@ -32,14 +32,6 @@ pipeline {
       }
     }
 
-    stage("Push to ECR") {
-      steps {
-        dir("scripts") {
-          sh "3-ecr-push-all-images.sh ${AWS_REGION} ${IMAGE_TAG} ${ECR_REGISTRY} ${DOCKER_USERNAME} ${DOCKER_REPO_NAME}"
-        }
-      }
-    }
-
     stage('Bootstrap Backend (Run Once)') {
       // This stage only runs if the commit message contains '[bootstrap]'
       when {
@@ -140,7 +132,15 @@ pipeline {
         }
       }
     }
-
+    
+    stage("Push to ECR") {
+      steps {
+        dir("scripts") {
+          sh "3-ecr-push-all-images.sh ${AWS_REGION} ${IMAGE_TAG} ${ECR_REGISTRY} ${DOCKER_USERNAME} ${DOCKER_REPO_NAME}"
+        }
+      }
+    }
+    
     stage("Set up Kubeconfig") {
       steps {
         dir("infra/terraform/envs/dev") {
