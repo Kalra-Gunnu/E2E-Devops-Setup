@@ -1,8 +1,3 @@
-provider "aws" {
-  region  = var.aws_region
-  profile = var.aws_profile != "" ? var.aws_profile : null
-}
-
 # Resource for the S3 bucket itself
 resource "aws_s3_bucket" "tfstate" {
   bucket = var.tfstate_bucket
@@ -40,21 +35,6 @@ resource "aws_s3_bucket_public_access_block" "tfstate_public_access" {
   block_public_policy     = true
   ignore_public_acls      = true
   restrict_public_buckets = true
-}
-
-# New resource to control bucket ownership and disable ACLs (recommended)
-resource "aws_s3_bucket_ownership_controls" "tfstate_ownership" {
-  bucket = aws_s3_bucket.tfstate.id
-  rule {
-    object_ownership = "BucketOwnerEnforced"
-  }
-}
-
-# The 'acl' argument is no longer needed with 'BucketOwnerEnforced'
-resource "aws_s3_bucket_acl" "tfstate_acl" {
-  depends_on = [aws_s3_bucket_ownership_controls.tfstate_ownership]
-  bucket     = aws_s3_bucket.tfstate.id
-  acl        = "private"
 }
 
 resource "aws_dynamodb_table" "tf_locks" {
