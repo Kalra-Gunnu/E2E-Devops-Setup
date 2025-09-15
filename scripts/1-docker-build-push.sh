@@ -1,6 +1,8 @@
 #!/bin/bash
 
-ROOT_DIR="."
+# Get the directory where this script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT_DIR="$(dirname "$SCRIPT_DIR")"
 TAG=${1:-latest}
 DOCKER_USERNAME=${2:-prag1402}
 DOCKER_REPO_NAME=${3:-e2e-devops}
@@ -10,6 +12,19 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
+
+# Load configuration from config.env file if available
+if [ -f "${ROOT_DIR}/config.env" ]; then
+    set -a  # Auto-export all variables
+    source "${ROOT_DIR}/config.env"
+    set +a  # Turn off auto-export
+    echo -e "${GREEN}✅ Configuration loaded from ${ROOT_DIR}/config.env${NC}"
+    
+    # Override with command line arguments if provided
+    DOCKER_USERNAME=${2:-${DOCKER_USERNAME}}
+    DOCKER_REPO_NAME=${3:-${DOCKER_REPO_NAME}}
+    TAG=${1:-${TAG:-latest}}
+fi
 
 echo -e "${GREEN}🚀 Starting Docker build and push process...${NC}"
 
@@ -23,8 +38,15 @@ build_and_push_service() {
     
     # Build the Docker image
     if [ "$service_name" == "frontend" ]; then
-        BUILD_ARGS=$(grep -v '^#' ${ROOT_DIR}/config.env | xargs -I {} echo --build-arg {})
-        docker build -t ${DOCKER_USERNAME}/${DOCKER_REPO_NAME}-${service_name}:${TAG} ${BUILD_ARGS} ${service_path}
+        docker build -t ${DOCKER_USERNAME}/${DOCKER_REPO_NAME}-${service_name}:${TAG} \
+            --build-arg NODE_ENV=${NODE_ENV:-production} \
+            --build-arg CLUSTER_IP=${CLUSTER_IP:-localhost} \
+            --build-arg PROJECT_SERVICE_URL=${PROJECT_SERVICE_URL:-http://localhost:3001} \
+            --build-arg PAYMENT_SERVICE_URL=${PAYMENT_SERVICE_URL:-http://localhost:3000} \
+            --build-arg USER_SERVICE_URL=${USER_SERVICE_URL:-http://localhost:3002} \
+            --build-arg COMPANY_NAME="${COMPANY_NAME:-Dey Education}" \
+            --build-arg CURRENCY=${CURRENCY:-INR} \
+            ${service_path}
     else
         docker build -t ${DOCKER_USERNAME}/${DOCKER_REPO_NAME}-${service_name}:${TAG} ${service_path}
     fi

@@ -7,14 +7,30 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-ROOT_DIR="."
+# Get the directory where this script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT_DIR="$(dirname "$SCRIPT_DIR")"
 K8_DIR="${ROOT_DIR}/k8s"
 TAG=${1:-latest}
 DOCKER_USERNAME=${2:-prag1402}
 DOCKER_REPO_NAME=${3:-e2e-devops}
 
+# Load configuration from config.env file if available
+if [ -f "${ROOT_DIR}/config.env" ]; then
+    set -a  # Auto-export all variables
+    source "${ROOT_DIR}/config.env"
+    set +a  # Turn off auto-export
+    echo -e "${GREEN}✅ Configuration loaded from ${ROOT_DIR}/config.env${NC}"
+    
+    # Override with command line arguments if provided
+    DOCKER_USERNAME=${2:-${DOCKER_USERNAME}}
+    DOCKER_REPO_NAME=${3:-${DOCKER_REPO_NAME}}
+    TAG=${1:-${TAG:-latest}}
+fi
+
 if [ -z "$DOCKER_USERNAME" || -z "$DOCKER_REPO_NAME" ]; then
-    echo -e "${RED}❌ DOCKER_USERNAME or DOCKER_REPO_NAME is not set. Please set them in config.env.${NC}"
+    echo -e "${RED}❌ DOCKER_USERNAME or DOCKER_REPO_NAME is not set. Please set them in config.env or pass as arguments.${NC}"
+    echo -e "${YELLOW}Usage: $0 [TAG] [DOCKER_USERNAME] [DOCKER_REPO_NAME]${NC}"
     exit 1
 fi
 
@@ -49,9 +65,30 @@ kubectl wait --namespace ingress-nginx \
   --selector=app.kubernetes.io/component=controller \
   --timeout=120s
 
-# Install envsubst
-echo -e "${YELLOW}🔧 Installing envsubst...${NC}"
-sudo apt-get install -y gettext-base
+# Install envsubst if not available
+if ! command -v envsubst &> /dev/null; then
+  echo -e "${YELLOW}🔧 Installing envsubst...${NC}"
+  # OS detection for cross-platform compatibility
+  if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    # Linux
+    if command -v apt-get &> /dev/null; then
+      sudo apt-get install -y gettext-base
+    elif command -v yum &> /dev/null; then
+      sudo yum install -y gettext
+    elif command -v dnf &> /dev/null; then
+      sudo dnf install -y gettext
+    fi
+  elif [[ "$OSTYPE" == "darwin"* ]]; then
+    # macOS
+    if command -v brew &> /dev/null; then
+      brew install gettext
+    fi
+  elif [[ "$OSTYPE" == "msys" ]] || [[ "$OSTYPE" == "cygwin" ]] || [[ "$OSTYPE" == "win32" ]]; then
+    # Windows
+    echo -e "${YELLOW}Please install Git for Windows which includes envsubst${NC}"
+    echo -e "${YELLOW}Or install gettext from: https://www.gnu.org/software/gettext/${NC}"
+  fi
+fi
 
 # Export variables for envsubst
 export DOCKER_USERNAME
