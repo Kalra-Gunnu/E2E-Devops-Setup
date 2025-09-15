@@ -12,7 +12,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(dirname "$SCRIPT_DIR")"
 K8_DIR="${ROOT_DIR}/k8s"
 TAG=${1:-latest}
-DOCKER_USERNAME=${2}
+DOCKER_USERNAME=${2:-}
 DOCKER_REPO_NAME=${3:-e2e-devops}
 
 # Load configuration from config.env file if available
@@ -22,10 +22,7 @@ if [ -f "${ROOT_DIR}/config.env" ]; then
     set +a  # Turn off auto-export
     echo -e "${GREEN}✅ Configuration loaded from ${ROOT_DIR}/config.env${NC}"
     
-    # Override with command line arguments if provided
-    DOCKER_USERNAME=${2:-${DOCKER_USERNAME}}
-    DOCKER_REPO_NAME=${3:-${DOCKER_REPO_NAME}}
-    TAG=${1:-${TAG:-latest}}
+
 fi
 
 if [ -z "$DOCKER_USERNAME" || -z "$DOCKER_REPO_NAME" ]; then

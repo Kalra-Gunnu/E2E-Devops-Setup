@@ -4,7 +4,7 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(dirname "$SCRIPT_DIR")"
 TAG=${1:-latest}
-DOCKER_USERNAME=${2}
+DOCKER_USERNAME=${2:-}
 DOCKER_REPO_NAME=${3:-e2e-devops}
 
 # Colors for output
@@ -19,11 +19,6 @@ if [ -f "${ROOT_DIR}/config.env" ]; then
     source "${ROOT_DIR}/config.env"
     set +a  # Turn off auto-export
     echo -e "${GREEN}✅ Configuration loaded from ${ROOT_DIR}/config.env${NC}"
-    
-    # Override with command line arguments if provided
-    DOCKER_USERNAME=${2:-${DOCKER_USERNAME}}
-    DOCKER_REPO_NAME=${3:-${DOCKER_REPO_NAME}}
-    TAG=${1:-${TAG:-latest}}
 fi
 
 echo -e "${GREEN}🚀 Starting Docker build and push process...${NC}"
