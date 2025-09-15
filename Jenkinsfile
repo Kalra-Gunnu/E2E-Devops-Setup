@@ -40,12 +40,7 @@ pipeline {
       steps {
         dir('infra/terraform/bootstrap') {
           // Initialize with the specific backend for the bootstrap state
-          sh """
-              terraform init \\
-                  -backend-config="bucket=${env.TF_BACKEND_BUCKET}" \\
-                  -backend-config="key=bootstrap/terraform.tfstate" \\
-                  -backend-config="region=${env.AWS_DEFAULT_REGION}"
-          """
+          sh 'terraform init'
           
           // Create the plan
           sh 'terraform plan -out=tfplan'
@@ -89,13 +84,10 @@ pipeline {
       steps {
         dir('infra/terraform/envs/dev') {
           sh """
-            terraform init \\
-                -backend-config="bucket=${env.TF_BACKEND_BUCKET}" \\
-                -backend-config="key=dev/terraform.tfstate" \\
-                -backend-config="region=${env.TF_BACKEND_REGION}"
+            terraform init  -backend-config="backend.hcl"
           """
           // Step 1: Create the plan file
-          sh 'terraform plan -var-file=terraform.tfvars -out=dev.tfplan'
+          sh ' terraform plan -target="module.vpc" -target="module.ecr" -target="module.eks" -out="step1.tfplan"'
 
           // Step 2: Convert the plan to JSON and check for destructions
           sh '''

@@ -19,3 +19,9 @@ variable "tfstate_lock_table" {
   description = "The DynamoDB table for state locking."
   type        = string
 }
+
+variable "oidc_provider_thumbprint" {
+  description = "The thumbprint for the OIDC provider."
+  type        = string
+  
+}

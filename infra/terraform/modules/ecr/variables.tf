@@ -1,6 +1,6 @@
 variable "repositories" {
   type = list(string)
-  default = ["payment","project","user","frontend"]
+  default = ["slabai_payment","slabai_project","slabai_user","slabai_frontend"]
 }
 
 variable "image_tag_mutability" {
