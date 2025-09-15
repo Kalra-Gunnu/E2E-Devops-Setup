@@ -23,7 +23,8 @@ build_and_push_service() {
     
     # Build the Docker image
     if [ "$service_name" == "frontend" ]; then
-        docker build -t ${DOCKER_USERNAME}/${DOCKER_REPO_NAME}-${service_name}:${TAG} ${service_path} --env-file ${ROOT_DIR}/config.env
+        BUILD_ARGS=$(grep -v '^#' ${ROOT_DIR}/config.env | xargs -I {} echo --build-arg {})
+        docker build -t ${DOCKER_USERNAME}/${DOCKER_REPO_NAME}-${service_name}:${TAG} ${BUILD_ARGS} ${service_path}
     else
         docker build -t ${DOCKER_USERNAME}/${DOCKER_REPO_NAME}-${service_name}:${TAG} ${service_path}
     fi
