@@ -6,7 +6,7 @@ AWS_ACCESS_KEY_ID=${3:-}
 AWS_SECRET_ACCESS_KEY=${4:-}
 TAG=${5:-latest}
 ECR_REGISTRY=${6:-}
-DOCKER_USERNAME=${7:-prag1402}
+DOCKER_USERNAME=${7}
 DOCKER_REPO_NAME=${8:-e2e-devops}
 
 if [ -z "$AWS_DEFAULT_REGION" || -z "$TAG" || -z "$ECR_REGISTRY" || -z "$DOCKER_USERNAME" || -z "$DOCKER_REPO_NAME" ]; then

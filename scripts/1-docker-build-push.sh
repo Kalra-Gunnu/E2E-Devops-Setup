@@ -4,7 +4,7 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(dirname "$SCRIPT_DIR")"
 TAG=${1:-latest}
-DOCKER_USERNAME=${2:-prag1402}
+DOCKER_USERNAME=${2}
 DOCKER_REPO_NAME=${3:-e2e-devops}
 
 # Colors for output

@@ -69,9 +69,9 @@ E2E-Devops-Setup/
 
 | Service | Image Name | Port | Description |
 |---------|------------|------|-------------|
-| **Payment Service** | `prag1402/e2e-devops/payment-service:latest` | 3000 | Handles payment processing, Razorpay integration |
-| **Project Service** | `prag1402/e2e-devops/project-service:latest` | 3001 | Manages projects, content, and S3 file storage |
-| **User Service** | `prag1402/e2e-devops/user-service:latest` | 3002 | User management and lead generation |
+| **Payment Service** | `<user-name>/e2e-devops/payment-service:latest` | 3000 | Handles payment processing, Razorpay integration |
+| **Project Service** | `<user-name>/e2e-devops/project-service:latest` | 3001 | Manages projects, content, and S3 file storage |
+| **User Service** | `<user-name>/e2e-devops/user-service:latest` | 3002 | User management and lead generation |
 
 ## ☸️ Kubernetes Resources
 

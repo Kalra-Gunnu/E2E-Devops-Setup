@@ -75,9 +75,9 @@ chmod +x scripts/4-deploy-kube-cluster.sh
 | Service | Port | Image | Replicas |
 |---------|------|-------|----------|
 | Frontend | 80 | nginx:alpine | 1 |
-| Payment Service | 3000 | prag1402/e2e-devops/payment-service:latest | 2 |
-| Project Service | 3001 | prag1402/e2e-devops/project-service:latest | 2 |
-| User Service | 3002 | prag1402/e2e-devops/user-service:latest | 2 |
+| Payment Service | 3000 | <user-name>/e2e-devops/payment-service:latest | 2 |
+| Project Service | 3001 | <user-name>/e2e-devops/project-service:latest | 2 |
+| User Service | 3002 | <user-name>/e2e-devops/user-service:latest | 2 |
 | MongoDB | 27017 | mongo:6.0 | 1 |
 | Redis | 6379 | redis:7-alpine | 1 |
 

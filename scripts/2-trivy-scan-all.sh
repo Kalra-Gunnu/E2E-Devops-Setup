@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 TAG=${1:-latest}
-DOCKER_USERNAME=${2:-prag1402}
+DOCKER_USERNAME=${2}
 DOCKER_REPO_NAME=${3:-e2e-devops}
 
 OUTPUT_FILE="trivy-scan-results.txt"

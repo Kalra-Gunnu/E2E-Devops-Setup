@@ -38,9 +38,9 @@ ${DOCKER_USERNAME}/${DOCKER_REPO_NAME}-${SERVICE_NAME}:${TAG}
 ### Examples:
 
 #### With Default Values:
-- `prag1402/e2e-devops-payment-service:latest`
-- `prag1402/e2e-devops-project-service:latest`
-- `prag1402/e2e-devops-user-service:latest`
+- `<user-name>/e2e-devops-payment-service:latest`
+- `<user-name>/e2e-devops-project-service:latest`
+- `<user-name>/e2e-devops-user-service:latest`
 
 ## 🔄 How It Works
 

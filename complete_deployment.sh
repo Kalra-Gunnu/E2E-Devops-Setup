@@ -20,7 +20,7 @@ if [ -f "${ROOT_DIR}/config.env" ]; then
 else
     echo -e "${YELLOW}⚠️  config.env not found at ${ROOT_DIR}/config.env, using default values${NC}"
     # Default values
-    DOCKER_USERNAME="prag1402"
+    DOCKER_USERNAME="user-name"
     DOCKER_REPO_NAME="e2e-devops"
     export DOCKER_USERNAME DOCKER_REPO_NAME
 fi
@@ -31,7 +31,7 @@ echo ""
 
 # Step 1: Build and Push Docker Images
 echo -e "${YELLOW}📦 Step 1: Building and pushing Docker images...${NC}"
-"${ROOT_DIR}/scripts/1-docker-build-push.sh"
+"${ROOT_DIR}/scripts/1-docker-build-push.sh" ${TAG} ${DOCKER_USERNAME} ${DOCKER_REPO_NAME}
 
 if [ $? -ne 0 ]; then
     echo -e "${RED}❌ Docker build failed. Please check the errors above.${NC}"
@@ -40,7 +40,7 @@ fi
 
 # Step 2: Scan Images with Trivy
 echo -e "${YELLOW}🚀 Step 2: Scanning images with Trivy...${NC}"
-"${ROOT_DIR}/scripts/2-trivy-scan-all.sh"
+"${ROOT_DIR}/scripts/2-trivy-scan-all.sh" ${TAG} ${DOCKER_USERNAME} ${DOCKER_REPO_NAME}
 
 # if [ $? -ne 0 ]; then
 #     echo -e "${RED}❌ Trivy scan failed. Please check the errors above.${NC}"
@@ -61,7 +61,7 @@ echo ""
 
 # Step 2: Deploy to Kubernetes
 echo -e "${YELLOW}🚀 Step 3: Deploying to Kubernetes...${NC}"
-"${ROOT_DIR}/scripts/4-deploy-kube-cluster.sh"
+"${ROOT_DIR}/scripts/4-deploy-kube-cluster.sh" ${TAG} ${DOCKER_USERNAME} ${DOCKER_REPO_NAME}
 
 if [ $? -ne 0 ]; then
     echo -e "${RED}❌ Kubernetes deployment failed. Please check the errors above.${NC}"
