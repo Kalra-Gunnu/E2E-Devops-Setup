@@ -70,6 +70,11 @@ data:
         root /usr/share/nginx/html;
         index index.html;
 
+        # Special case: when URI is exactly "/"
+        location = / {
+            rewrite ^ /index.html break;
+        }
+
         location / {
             try_files $uri $uri/ /index.html;
         }

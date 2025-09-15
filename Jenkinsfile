@@ -3,6 +3,9 @@ pipeline {
 
   environment {
     AWS_REGION = "${env.AWS_REGION}"
+    AWS_ACCOUNT_ID = "${env.AWS_ACCOUNT_ID}"
+    AWS_ACCESS_KEY_ID = "${env.AWS_ACCESS_KEY_ID}"
+    AWS_SECRET_ACCESS_KEY = "${env.AWS_SECRET_ACCESS_KEY}"
     ECR_REGISTRY = "${env.AWS_ACCOUNT_ID}.dkr.ecr.${env.AWS_DEFAULT_REGION}.amazonaws.com"
     DOCKER_USERNAME = "${env.DOCKER_USERNAME}"
     DOCKER_REPO_NAME = "${env.DOCKER_REPO_NAME}"
@@ -13,6 +16,14 @@ pipeline {
     stage("Checkout") {
       steps {
         checkout scm
+      }
+    }
+
+    stage("PreRequisites") {
+      steps {
+        dir("scripts") {
+          sh "0-install-prerequisites.sh"
+        }
       }
     }
 
@@ -128,7 +139,7 @@ pipeline {
     stage("Push to ECR") {
       steps {
         dir("scripts") {
-          sh "3-ecr-push-all-images.sh ${AWS_REGION} ${IMAGE_TAG} ${ECR_REGISTRY} ${DOCKER_USERNAME} ${DOCKER_REPO_NAME}"
+          sh "3-ecr-push-all-images.sh ${AWS_REGION} ${AWS_ACCOUNT_ID} ${AWS_ACCESS_KEY_ID} ${AWS_SECRET_ACCESS_KEY} ${IMAGE_TAG} ${ECR_REGISTRY} ${DOCKER_USERNAME} ${DOCKER_REPO_NAME}"
         }
       }
     }

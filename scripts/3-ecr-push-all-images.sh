@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 AWS_DEFAULT_REGION=${1:-us-west-2}
-TAG=${2:-latest}
-ECR_REGISTRY=${3:-}
-DOCKER_USERNAME=${4:-prag1402}
-DOCKER_REPO_NAME=${5:-e2e-devops}
+AWS_ACCOUNT_ID=${2:-}
+AWS_ACCESS_KEY_ID=${3:-}
+AWS_SECRET_ACCESS_KEY=${4:-}
+TAG=${5:-latest}
+ECR_REGISTRY=${6:-}
+DOCKER_USERNAME=${7:-prag1402}
+DOCKER_REPO_NAME=${8:-e2e-devops}
 
 if [ -z "$AWS_DEFAULT_REGION" || -z "$TAG" || -z "$ECR_REGISTRY" || -z "$DOCKER_USERNAME" || -z "$DOCKER_REPO_NAME" ]; then
   echo "Usage: $0 <aws_default_region> <tag> <ecr_registry> <docker_username> <docker_repo_name>"
