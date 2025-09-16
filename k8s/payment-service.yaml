@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: payment-service
-        image: ${DOCKER_USERNAME}/${DOCKER_REPO_NAME}-payment-service:${TAG}
+        image: ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/g5_slabai_payment:${TAG}
         ports:
         - containerPort: 3000
         env:

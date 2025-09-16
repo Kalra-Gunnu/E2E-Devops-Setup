@@ -24,7 +24,7 @@ module "vpc" {
 #================================================================
 module "ecr" {
   source       = "../../modules/ecr"
-  repositories = ["payment", "project", "user", "frontend"]
+  repositories = ["g5_slabai_payment", "g5_slabai_project", "g5_slabai_user", "g5_slabai_frontend"]
   tags         = { Environment = local.env }
 }
 

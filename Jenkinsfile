@@ -88,7 +88,7 @@ pipeline {
       }
     }
 
-    stage('Plan Development') {
+    stage('Plan Development - Stage 1') {
       when { 
         branch 'main' 
       }
@@ -97,8 +97,8 @@ pipeline {
           sh """
             terraform init  -backend-config="backend.hcl"
           """
-          // Step 1: Create the plan file
-          sh ' terraform plan -target="module.vpc" -target="module.ecr" -target="module.eks" -out="step1.tfplan"'
+          // Step 1: Create the plan file for VPC, ECR, EKS
+          sh 'terraform plan -target="module.vpc" -target="module.ecr" -target="module.eks" -out="stage1.tfplan"'
 
           // Step 2: Convert the plan to JSON and check for destructions
           sh '''
@@ -106,13 +106,12 @@ pipeline {
             set -e
             
             # Convert plan to JSON
-            terraform show -json dev.tfplan > dev.json
+            terraform show -json stage1.tfplan > stage1.json
             
             # Check for any actions that are "delete"
-            # The 'jq' tool is excellent for parsing JSON in shell scripts
-            deletions=$(jq -r '[.resource_changes[] | select(.change.actions[] == "delete")] | length' dev.json)
+            deletions=$(jq -r '[.resource_changes[] | select(.change.actions[] == "delete")] | length' stage1.json)
             
-            echo "Plan includes $deletions resource(s) to be destroyed."
+            echo "Stage 1 plan includes $deletions resource(s) to be destroyed."
             
             if [ "$deletions" -gt 0 ]; then
                 echo "ERROR: Destructive changes detected in Terraform plan. Failing build."
@@ -123,15 +122,50 @@ pipeline {
       }
     }
 
-    stage('Apply Development') {
-      when { branch 'main' }
-      // This stage will now only run if the 'Plan Development' stage succeeds
-      // (i.e., no destructive changes were found).
+    stage('Apply Development - Stage 1') {
       when { branch 'main' }
       steps {
         dir('infra/terraform/envs/dev') {
-            input "Plan is safe (no destructions). Proceed with applying to development?"
-            sh 'terraform apply -auto-approve dev.tfplan'
+            input "Stage 1 plan is safe (no destructions). Proceed with applying VPC, ECR, EKS?"
+            sh 'terraform apply -auto-approve stage1.tfplan'
+        }
+      }
+    }
+
+    stage('Plan Development - Stage 2 (IAM IRSA)') {
+      when { branch 'main' }
+      steps {
+        dir('infra/terraform/envs/dev') {
+          // Plan IAM IRSA after EKS is created
+          sh 'terraform plan -target="module.iam_irsa" -out="stage2.tfplan"'
+          
+          sh '''
+            #!/bin/bash
+            set -e
+            
+            # Convert plan to JSON
+            terraform show -json stage2.tfplan > stage2.json
+            
+            # Check for any actions that are "delete"
+            deletions=$(jq -r '[.resource_changes[] | select(.change.actions[] == "delete")] | length' stage2.json)
+            
+            echo "Stage 2 plan includes $deletions resource(s) to be destroyed."
+            
+            if [ "$deletions" -gt 0 ]; then
+                echo "ERROR: Destructive changes detected in IAM IRSA plan. Failing build."
+                exit 1
+            fi
+          '''
+        }
+      }
+    }
+
+    stage('Apply Development - Stage 2 (IAM IRSA)') {
+      when { branch 'main' }
+      steps {
+        dir('infra/terraform/envs/dev') {
+            input "Stage 2 plan is safe. Proceed with applying IAM IRSA?"
+            sh 'terraform apply -auto-approve stage2.tfplan'
         }
       }
     }
@@ -161,10 +195,10 @@ pipeline {
     }
 
 
-    stage("Deploy to Kubernetes") {
+    stage("Deploy to EKS") {
       steps {
         dir("scripts") {
-          sh "4-deploy-kube-cluster.sh ${IMAGE_TAG} ${ECR_REGISTRY} ${DOCKER_REPO_NAME}"
+          sh "4-deploy-eks-cluster.sh ${IMAGE_TAG} ${ECR_REGISTRY} ${DOCKER_REPO_NAME}"
         }
       }
     }

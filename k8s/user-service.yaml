@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: user-service
-        image: ${DOCKER_USERNAME}/${DOCKER_REPO_NAME}-user-service:${TAG}
+        image: ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/g5_slabai_user:${TAG}
         ports:
         - containerPort: 3002
         env:

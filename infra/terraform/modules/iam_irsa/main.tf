@@ -47,12 +47,19 @@ resource "aws_iam_policy" "external_secrets_policy" {
         Resource = var.external_secrets_arn_wildcard ? ["*"] : var.external_secrets_resources
       },
       {
-        Sid = "AllowKMSDecryptIfUsed",
+        Sid = "AllowKMSDecryptForSecretsManager",
         Effect = "Allow",
         Action = [
           "kms:Decrypt"
         ],
-        Resource = "*"
+        Resource = [
+          "arn:aws:kms:${var.aws_region}:aws:alias/aws/secretsmanager"
+        ],
+        Condition = {
+          StringEquals = {
+            "kms:ViaService": "secretsmanager.${var.aws_region}.amazonaws.com"
+          }
+        }
       }
     ]
   })

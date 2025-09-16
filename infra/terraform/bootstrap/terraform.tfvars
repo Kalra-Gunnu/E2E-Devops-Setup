@@ -2,6 +2,6 @@ aws_region = "us-west-2"
 
 aws_profile = ""
 
-tfstate_bucket = "tf-state-bucket-group5"
+tfstate_bucket = "g5-e2e-devops-bucket"
 
-tfstate_lock_table = "tf-state-lock-table-group5"
+tfstate_lock_table = "g5-e2e-devops-lock-table"
