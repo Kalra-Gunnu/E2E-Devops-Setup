@@ -32,6 +32,9 @@ echo "deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.
 sudo apt-get update -y
 sudo apt-get install -y trivy
 
+# Install jq
+sudo apt-get install -y jq
+
 # Install envsubst (gettext-base)
 sudo apt-get install -y gettext-base
 
