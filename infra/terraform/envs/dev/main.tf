@@ -31,6 +31,7 @@ module "ecr" {
 #================================================================
 # EKS Cluster (Development Configuration)
 #================================================================
+/*
 module "eks" {
   source = "../../modules/eks"
 
@@ -63,10 +64,12 @@ module "eks" {
     Environment = local.env
   }
 }
+*/
 
 #================================================================
 # IAM Role for External Secrets (IRSA)
 #================================================================
+/*
 module "iam_irsa" {
   source = "../../modules/iam_irsa"
 
@@ -86,5 +89,6 @@ module "iam_irsa" {
 
   tags = { Environment = local.env }
 }
+*/
 
 data "aws_caller_identity" "current" {}

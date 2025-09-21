@@ -72,62 +72,39 @@ cd ../envs/dev
 print_status "Initializing Terraform with S3 backend..."
 terraform init -backend-config="backend.hcl"
 
-# Stage 2a: Deploy VPC, ECR, and EKS first (without IAM IRSA)
-print_status "Stage 2a: Planning VPC, ECR, and EKS deployment..."
-terraform plan -var-file="terraform.tfvars" -target=module.vpc -target=module.ecr -target=module.eks
+# Deploy all infrastructure components
+print_status "Planning complete infrastructure deployment..."
+terraform plan -var-file="terraform.tfvars"
 
-print_warning "About to deploy (Stage 1):"
+print_warning "About to deploy:"
 echo "  - VPC with public/private subnets"
 echo "  - ECR repositories for 4 services"
 echo "  - EKS cluster with cost-optimized node groups"
-echo ""
-echo "Note: IAM IRSA will be deployed in the next stage after EKS is ready"
 
-read -p "Continue with Stage 1 deployment? (y/N): " -n 1 -r
+read -p "Continue with deployment? (y/N): " -n 1 -r
 echo
 if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-    print_error "Stage 1 deployment cancelled"
+    print_error "Deployment cancelled"
     exit 1
 fi
 
-print_status "Applying Stage 1 configuration (VPC, ECR, EKS)..."
-terraform apply -var-file="terraform.tfvars" -target=module.vpc -target=module.ecr -target=module.eks -auto-approve
-
-print_status "Stage 1 deployed successfully ✓"
-
-# Stage 2b: Deploy IAM IRSA now that EKS outputs are available
-echo ""
-print_status "Stage 2b: Planning IAM IRSA deployment..."
-terraform plan -var-file="terraform.tfvars" -target=module.iam_irsa
-
-print_warning "About to deploy (Stage 2):"
-echo "  - IAM roles for service accounts (IRSA)"
-echo "  - OIDC provider for EKS cluster"
-
-read -p "Continue with Stage 2 deployment? (y/N): " -n 1 -r
-echo
-if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-    print_error "Stage 2 deployment cancelled"
-    exit 1
-fi
-
-print_status "Applying Stage 2 configuration (IAM IRSA)..."
-terraform apply -var-file="terraform.tfvars" -target=module.iam_irsa -auto-approve
+print_status "Applying infrastructure configuration..."
+terraform apply -var-file="terraform.tfvars" -auto-approve
 
 print_status "Dev environment deployed successfully ✓"
 
 # Step 3: Configure kubectl
-echo ""
-echo "⚙️  Step 3: Configuring kubectl"
-echo "==============================="
+#echo ""
+#echo "⚙️  Step 3: Configuring kubectl"
+#echo "==============================="
 
-print_status "Updating kubeconfig for EKS cluster..."
-aws eks update-kubeconfig --region us-west-2 --name app-dev
+#print_status "Updating kubeconfig for EKS cluster..."
+#aws eks update-kubeconfig --region us-west-2 --name app-dev
 
-print_status "Testing cluster connectivity..."
-kubectl get nodes
+#print_status "Testing cluster connectivity..."
+#kubectl get nodes
 
-print_status "kubectl configured successfully ✓"
+#print_status "kubectl configured successfully ✓"
 
 # Step 4: Display outputs
 echo ""
@@ -142,11 +119,11 @@ print_status "🎉 Infrastructure deployment completed successfully!"
 echo ""
 echo "Next steps:"
 echo "1. Push your Docker images to the ECR repositories"
-echo "2. Deploy your Kubernetes manifests from the k8s/ directory"
-echo "3. Configure your applications to use the deployed resources"
+#echo "2. Deploy your Kubernetes manifests from the k8s/ directory"
+#echo "3. Configure your applications to use the deployed resources"
 echo ""
 echo "Useful commands:"
-echo "  - View EKS cluster: aws eks describe-cluster --name app-dev --region us-west-2"
+#echo "  - View EKS cluster: aws eks describe-cluster --name app-dev --region us-west-2"
 echo "  - List ECR repositories: aws ecr describe-repositories --region us-west-2"
-echo "  - Get cluster nodes: kubectl get nodes"
-echo "  - View all resources: kubectl get all --all-namespaces"
+#echo "  - Get cluster nodes: kubectl get nodes"
+#echo "  - View all resources: kubectl get all --all-namespaces"

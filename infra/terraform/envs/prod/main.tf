@@ -59,6 +59,7 @@ module "eks" {
 }
 
 # IAM / IRSA for ExternalSecrets
+/*
 module "iam_irsa" {
   source = "../../modules/iam_irsa"
   aws_region = var.aws_region
@@ -85,5 +86,6 @@ module "iam_irsa" {
   ]
   tags = { Environment = local.env }
 }
+*/
 
 data "aws_caller_identity" "current" {}
