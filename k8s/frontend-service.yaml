@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/g5_slabai_frontend:${TAG}
+        image: ${ECR_REGISTRY}/g5-slabai-frontend:${TAG}
         ports:
         - containerPort: 80
         command: ["/bin/sh", "-c"]

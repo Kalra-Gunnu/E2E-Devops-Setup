@@ -72,7 +72,7 @@ module "iam_irsa" {
 
 ### Dev Environment
 - **VPC**: `app-dev-vpc` with public/private subnets across 3 AZs
-- **ECR Repositories**: g5_slabai_payment, g5_slabai_project, g5_slabai_user, g5_slabai_frontend
+- **ECR Repositories**: g5-slabai-payment, g5-slabai-project, g5-slabai-user, g5-slabai-frontend
 - **EKS Cluster**: `app-dev` with cost-optimized node groups
 - **IAM IRSA**: Service accounts for external secrets
 
@@ -90,17 +90,17 @@ module "iam_irsa" {
    aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin <account-id>.dkr.ecr.us-west-2.amazonaws.com
    
    # Tag and push images (updated repository names)
-   docker tag payment:latest <account-id>.dkr.ecr.us-west-2.amazonaws.com/g5_slabai_payment:latest
-   docker push <account-id>.dkr.ecr.us-west-2.amazonaws.com/g5_slabai_payment:latest
+   docker tag payment:latest <account-id>.dkr.ecr.us-west-2.amazonaws.com/g5-slabai-payment:latest
+   docker push <account-id>.dkr.ecr.us-west-2.amazonaws.com/g5-slabai-payment:latest
    
-   docker tag project:latest <account-id>.dkr.ecr.us-west-2.amazonaws.com/g5_slabai_project:latest
-   docker push <account-id>.dkr.ecr.us-west-2.amazonaws.com/g5_slabai_project:latest
+   docker tag project:latest <account-id>.dkr.ecr.us-west-2.amazonaws.com/g5-slabai-project:latest
+   docker push <account-id>.dkr.ecr.us-west-2.amazonaws.com/g5-slabai-project:latest
    
-   docker tag user:latest <account-id>.dkr.ecr.us-west-2.amazonaws.com/g5_slabai_user:latest
-   docker push <account-id>.dkr.ecr.us-west-2.amazonaws.com/g5_slabai_user:latest
+   docker tag user:latest <account-id>.dkr.ecr.us-west-2.amazonaws.com/g5-slabai-user:latest
+   docker push <account-id>.dkr.ecr.us-west-2.amazonaws.com/g5-slabai-user:latest
    
-   docker tag frontend:latest <account-id>.dkr.ecr.us-west-2.amazonaws.com/g5_slabai_frontend:latest
-   docker push <account-id>.dkr.ecr.us-west-2.amazonaws.com/g5_slabai_frontend:latest
+   docker tag frontend:latest <account-id>.dkr.ecr.us-west-2.amazonaws.com/g5-slabai-frontend:latest
+   docker push <account-id>.dkr.ecr.us-west-2.amazonaws.com/g5-slabai-frontend:latest
    ```
 
 2. **Deploy Kubernetes Manifests**:
@@ -128,7 +128,7 @@ module "iam_irsa" {
 aws eks describe-cluster --name app-dev --region us-west-2
 
 # List ECR repositories (updated names)
-aws ecr describe-repositories --region us-west-2 --repository-names g5_slabai_payment g5_slabai_project g5_slabai_user g5_slabai_frontend
+aws ecr describe-repositories --region us-west-2 --repository-names g5-slabai-payment g5-slabai-project g5-slabai-user g5-slabai-frontend
 
 # Get cluster nodes
 kubectl get nodes

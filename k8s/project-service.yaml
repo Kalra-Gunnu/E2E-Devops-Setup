@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: project-service
-        image: ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/g5_slabai_project:${TAG}
+        image: ${ECR_REGISTRY}/g5-slabai-project:${TAG}
         ports:
         - containerPort: 3001
         env:

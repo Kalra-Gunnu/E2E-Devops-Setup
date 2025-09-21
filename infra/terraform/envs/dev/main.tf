@@ -12,6 +12,7 @@ module "vpc" {
   azs                 = ["us-west-2a", "us-west-2b", "us-west-2c"]
   public_subnet_count = 3
   private_subnet_count = 3
+  cluster_name        = "app-${local.env}"
 
   tags = {
     Environment = local.env
@@ -24,7 +25,7 @@ module "vpc" {
 #================================================================
 module "ecr" {
   source       = "../../modules/ecr"
-  repositories = ["g5_slabai_payment", "g5_slabai_project", "g5_slabai_user", "g5_slabai_frontend"]
+  repositories = ["g5-slabai-payment", "g5-slabai-project", "g5-slabai-user", "g5-slabai-frontend"]
   tags         = { Environment = local.env }
 }
 
@@ -36,7 +37,7 @@ module "eks" {
   source = "../../modules/eks"
 
   cluster_name    = "app-${local.env}"
-  cluster_version = "1.27"
+  cluster_version = "1.33"
   vpc_id          = module.vpc.vpc_id
   private_subnet_ids      = module.vpc.private_subnet_ids
 

@@ -13,7 +13,7 @@ ROOT_DIR="$(dirname "$SCRIPT_DIR")"
 K8_DIR="${ROOT_DIR}/k8s"
 TAG=${1:-latest}
 ECR_REGISTRY=${2:-}
-DOCKER_REPO_NAME=${3:-g5_slabai}
+DOCKER_REPO_NAME=${3:-g5-slabai}
 
 # Load configuration from config.env file if available
 if [ -f "${ROOT_DIR}/config.env" ]; then
@@ -23,14 +23,14 @@ if [ -f "${ROOT_DIR}/config.env" ]; then
     echo -e "${GREEN}✅ Configuration loaded from ${ROOT_DIR}/config.env${NC}"
 fi
 
-if [ -z "$ECR_REGISTRY" || -z "$DOCKER_REPO_NAME" ]; then
+if [[ -z "$ECR_REGISTRY" || -z "$DOCKER_REPO_NAME" ]]; then
     echo -e "${RED}❌ ECR_REGISTRY or DOCKER_REPO_NAME is not set. Please set them in config.env or pass as arguments.${NC}"
     echo -e "${YELLOW}Usage: $0 [TAG] [ECR_REGISTRY] [DOCKER_REPO_NAME]${NC}"
     exit 1
 fi
 
 # Check if kubectl is configured for EKS
-if ! kubectl cluster-info &> /dev/null; then
+if ! kubectl cluster-info > /dev/null 2>&1; then
     echo -e "${RED}❌ kubectl is not configured for EKS cluster. Please run 'aws eks update-kubeconfig' first.${NC}"
     exit 1
 fi
@@ -59,7 +59,7 @@ echo -e "${BLUE}🚀 Starting EKS deployment...${NC}"
 
 # Install AWS Load Balancer Controller (for EKS)
 echo -e "${YELLOW}🔧 Installing AWS Load Balancer Controller...${NC}"
-kubectl apply -k "github.com/aws/eks-charts/stable/aws-load-balancer-controller//crds?ref=master"
+kubectl apply -f https://github.com/aws/eks-charts/raw/master/stable/aws-load-balancer-controller/crds/crds.yaml
 
 # Install envsubst if not available
 if ! command -v envsubst &> /dev/null; then

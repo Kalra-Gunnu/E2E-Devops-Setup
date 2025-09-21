@@ -11,8 +11,8 @@ if [[ -z "$AWS_DEFAULT_REGION" || -z "$TAG" || -z "$ECR_REGISTRY" || -z "$DOCKER
   exit 2
 fi
 
-services=("g5_slabai_payment" "g5_slabai_project" "g5_slabai_user" "g5_slabai_frontend")
-local_names=("g5_slabai-payment-service" "g5_slabai-project-service" "g5_slabai-user-service" "g5_slabai-frontend")
+services=("g5-slabai-payment" "g5-slabai-project" "g5-slabai-user" "g5-slabai-frontend")
+local_names=("g5-slabai-payment-service" "g5-slabai-project-service" "g5-slabai-user-service" "g5-slabai-frontend")
 
 aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin "$ECR_REGISTRY"
 for i in "${!services[@]}"; do
