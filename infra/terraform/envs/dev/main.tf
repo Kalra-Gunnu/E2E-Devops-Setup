@@ -40,6 +40,7 @@ module "eks" {
   cluster_version = "1.33"
   vpc_id          = module.vpc.vpc_id
   private_subnet_ids      = module.vpc.private_subnet_ids
+  public_subnet_ids   = module.vpc.public_subnet_ids
 
   # Development-focused node group: smaller, single node
   eks_managed_node_groups = {

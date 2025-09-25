@@ -8,7 +8,7 @@ module "eks" {
   kubernetes_version = var.cluster_version    # Renamed from cluster_version
 
   vpc_id                  = var.vpc_id
-  subnet_ids              = var.private_subnet_ids # Note: This is for both control plane and nodes by default
+  subnet_ids              = var.public_subnet_ids # Note: This is for both control plane and nodes by default
 
   create_kms_key = false
 

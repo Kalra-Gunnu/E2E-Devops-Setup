@@ -52,14 +52,24 @@ if ! command -v kubectl &> /dev/null; then
     exit 1
 fi
 
+# Patch the default storage class to be gp2 (EKS default)
+echo -e "${YELLOW}🔧 Patching default storage class to gp2...${NC}"
+kubectl patch storageclass gp2 -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}' || true
+
 echo -e "${GREEN}✅ All EKS Deployment Prerequisites are met!${NC}"
 echo ""
 
 echo -e "${BLUE}🚀 Starting EKS deployment...${NC}"
 
+
 # Install AWS Load Balancer Controller (for EKS)
-echo -e "${YELLOW}🔧 Installing AWS Load Balancer Controller...${NC}"
-kubectl apply -f https://github.com/aws/eks-charts/raw/master/stable/aws-load-balancer-controller/crds/crds.yaml
+#echo -e "${YELLOW}🔧 Installing AWS Load Balancer Controller...${NC}"
+#kubectl apply -f https://github.com/aws/eks-charts/raw/master/stable/aws-load-balancer-controller/crds/crds.yaml
+
+# Install NGINX Ingress Controller (for EKS)
+echo -e "${YELLOW}🔧 Installing NGINX Ingress Controller...${NC}"
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.10.1/deploy/static/provider/cloud/deploy.yaml
+
 
 # Install envsubst if not available
 if ! command -v envsubst &> /dev/null; then
@@ -90,22 +100,20 @@ fi
 export ECR_REGISTRY
 export TAG
 export DOCKER_REPO_NAME
-export AWS_ACCOUNT_ID
-export AWS_REGION
 
 # Create namespace
 echo -e "${YELLOW}📦 Creating namespace...${NC}"
-envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/namespace.yaml | kubectl apply -f -
+envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME' < ${K8_DIR}/namespace.yaml | kubectl apply -f -
 
 # Apply ConfigMap and Secrets
 echo -e "${YELLOW}🔐 Applying ConfigMap and Secrets...${NC}"
-envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/configmap.yaml | kubectl apply -f -
-envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/secret.yaml | kubectl apply -f -
+envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME' < ${K8_DIR}/configmap.yaml | kubectl apply -f -
+envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME' < ${K8_DIR}/secret.yaml | kubectl apply -f -
 
 # Deploy databases
 echo -e "${YELLOW}🗄️  Deploying databases...${NC}"
-envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/mongodb.yaml | kubectl apply -f -
-envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/redis.yaml | kubectl apply -f -
+envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME' < ${K8_DIR}/mongodb.yaml | kubectl apply -f -
+envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME' < ${K8_DIR}/redis.yaml | kubectl apply -f -
 
 # Wait for databases to be ready
 echo -e "${YELLOW}⏳ Waiting for databases to be ready...${NC}"
@@ -121,17 +129,17 @@ kubectl wait --namespace ${DOCKER_REPO_NAME} \
 
 # Deploy backend services
 echo -e "${YELLOW}🔧 Deploying backend services...${NC}"
-envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/payment-service.yaml | kubectl apply -f -
-envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/project-service.yaml | kubectl apply -f -
-envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/user-service.yaml | kubectl apply -f -
+envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME' < ${K8_DIR}/payment-service.yaml | kubectl apply -f -
+envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME' < ${K8_DIR}/project-service.yaml | kubectl apply -f -
+envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME' < ${K8_DIR}/user-service.yaml | kubectl apply -f -
 
 # Deploy frontend
 echo -e "${YELLOW}🌐 Deploying frontend...${NC}"
-envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/frontend-service.yaml | kubectl apply -f -
+envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME' < ${K8_DIR}/frontend-service.yaml | kubectl apply -f -
 
 # Deploy ingress
 echo -e "${YELLOW}🚪 Deploying ingress...${NC}"
-envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/ingress.yaml | kubectl apply -f -
+envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME' < ${K8_DIR}/ingress.yaml | kubectl apply -f -
 
 # Wait for all pods to be ready
 echo -e "${YELLOW}⏳ Waiting for all services to be ready...${NC}"
