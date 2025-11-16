@@ -11,10 +11,11 @@ NC='\033[0m' # No Color
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(dirname "$SCRIPT_DIR")"
 K8_DIR="${ROOT_DIR}/k8s"
-TAG=${1:-latest}
+IMAGE_TAG=${1:-latest}
 ECR_REGISTRY=${2:-}
-DOCKER_REPO_NAME=${3:-g5_slabai}
-
+DOCKER_REPO_NAME=${3:-g5-slabai}
+AWS_PROFILE=${4:-herovired}
+AWS_REGION=${5:-us-west-2}
 # Load configuration from config.env file if available
 if [ -f "${ROOT_DIR}/config.env" ]; then
     set -a  # Auto-export all variables
@@ -23,55 +24,149 @@ if [ -f "${ROOT_DIR}/config.env" ]; then
     echo -e "${GREEN}✅ Configuration loaded from ${ROOT_DIR}/config.env${NC}"
 fi
 
-if [ -z "$ECR_REGISTRY" || -z "$DOCKER_REPO_NAME" ]; then
-    echo -e "${RED}❌ ECR_REGISTRY or DOCKER_REPO_NAME is not set. Please set them in config.env or pass as arguments.${NC}"
-    echo -e "${YELLOW}Usage: $0 [TAG] [ECR_REGISTRY] [DOCKER_REPO_NAME]${NC}"
-    exit 1
-fi
-
 echo ""
 echo "⚙️  Configuring kubectl for EKS cluster"
 echo "==============================="
 
 echo -e "${YELLOW}Updating kubeconfig for EKS cluster...${NC}"
-aws eks update-kubeconfig --region us-west-2 --name app-dev
+aws sts get-caller-identity --profile ${AWS_PROFILE} >/dev/null
+aws eks update-kubeconfig --region ${AWS_REGION} --profile ${AWS_PROFILE} --name app-dev
+aws eks get-token --cluster-name app-dev --region ${AWS_REGION} --profile ${AWS_PROFILE} >/dev/null
 
 echo -e "${YELLOW}Testing cluster connectivity...${NC}"
+sleep 3
 kubectl get nodes
 
-echo -e "${GREEN}✅ kubectl configured successfully ✓${NC}"
-
-# Check if kubectl is configured for EKS
-if ! kubectl cluster-info &> /dev/null; then
-    echo -e "${RED}❌ kubectl is not configured for EKS cluster. Please run 'aws eks update-kubeconfig' first.${NC}"
-    exit 1
-fi
-
-# Verify we're connected to EKS (not local cluster)
-CLUSTER_INFO=$(kubectl cluster-info | head -1)
-if [[ $CLUSTER_INFO == *"https://kubernetes.docker.internal"* ]] || [[ $CLUSTER_INFO == *"127.0.0.1"* ]]; then
-    echo -e "${RED}❌ kubectl is pointing to local cluster, not EKS. Please configure for EKS cluster.${NC}"
-    exit 1
-fi
-
-echo -e "${GREEN}✅ kubectl is configured for EKS cluster${NC}"
-echo -e "${BLUE}Cluster Info: ${CLUSTER_INFO}${NC}"
-
-# Check if kubectl is installed
-if ! command -v kubectl &> /dev/null; then
-    echo -e "${RED}❌ kubectl is not installed. Please install kubectl first.${NC}"
-    echo -e "${YELLOW}   Visit: https://kubernetes.io/docs/tasks/tools/${NC}"
-    exit 1
-fi
-
-echo -e "${GREEN}✅ All EKS Deployment Prerequisites are met!${NC}"
-echo ""
-
-echo -e "${BLUE}🚀 Starting EKS deployment...${NC}"
 
 # Install AWS Load Balancer Controller (for EKS)
-echo -e "${YELLOW}🔧 Installing AWS Load Balancer Controller...${NC}"
-kubectl apply -k "github.com/aws/eks-charts/stable/aws-load-balancer-controller//crds?ref=master"
+echo -e "${YELLOW}🔧 Checking AWS Load Balancer Controller...${NC}"
+
+# Get cluster name
+CLUSTER_NAME="app-dev"
+AWS_ACCOUNT_ID=$(aws sts get-caller-identity --profile ${AWS_PROFILE} --query Account --output text)
+
+# Check if Helm is installed
+if ! command -v helm &> /dev/null; then
+    echo -e "${YELLOW}📦 Installing Helm...${NC}"
+    curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+fi
+
+# Add EKS Helm chart repository
+helm repo add eks https://aws.github.io/eks-charts 2>/dev/null || true
+helm repo update
+
+# Check if Helm release already exists
+if helm list -n kube-system | grep -q "aws-load-balancer-controller"; then
+    echo -e "${GREEN}✅ AWS Load Balancer Controller Helm release already exists${NC}"
+    echo -e "${YELLOW}⏳ Checking if controller is ready...${NC}"
+    kubectl wait --namespace kube-system \
+        --for=condition=ready pod \
+        --selector=app.kubernetes.io/name=aws-load-balancer-controller \
+        --timeout=60s 2>/dev/null || echo -e "${YELLOW}⚠️  Controller pods may not be ready yet${NC}"
+# Check if deployment exists (installed via YAML)
+elif kubectl get deployment -n kube-system aws-load-balancer-controller &>/dev/null; then
+    echo -e "${GREEN}✅ AWS Load Balancer Controller is already installed (via YAML)${NC}"
+    echo -e "${YELLOW}⏳ Checking if controller is ready...${NC}"
+    kubectl wait --namespace kube-system \
+        --for=condition=ready pod \
+        --selector=app.kubernetes.io/name=aws-load-balancer-controller \
+        --timeout=60s 2>/dev/null || echo -e "${YELLOW}⚠️  Controller pods may not be ready yet${NC}"
+else
+    echo -e "${YELLOW}📦 Installing AWS Load Balancer Controller...${NC}"
+    
+    # Check if IRSA is enabled (OIDC provider exists)
+    OIDC_PROVIDER=$(aws eks describe-cluster --name ${CLUSTER_NAME} --region ${AWS_REGION} --profile ${AWS_PROFILE} --query "cluster.identity.oidc.issuer" --output text 2>/dev/null | sed -e "s/^https:\/\///")
+    
+    if [ -n "$OIDC_PROVIDER" ] && [ "$OIDC_PROVIDER" != "None" ]; then
+        echo -e "${GREEN}✅ OIDC provider found: ${OIDC_PROVIDER}${NC}"
+        
+        # Try to find existing IAM role for Load Balancer Controller
+        LB_ROLE_NAME="AmazonEKSAutoClusterRole"
+        LB_ROLE_ARN=$(aws iam get-role --role-name ${LB_ROLE_NAME} --profile ${AWS_PROFILE} --query 'Role.Arn' --output text 2>/dev/null || echo "")
+        
+        # If not found, try the auto cluster role
+        if [ -z "$LB_ROLE_ARN" ] || [ "$LB_ROLE_ARN" = "None" ]; then
+            LB_ROLE_ARN=$(aws iam get-role --role-name AmazonEKSAutoClusterRole --profile ${AWS_PROFILE} --query 'Role.Arn' --output text 2>/dev/null || echo "")
+        fi
+        
+        if [ -n "$LB_ROLE_ARN" ] && [ "$LB_ROLE_ARN" != "None" ]; then
+            echo -e "${GREEN}✅ Found existing IAM role: ${LB_ROLE_ARN}${NC}"
+            # Create a temporary values file for the annotation
+            VALUES_FILE=$(mktemp)
+            cat > ${VALUES_FILE} <<EOF
+serviceAccount:
+  annotations:
+    eks.amazonaws.com/role-arn: ${LB_ROLE_ARN}
+EOF
+            USE_VALUES_FILE=true
+        else
+            echo -e "${YELLOW}⚠️  IAM role not found. Attempting to install without IRSA...${NC}"
+            echo -e "${YELLOW}   If installation fails, create IAM role manually or provide role ARN${NC}"
+            USE_VALUES_FILE=false
+        fi
+    else
+        echo -e "${YELLOW}⚠️  OIDC provider not found. Installing without IRSA...${NC}"
+        USE_VALUES_FILE=false
+    fi
+    
+    # Get VPC ID
+    VPC_ID=$(aws eks describe-cluster --name ${CLUSTER_NAME} --region ${AWS_REGION} --profile ${AWS_PROFILE} --query "cluster.resourcesVpcConfig.vpcId" --output text)
+    
+    # Install using Helm with or without values file
+    if [ "$USE_VALUES_FILE" = true ]; then
+        helm install aws-load-balancer-controller eks/aws-load-balancer-controller \
+            -n kube-system \
+            -f ${VALUES_FILE} \
+            --set clusterName=${CLUSTER_NAME} \
+            --set serviceAccount.create=true \
+            --set serviceAccount.name=aws-load-balancer-controller \
+            --set region=${AWS_REGION} \
+            --set vpcId=${VPC_ID} \
+            --wait --timeout 5m 2>&1 | tee /tmp/lb-controller-install.log
+        rm -f ${VALUES_FILE}
+    else
+        helm install aws-load-balancer-controller eks/aws-load-balancer-controller \
+            -n kube-system \
+            --set clusterName=${CLUSTER_NAME} \
+            --set serviceAccount.create=true \
+            --set serviceAccount.name=aws-load-balancer-controller \
+            --set region=${AWS_REGION} \
+            --set vpcId=${VPC_ID} \
+            --wait --timeout 5m 2>&1 | tee /tmp/lb-controller-install.log
+    fi
+    
+    if [ ${PIPESTATUS[0]} -eq 0 ]; then
+        echo -e "${GREEN}✅ AWS Load Balancer Controller installed successfully${NC}"
+    else
+        echo -e "${RED}❌ Failed to install AWS Load Balancer Controller${NC}"
+        echo -e "${YELLOW}📋 Installation log saved to /tmp/lb-controller-install.log${NC}"
+        echo -e "${YELLOW}💡 You may need to create IAM role manually. Check the log for details.${NC}"
+        echo -e "${YELLOW}   Or install using YAML:${NC}"
+        echo -e "${YELLOW}   kubectl apply -f https://github.com/kubernetes-sigs/aws-load-balancer-controller/releases/download/v2.8.3/v2_8_3_full.yaml${NC}"
+    fi
+fi
+
+# Wait for webhook endpoints to be available
+echo -e "${YELLOW}⏳ Waiting for webhook endpoints to be available...${NC}"
+WEBHOOK_READY=false
+for i in {1..30}; do
+    ENDPOINTS=$(kubectl get endpoints -n kube-system aws-load-balancer-webhook-service -o jsonpath='{.subsets[0].addresses[*].ip}' 2>/dev/null)
+    if [ -n "$ENDPOINTS" ]; then
+        echo -e "${GREEN}✅ Webhook endpoints are ready${NC}"
+        WEBHOOK_READY=true
+        break
+    fi
+    sleep 2
+done
+
+if [ "$WEBHOOK_READY" = false ]; then
+    echo -e "${YELLOW}⚠️  Webhook endpoints not ready. Temporarily disabling webhooks to allow deployment...${NC}"
+    kubectl delete validatingwebhookconfiguration aws-load-balancer-webhook 2>/dev/null || true
+    kubectl delete mutatingwebhookconfiguration aws-load-balancer-webhook 2>/dev/null || true
+    echo -e "${YELLOW}   Webhooks will be recreated when controller is fully ready${NC}"
+fi
+
+echo ""
 
 # Install envsubst if not available
 if ! command -v envsubst &> /dev/null; then
@@ -98,26 +193,30 @@ if ! command -v envsubst &> /dev/null; then
   fi
 fi
 
+echo ""
+echo -e "${GREEN}✅ All EKS Deployment Prerequisites are met!${NC}"
+echo -e "${BLUE}🚀 Starting EKS deployment...${NC}"
+
 # Export variables for envsubst
 export ECR_REGISTRY
-export TAG
+export IMAGE_TAG
 export DOCKER_REPO_NAME
 export AWS_ACCOUNT_ID
 export AWS_REGION
 
 # Create namespace
 echo -e "${YELLOW}📦 Creating namespace...${NC}"
-envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/namespace.yaml | kubectl apply -f -
+envsubst '$ECR_REGISTRY $IMAGE_TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/namespace.yaml | kubectl apply -f -
 
 # Apply ConfigMap and Secrets
 echo -e "${YELLOW}🔐 Applying ConfigMap and Secrets...${NC}"
-envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/configmap.yaml | kubectl apply -f -
-envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/secret.yaml | kubectl apply -f -
+envsubst '$ECR_REGISTRY $IMAGE_TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/configmap.yaml | kubectl apply -f -
+envsubst '$ECR_REGISTRY $IMAGE_TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/secret.yaml | kubectl apply -f -
 
 # Deploy databases
 echo -e "${YELLOW}🗄️  Deploying databases...${NC}"
-envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/mongodb.yaml | kubectl apply -f -
-envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/redis.yaml | kubectl apply -f -
+envsubst '$ECR_REGISTRY $IMAGE_TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/mongodb.yaml | kubectl apply -f -
+envsubst '$ECR_REGISTRY $IMAGE_TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/redis.yaml | kubectl apply -f -
 
 # Wait for databases to be ready
 echo -e "${YELLOW}⏳ Waiting for databases to be ready...${NC}"
@@ -133,17 +232,17 @@ kubectl wait --namespace ${DOCKER_REPO_NAME} \
 
 # Deploy backend services
 echo -e "${YELLOW}🔧 Deploying backend services...${NC}"
-envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/payment-service.yaml | kubectl apply -f -
-envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/project-service.yaml | kubectl apply -f -
-envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/user-service.yaml | kubectl apply -f -
+envsubst '$ECR_REGISTRY $IMAGE_TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/payment-service.yaml | kubectl apply -f -
+envsubst '$ECR_REGISTRY $IMAGE_TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/project-service.yaml | kubectl apply -f -
+envsubst '$ECR_REGISTRY $IMAGE_TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/user-service.yaml | kubectl apply -f -
 
 # Deploy frontend
 echo -e "${YELLOW}🌐 Deploying frontend...${NC}"
-envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/frontend-service.yaml | kubectl apply -f -
+envsubst '$ECR_REGISTRY $IMAGE_TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/frontend-service.yaml | kubectl apply -f -
 
 # Deploy ingress
 echo -e "${YELLOW}🚪 Deploying ingress...${NC}"
-envsubst '$ECR_REGISTRY $TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/ingress.yaml | kubectl apply -f -
+envsubst '$ECR_REGISTRY $IMAGE_TAG $DOCKER_REPO_NAME $AWS_ACCOUNT_ID $AWS_REGION' < ${K8_DIR}/ingress.yaml | kubectl apply -f -
 
 # Wait for all pods to be ready
 echo -e "${YELLOW}⏳ Waiting for all services to be ready...${NC}"

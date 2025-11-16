@@ -41,21 +41,22 @@ module "eks" {
   subnet_ids = var.private_subnet_ids
 
   eks_managed_node_group_defaults = {
+      # Instance sizing
+      min_size     = 2
+      max_size     = 4
+      desired_size = 2
+
+      # Instance type
       instance_types = ["t3.small"]
+      capacity_type  = "SPOT"
+
+      
   }
 
   eks_managed_node_groups = {
     one = {
       name = "g5-node-group-1"
 
-      # Instance sizing
-      min_size     = 2
-      max_size     = 4
-      desired_size = 3
-
-      # Instance type
-      instance_types = ["t3.small"]
-      capacity_type  = "SPOT"
       # Optional: Add custom tags to nodes
       tags = {
         "NodeType" = "general-purpose",
@@ -65,14 +66,6 @@ module "eks" {
     two = {
       name = "g5-node-group-2"
 
-      # Instance sizing
-      min_size     = 2
-      max_size     = 4
-      desired_size = 3
-
-      # Instance type
-      instance_types = ["t3.small"]
-      capacity_type  = "SPOT"
       # Optional: Add custom tags to nodes
       tags = {
         "NodeType" = "general-purpose"
@@ -92,6 +85,10 @@ module "eks" {
       most_recent = true
     }
     vpc-cni = {
+      most_recent = true
+    }
+
+    aws-ebs-csi-driver = {
       most_recent = true
     }
   }

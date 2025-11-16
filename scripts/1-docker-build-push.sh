@@ -5,7 +5,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(dirname "$SCRIPT_DIR")"
 TAG=${1:-latest}
 DOCKER_USERNAME=${2:-}
-DOCKER_REPO_NAME=${3:-e2e-devops}
+DOCKER_REPO_NAME=${3:-g5-slabai}
 
 # Colors for output
 RED='\033[0;31m'
@@ -31,19 +31,15 @@ build_and_push_service() {
     
     echo -e "${YELLOW}📦 Building ${service_name}...${NC}"
     
-    # Build the Docker image
+    # Build the Docker image for linux/amd64 platform (EKS nodes use x86_64)
     if [ "$service_name" == "frontend" ]; then
-        docker build -t ${DOCKER_USERNAME}/${DOCKER_REPO_NAME}-${service_name}:${TAG} \
+        docker build --platform linux/amd64 -t ${DOCKER_USERNAME}/${DOCKER_REPO_NAME}-${service_name}:${TAG} \
             --build-arg NODE_ENV=${NODE_ENV:-production} \
-            --build-arg CLUSTER_IP=${CLUSTER_IP:-localhost} \
-            --build-arg PROJECT_SERVICE_URL=${PROJECT_SERVICE_URL:-http://localhost:3001} \
-            --build-arg PAYMENT_SERVICE_URL=${PAYMENT_SERVICE_URL:-http://localhost:3000} \
-            --build-arg USER_SERVICE_URL=${USER_SERVICE_URL:-http://localhost:3002} \
             --build-arg COMPANY_NAME="${COMPANY_NAME:-Dey Education}" \
             --build-arg CURRENCY=${CURRENCY:-INR} \
             ${service_path}
     else
-        docker build -t ${DOCKER_USERNAME}/${DOCKER_REPO_NAME}-${service_name}:${TAG} ${service_path}
+        docker build --platform linux/amd64 -t ${DOCKER_USERNAME}/${DOCKER_REPO_NAME}-${service_name}:${TAG} ${service_path}
     fi
     
     if [ $? -eq 0 ]; then

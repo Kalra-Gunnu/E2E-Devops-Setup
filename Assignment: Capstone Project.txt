@@ -1,0 +1,18 @@
+Assignment: Capstone Project
+
+Project Name: End-to-End DevOps Pipeline
+
+Github Repository: https://github.com/pranshu1402/E2E-Devops-Setup
+Guides: https://github.com/pranshu1402/E2E-Devops-Setup/project_guides
+
+Batch: B11, Devops & Cloud Engineering Post Graduate Program
+
+Group: 5
+Collaborators: Pranshu Goyal, Gundeep Singh
+Other Members: Aastha, Megha Dumbre
+
+*Student:*
+Name: Pranshu Goyal
+ID: Pranshu Goyal_10061
+Email: pranshu.ghps@gmail.com
+Phone: 9873793226

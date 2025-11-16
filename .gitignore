@@ -128,3 +128,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+**/.terraform/*
+.terraform.lock.hcl
+terraform.tfstate
+trivy-scan-results.txt

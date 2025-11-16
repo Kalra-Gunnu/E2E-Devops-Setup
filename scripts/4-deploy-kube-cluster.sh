@@ -13,7 +13,7 @@ ROOT_DIR="$(dirname "$SCRIPT_DIR")"
 K8_DIR="${ROOT_DIR}/k8s"
 TAG=${1:-latest}
 DOCKER_USERNAME=${2:-}
-DOCKER_REPO_NAME=${3:-e2e-devops}
+DOCKER_REPO_NAME=${3:-g5-slabai}
 
 # Load configuration from config.env file if available
 if [ -f "${ROOT_DIR}/config.env" ]; then
@@ -21,8 +21,6 @@ if [ -f "${ROOT_DIR}/config.env" ]; then
     source "${ROOT_DIR}/config.env"
     set +a  # Turn off auto-export
     echo -e "${GREEN}✅ Configuration loaded from ${ROOT_DIR}/config.env${NC}"
-    
-
 fi
 
 if [ -z "$DOCKER_USERNAME" || -z "$DOCKER_REPO_NAME" ]; then
@@ -157,10 +155,10 @@ kubectl wait --namespace ${DOCKER_REPO_NAME} \
 echo -e "${GREEN}🎉 Deployment completed successfully!${NC}"
 echo ""
 echo -e "${GREEN}📋 Service URLs:${NC}"
-echo -e "  • Frontend: http://${CLUSTER_IP}"
-echo -e "  • Payment Service: http://${CLUSTER_IP}/api/payment"
-echo -e "  • Project Service: http://${CLUSTER_IP}/api/project"
-echo -e "  • User Service: http://${CLUSTER_IP}/api/user"
+echo -e "  • Frontend: http://localhost"
+echo -e "  • Payment Service: http://localhost/api/payment"
+echo -e "  • Project Service: http://localhost/api/project"
+echo -e "  • User Service: http://localhost/api/user"
 echo ""
 echo -e "${GREEN}🔍 Check deployment status:${NC}"
 echo -e "  kubectl get pods -n ${DOCKER_REPO_NAME}"

@@ -1,6 +1,6 @@
 variable "repositories" {
   type = list(string)
-  default = ["g5_slabai_payment","g5_slabai_project","g5_slabai_user","g5_slabai_frontend"]
+  default = ["g5-slabai-payment-service","g5-slabai-project-service","g5-slabai-user-service","g5-slabai-frontend"]
 }
 
 variable "image_tag_mutability" {

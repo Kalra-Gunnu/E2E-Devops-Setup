@@ -1,0 +1,56 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}]'
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/ssl-redirect: "false"
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/use-regex: "true"
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"networking.k8s.io/v1","kind":"Ingress","metadata":{"annotations":{"alb.ingress.kubernetes.io/listen-ports":"[{\"HTTP\": 80}]","alb.ingress.kubernetes.io/scheme":"internet-facing","alb.ingress.kubernetes.io/ssl-redirect":"false","alb.ingress.kubernetes.io/target-type":"ip","alb.ingress.kubernetes.io/use-regex":"true"},"name":"app-ingress","namespace":"g5-slabai"},"spec":{"ingressClassName":"alb","rules":[{"http":{"paths":[{"backend":{"service":{"name":"payment-service","port":{"number":3000}}},"path":"/api/payment.*","pathType":"ImplementationSpecific"},{"backend":{"service":{"name":"project-service","port":{"number":3001}}},"path":"/api/project.*","pathType":"ImplementationSpecific"},{"backend":{"service":{"name":"user-service","port":{"number":3002}}},"path":"/api/user.*","pathType":"ImplementationSpecific"},{"backend":{"service":{"name":"frontend-service","port":{"number":80}}},"path":"/|.*","pathType":"Exact"}]}}]}}
+  creationTimestamp: "2025-11-15T10:14:22Z"
+  deletionGracePeriodSeconds: 0
+  deletionTimestamp: "2025-11-15T12:30:42Z"
+  finalizers:
+  - ingress.k8s.aws/resources
+  generation: 3
+  name: app-ingress
+  namespace: g5-slabai
+  resourceVersion: "53422"
+  uid: 9b2bb24b-43cd-4b79-9169-7954c39c4f60
+spec:
+  ingressClassName: alb
+  rules:
+  - http:
+      paths:
+      - backend:
+          service:
+            name: payment-service
+            port:
+              number: 3000
+        path: /api/payment.*
+        pathType: ImplementationSpecific
+      - backend:
+          service:
+            name: project-service
+            port:
+              number: 3001
+        path: /api/project.*
+        pathType: ImplementationSpecific
+      - backend:
+          service:
+            name: user-service
+            port:
+              number: 3002
+        path: /api/user.*
+        pathType: ImplementationSpecific
+      - backend:
+          service:
+            name: frontend-service
+            port:
+              number: 80
+        path: /|.*
+        pathType: Exact
+status:
+  loadBalancer: {}

@@ -3,7 +3,7 @@ set -euo pipefail
 
 TAG=${1:-latest}
 DOCKER_USERNAME=${2:-}
-DOCKER_REPO_NAME=${3:-e2e-devops}
+DOCKER_REPO_NAME=${3:-g5-slabai}
 
 OUTPUT_FILE="trivy-scan-results.txt"
 > "$OUTPUT_FILE"  # Truncate or create the output file

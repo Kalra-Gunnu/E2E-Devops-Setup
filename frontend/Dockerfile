@@ -18,7 +18,7 @@ echo "Environment variables substituted successfully"\n\
 ' > /app/substitute-env.sh && chmod +x /app/substitute-env.sh
 
 # Final stage with nginx
-FROM nginx:alpine
+FROM nginx:alpine AS final
 
 # Install envsubst in the final image
 RUN apk add --no-cache gettext

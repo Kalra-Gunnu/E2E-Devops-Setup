@@ -1,10 +1,5 @@
 // Configuration file for API endpoints and other settings
 window.APP_CONFIG = {
-    // API Base URLs - these will be replaced by environment variables
-    PROJECT_SERVICE_URL: '${PROJECT_SERVICE_URL}',
-    PAYMENT_SERVICE_URL: '${PAYMENT_SERVICE_URL}',
-    USER_SERVICE_URL: '${USER_SERVICE_URL}',
-    
     // Razorpay configuration
     RAZORPAY_KEY: '${RAZORPAY_KEY}',
     
@@ -15,12 +10,7 @@ window.APP_CONFIG = {
 
 // Helper function to get API URL
 window.getApiUrl = function(service, endpoint) {
-    const baseUrl = window.APP_CONFIG[service + '_SERVICE_URL'];
-    if (!baseUrl) {
-        console.error(`Service URL not configured for: ${service}`);
-        return null;
-    }
-    return `${baseUrl}${endpoint}`;
+    return `${window.location.origin}${endpoint}`;
 };
 
 // Helper function to get config value

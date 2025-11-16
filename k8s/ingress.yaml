@@ -2,16 +2,18 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: app-ingress
-  namespace: e2e-devops
+  namespace: ${DOCKER_REPO_NAME}
   annotations:
     # nginx.ingress.kubernetes.io/rewrite-target: /$2
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
-    nginx.ingress.kubernetes.io/use-regex: "true"
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}]'
+    alb.ingress.kubernetes.io/ssl-redirect: "false"
+    alb.ingress.kubernetes.io/use-regex: "true"
 spec:
-  ingressClassName: nginx
+  ingressClassName: alb
   rules:
-  - host: localhost
-    http:
+  - http:
       paths:
       - path: /api/payment.*
         pathType: ImplementationSpecific
@@ -41,26 +43,5 @@ spec:
             name: frontend-service
             port:
               number: 80
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: frontend-ingress
-  namespace: e2e-devops
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$1
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
-    nginx.ingress.kubernetes.io/use-regex: "true"
-spec:
-  ingressClassName: nginx
-  rules:
-  - host: localhost
-    http:
-      paths:
-      - path: /(.*html|.*css|.*js|testingUI/.*|assets/.*)
-        pathType: ImplementationSpecific
-        backend:
-          service:
-            name: frontend-service
-            port:
-              number: 80
+# Frontend ingress is now handled by app-ingress above
+# AWS ALB will route all traffic including static assets
